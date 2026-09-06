@@ -1,4 +1,4 @@
-(function() {
+(function () {
   const html = document.documentElement;
   const stored = localStorage.getItem('theme') || 'system';
   function apply(theme) {
