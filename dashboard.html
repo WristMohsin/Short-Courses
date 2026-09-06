@@ -10,10 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-sans antialiased min-h-screen">
-  <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur border-b border-gray-200 dark:border-gray-800">
+  <header class="sticky top-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur border-b border-gray-200 dark:border-gray-800">
     <div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
       <a href="index.html" class="font-bold flex items-center gap-2">
-        <span class="w-7 h-7 rounded-lg bg-gradient-to-br from-orange-500 to-purple-600 text-white text-xs flex items-center justify-center">OS</span>
+        <span class="w-7 h-7 rounded-lg bg-gradient-to-br from-orange-500 to-purple-600 text-white text-xs flex items-center justify-center font-bold">OS</span>
         OpenSkill Academy
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
@@ -27,82 +27,62 @@
       </div>
     </div>
   </header>
-
   <main class="max-w-7xl mx-auto px-4 py-10">
     <div class="mb-10">
-      <h1 class="text-3xl md:text-4xl font-extrabold mb-2">Your Learning Dashboard</h1>
-      <p class="text-gray-600 dark:text-gray-400">Track progress, continue learning, and build your portfolio. Progress is saved in your browser.</p>
+      <h1 class="text-3xl md:text-4xl font-extrabold mb-2">Learning Dashboard</h1>
+      <p class="text-gray-600 dark:text-gray-400">Track your progress. Progress is saved in your browser (localStorage).</p>
     </div>
-
-    <div class="grid md:grid-cols-3 gap-6 mb-12">
-      <div class="p-6 rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
-        <div class="text-sm text-gray-500 mb-1">Learning Streak</div>
-        <div class="text-3xl font-bold text-orange-500" id="streak">0 days</div>
-      </div>
-      <div class="p-6 rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
-        <div class="text-sm text-gray-500 mb-1">Paths Started</div>
-        <div class="text-3xl font-bold" id="pathsStarted">0</div>
-      </div>
-      <div class="p-6 rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
-        <div class="text-sm text-gray-500 mb-1">Overall Progress</div>
-        <div class="text-3xl font-bold text-green-500" id="overallProgress">0%</div>
-      </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+      <div class="card p-5"><div class="text-xs font-semibold text-gray-500 uppercase mb-1">Paths Available</div><div class="text-3xl font-bold">7</div></div>
+      <div class="card p-5"><div class="text-xs font-semibold text-gray-500 uppercase mb-1">Paths Started</div><div class="text-3xl font-bold text-orange-500" id="pathsStarted">0</div></div>
+      <div class="card p-5"><div class="text-xs font-semibold text-gray-500 uppercase mb-1">Overall Progress</div><div class="text-3xl font-bold text-green-500" id="overallProgress">0%</div></div>
+      <div class="card p-5"><div class="text-xs font-semibold text-gray-500 uppercase mb-1">Next Step</div><div class="text-sm font-semibold mt-2" id="nextStep">Choose a path below</div></div>
     </div>
-
-    <h2 class="text-xl font-bold mb-4">All Learning Paths (A → Z)</h2>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
-      <a href="courses/web-development.html" class="block p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-orange-400 transition">
-        <div class="font-bold mb-1">1. Web Development</div>
-        <p class="text-sm text-gray-500 mb-3">HTML → CSS → JS → Vue/React → PHP/Laravel → Capstone</p>
-        <div class="text-xs text-orange-600 font-medium">Flagship path • Most complete</div>
-      </a>
-      <a href="courses/uiux-design.html" class="block p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-pink-400 transition">
-        <div class="font-bold mb-1">2. UI/UX & Graphics</div>
-        <p class="text-sm text-gray-500 mb-3">Design principles → Free tools → Figma → Portfolio</p>
-      </a>
-      <a href="courses/digital-marketing.html" class="block p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-green-400 transition">
-        <div class="font-bold mb-1">3. Digital Marketing + SEO + ASO</div>
-        <p class="text-sm text-gray-500 mb-3">Social → SEO → Analytics → ASO → Capstone plan</p>
-      </a>
-      <a href="courses/content-writing.html" class="block p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-amber-400 transition">
-        <div class="font-bold mb-1">4. Content Writing</div>
-        <p class="text-sm text-gray-500 mb-3">Fundamentals → SEO writing → Copy → Portfolio</p>
-      </a>
-      <a href="courses/video-editing.html" class="block p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-red-400 transition">
-        <div class="font-bold mb-1">5. Video Editing</div>
-        <p class="text-sm text-gray-500 mb-3">DaVinci Resolve free → Color → Capstone video</p>
-      </a>
-      <a href="courses/unity-game-dev.html" class="block p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-indigo-400 transition">
-        <div class="font-bold mb-1">6. Unity Game Development</div>
-        <p class="text-sm text-gray-500 mb-3">C# → Unity → Mini-games → itch.io portfolio</p>
-      </a>
-      <a href="courses/3d-modeling.html" class="block p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-teal-400 transition">
-        <div class="font-bold mb-1">7. 3D Modeling (Blender)</div>
-        <p class="text-sm text-gray-500 mb-3">Blender free → Modeling → Texturing → Portfolio</p>
-      </a>
-    </div>
-
-    <div class="p-6 rounded-2xl bg-orange-50 dark:bg-orange-950/30 border border-orange-200 dark:border-orange-900">
-      <h2 class="font-bold text-lg mb-2">How to learn A → Z (Professional method)</h2>
+    <h2 class="text-xl font-bold mb-4">Your Learning Paths</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12" id="pathGrid"></div>
+    <div class="card p-6 mb-8">
+      <h2 class="font-bold text-lg mb-3">How to use this platform</h2>
       <ol class="list-decimal pl-5 space-y-2 text-sm text-gray-700 dark:text-gray-300">
-        <li><strong>Choose ONE path only</strong> — Focus beats starting 5 courses.</li>
-        <li><strong>Follow the roadmap in order</strong> — Do not skip fundamentals.</li>
-        <li><strong>Do every practice exercise</strong> — Reading is not enough. Build.</li>
-        <li><strong>Use only free resources listed</strong> — Official docs + free YouTube + free tools.</li>
-        <li><strong>Finish the Capstone</strong> — Put it on GitHub / Figma / itch.io / ArtStation.</li>
-        <li><strong>Come back to Dashboard</strong> — Track what you finished.</li>
+        <li><strong>Pick only ONE path</strong> at a time (Web Development is recommended if you want coding jobs).</li>
+        <li>Open the path and follow modules <strong>in order</strong> — do not skip fundamentals.</li>
+        <li>Complete every <strong>practice exercise</strong> and project.</li>
+        <li>Use only the <strong>free resources</strong> listed on each lesson.</li>
+        <li>Finish the <strong>Capstone</strong> and put it on GitHub / Figma / itch.io / ArtStation.</li>
+        <li>Come back here to track what you finished.</li>
       </ol>
     </div>
+    <div class="text-center">
+      <a href="courses/web-development.html" class="inline-block px-6 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold">Start Web Development (Flagship) →</a>
+    </div>
   </main>
-
   <script src="js/theme.js"></script>
   <script src="js/language.js"></script>
   <script src="js/progress.js"></script>
   <script>
-    const p = typeof Progress !== 'undefined' ? Progress.get() : {};
-    const started = Object.keys(p).length;
+    const paths = [
+      { id: 'web-dev', title: 'Web Development', desc: 'HTML → CSS → JS → Vue/React → Laravel → Capstone', href: 'courses/web-development.html', hours: '180–300h' },
+      { id: 'uiux', title: 'UI/UX & Graphics Design', desc: 'Design principles → Free tools → Figma → Portfolio', href: 'courses/uiux-design.html', hours: '150–250h' },
+      { id: 'dm', title: 'Digital Marketing + SEO + ASO', desc: 'Social → SEO → Analytics → ASO → Campaign plan', href: 'courses/digital-marketing.html', hours: '120–200h' },
+      { id: 'content', title: 'Content Writing', desc: 'Grammar → SEO writing → Copy → Portfolio', href: 'courses/content-writing.html', hours: '80–120h' },
+      { id: 'video', title: 'Video Editing', desc: 'DaVinci Resolve → Color → Motion → Capstone', href: 'courses/video-editing.html', hours: '100–180h' },
+      { id: 'unity', title: 'Unity Game Development', desc: 'C# → Unity → Mini-games → Publish on itch.io', href: 'courses/unity-game-dev.html', hours: '150–250h' },
+      { id: 'blender', title: '3D Modeling (Blender)', desc: 'Modeling → Texturing → Lighting → Portfolio renders', href: 'courses/3d-modeling.html', hours: '120–200h' }
+    ];
+    const progress = (typeof Progress !== 'undefined') ? Progress.get() : {};
+    const started = Object.keys(progress).filter(k => progress[k] && progress[k] > 0).length;
     document.getElementById('pathsStarted').textContent = started;
-    if (started > 0) document.getElementById('overallProgress').textContent = Math.min(100, started * 15) + '%';
+    document.getElementById('overallProgress').textContent = Math.min(100, started * 14) + '%';
+    if (started === 0) document.getElementById('nextStep').textContent = 'Start Web Development';
+    else document.getElementById('nextStep').textContent = 'Continue your path';
+    const grid = document.getElementById('pathGrid');
+    paths.forEach((p, i) => {
+      const pct = progress[p.id] || 0;
+      const el = document.createElement('a');
+      el.href = p.href;
+      el.className = 'card p-5 block hover:border-orange-400';
+      el.innerHTML = `<div class="flex justify-between items-start mb-2"><div class="font-bold">${i+1}. ${p.title}</div><span class="text-xs text-gray-500">${p.hours}</span></div><p class="text-sm text-gray-500 mb-4">${p.desc}</p><div class="h-2 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden mb-2"><div class="h-full bg-orange-500 rounded-full" style="width:${pct}%"></div></div><div class="text-xs text-gray-500">${pct}% complete · Open path →</div>`;
+      grid.appendChild(el);
+    });
   </script>
 </body>
 </html>
