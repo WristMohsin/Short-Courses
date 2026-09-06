@@ -1,306 +1,247 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free Web Development Path – OpenSkill Academy</title>
+  <title>Web Development Path – OpenSkill Academy</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class' }</script>
+  <script>tailwind.config={darkMode:'class'}</script>
   <link rel="stylesheet" href="../css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-sans antialiased">
-  <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur border-b border-gray-200 dark:border-gray-800">
+  <header class="sticky top-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur border-b border-gray-200 dark:border-gray-800">
     <div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="../index.html" class="font-bold flex items-center gap-2"><span class="w-7 h-7 rounded-lg bg-gradient-to-br from-orange-500 to-purple-600 text-white text-xs flex items-center justify-center">OS</span> OpenSkill</a>
-      <div class="flex items-center gap-3">
-        <button id="langToggle" class="text-sm px-3 py-1 border rounded-full">EN | RU</button>
-        <button id="themeToggle" class="p-2">🌓</button>
+      <a href="../index.html" class="font-bold flex items-center gap-2 text-sm md:text-base">
+        <span class="w-7 h-7 rounded-lg bg-gradient-to-br from-orange-500 to-purple-600 text-white text-xs flex items-center justify-center font-bold">OS</span>
+        <span class="hidden sm:inline">OpenSkill Academy</span>
+      </a>
+      <div class="flex items-center gap-2 md:gap-4 text-sm">
+        <a href="../dashboard.html" class="hover:text-orange-500 hidden md:inline">Dashboard</a>
+        <button id="langToggle" class="px-2.5 py-1 border border-gray-300 dark:border-gray-600 rounded-full text-xs">EN | RU</button>
+        <button id="themeToggle" class="p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">🌓</button>
       </div>
     </div>
   </header>
 
-  <main class="max-w-5xl mx-auto px-4 py-10">
-    <div class="mb-10">
-      <div class="text-sm text-orange-600 font-medium mb-2">Learning Path • Free Replacement for Skill Up Web Development</div>
-      <h1 class="text-3xl md:text-5xl font-extrabold mb-4">Web Development</h1>
-      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl">
-        Complete free curriculum covering everything in the Skill Up Regular (4-month) and Full Stack Bootcamp (6-month) programs using only free official docs, free tutorials, and free tools.
-      </p>
-      <div class="mt-6 flex flex-wrap gap-3 text-sm">
-        <span class="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300">Beginner → Advanced</span>
-        <span class="px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300">100% Free</span>
-        <span class="px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300">~180–300 hours</span>
-        <span class="px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800">English + Roman Urdu</span>
+  <div class="max-w-7xl mx-auto px-4 py-8 md:py-12">
+    <div class="grid lg:grid-cols-12 gap-8">
+      <aside class="lg:col-span-3 hidden lg:block">
+        <div class="course-sidebar card p-4">
+          <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Course Navigation</div>
+          <nav class="space-y-1 text-sm">
+            <a href="#overview" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40 font-medium">Overview</a>
+            <a href="#roadmap" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">Roadmap</a>
+            <div class="pt-2 pb-1 px-3 text-xs font-semibold text-gray-400">MODULES</div>
+            <a href="#m1" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">1. HTML & CSS</a>
+            <a href="#m2" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">2. JavaScript</a>
+            <a href="#m3" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">3. Git & GitHub</a>
+            <a href="#m4" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">4. Frontend Framework</a>
+            <a href="#m5" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">5. Backend & Laravel</a>
+            <a href="#capstone" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">Capstone Project</a>
+          </nav>
+        </div>
+      </aside>
+
+      <div class="lg:col-span-9 space-y-10">
+        <section id="overview">
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="badge bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300">Beginner → Advanced</span>
+            <span class="badge bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300">100% Free</span>
+            <span class="badge bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300">180–300 hours</span>
+          </div>
+          <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-3">Web Development</h1>
+          <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mb-6">
+            Complete free path from zero to job-ready. Covers Skill Up Regular + Full Stack Bootcamp using only free official docs, free courses, and free tools.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#m1" class="px-5 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm transition">Start Module 1</a>
+            <a href="#roadmap" class="px-5 py-2.5 rounded-xl border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold text-sm transition">View Roadmap</a>
+          </div>
+        </section>
+
+        <section class="card p-6">
+          <h2 class="text-lg font-bold mb-4">What you will be able to do</h2>
+          <div class="grid sm:grid-cols-2 gap-3 text-sm">
+            <div class="flex gap-2"><span class="text-green-500">✓</span> Build responsive websites (HTML, CSS, Bootstrap)</div>
+            <div class="flex gap-2"><span class="text-green-500">✓</span> Write interactive JavaScript applications</div>
+            <div class="flex gap-2"><span class="text-green-500">✓</span> Use Git & GitHub professionally</div>
+            <div class="flex gap-2"><span class="text-green-500">✓</span> Build apps with Vue.js or React</div>
+            <div class="flex gap-2"><span class="text-green-500">✓</span> Create backends with PHP & Laravel</div>
+            <div class="flex gap-2"><span class="text-green-500">✓</span> Deploy projects and build a portfolio</div>
+          </div>
+        </section>
+
+        <section id="roadmap">
+          <h2 class="text-2xl font-bold mb-6">Learning Roadmap</h2>
+          <div class="space-y-0">
+            <div class="roadmap-line pb-8"><div class="absolute left-0 w-8 h-8 rounded-full bg-orange-500 text-white flex items-center justify-center text-sm font-bold">1</div><h3 class="font-semibold text-lg">Foundation — HTML, CSS, Bootstrap</h3><p class="text-sm text-gray-500 mt-1">3–4 weeks</p></div>
+            <div class="roadmap-line pb-8"><div class="absolute left-0 w-8 h-8 rounded-full bg-orange-500 text-white flex items-center justify-center text-sm font-bold">2</div><h3 class="font-semibold text-lg">JavaScript Fundamentals</h3><p class="text-sm text-gray-500 mt-1">4–5 weeks</p></div>
+            <div class="roadmap-line pb-8"><div class="absolute left-0 w-8 h-8 rounded-full bg-orange-500 text-white flex items-center justify-center text-sm font-bold">3</div><h3 class="font-semibold text-lg">Git & GitHub</h3><p class="text-sm text-gray-500 mt-1">1 week</p></div>
+            <div class="roadmap-line pb-8"><div class="absolute left-0 w-8 h-8 rounded-full bg-orange-500 text-white flex items-center justify-center text-sm font-bold">4</div><h3 class="font-semibold text-lg">Modern Frontend (Vue or React)</h3><p class="text-sm text-gray-500 mt-1">4–6 weeks</p></div>
+            <div class="roadmap-line pb-8"><div class="absolute left-0 w-8 h-8 rounded-full bg-orange-500 text-white flex items-center justify-center text-sm font-bold">5</div><h3 class="font-semibold text-lg">Backend — PHP & Laravel</h3><p class="text-sm text-gray-500 mt-1">5–7 weeks</p></div>
+            <div class="roadmap-line"><div class="absolute left-0 w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center text-sm font-bold">6</div><h3 class="font-semibold text-lg">Capstone & Portfolio</h3><p class="text-sm text-gray-500 mt-1">Full-stack project + deployment</p></div>
+          </div>
+        </section>
+
+        <section id="m1" class="space-y-6">
+          <div class="module-accent pl-4">
+            <div class="text-sm font-semibold text-orange-500 mb-1">MODULE 1 · 3–4 WEEKS</div>
+            <h2 class="text-2xl font-bold">HTML, CSS & Responsive Design</h2>
+          </div>
+          <article class="card p-6 space-y-4">
+            <h3 class="text-xl font-bold">1.1 HTML — Structure of the Web</h3>
+            <p class="text-sm text-gray-500">6–8 hours</p>
+            <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">HTML is the skeleton of every webpage. Learn semantic HTML5: headings, paragraphs, lists, links, images, forms, and page structure.</p>
+            <div class="grid sm:grid-cols-2 gap-2">
+              <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank" rel="noopener" class="resource-link">MDN — Learn HTML</a>
+              <a href="https://web.dev/learn/html" target="_blank" rel="noopener" class="resource-link">web.dev Learn HTML</a>
+              <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank" rel="noopener" class="resource-link">freeCodeCamp Responsive Web Design</a>
+              <a href="https://www.youtube.com/watch?v=pQN-pnXPaVg" target="_blank" rel="noopener" class="resource-link">freeCodeCamp HTML Full Course</a>
+            </div>
+            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Practice:</strong> Build a personal profile page (name, bio, skills list, image, GitHub link).</div>
+            <div data-quiz="html1" class="space-y-2 text-sm">
+              <p class="font-medium">Quiz: Main heading tag?</p>
+              <div class="quiz-option rounded-lg p-3" data-correct="true">&lt;h1&gt;</div>
+              <div class="quiz-option rounded-lg p-3" data-correct="false">&lt;head&gt;</div>
+              <div class="quiz-option rounded-lg p-3" data-correct="false">&lt;title&gt;</div>
+            </div>
+          </article>
+          <article class="card p-6 space-y-4">
+            <h3 class="text-xl font-bold">1.2 CSS — Styling</h3>
+            <p class="text-sm text-gray-500">10–14 hours</p>
+            <p class="text-sm text-gray-700 dark:text-gray-300">Box model, selectors, Flexbox, Grid, responsive design.</p>
+            <div class="grid sm:grid-cols-2 gap-2">
+              <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank" rel="noopener" class="resource-link">MDN Learn CSS</a>
+              <a href="https://web.dev/learn/css" target="_blank" rel="noopener" class="resource-link">web.dev Learn CSS</a>
+              <a href="https://flexboxfroggy.com/" target="_blank" rel="noopener" class="resource-link">Flexbox Froggy</a>
+              <a href="https://cssgridgarden.com/" target="_blank" rel="noopener" class="resource-link">Grid Garden</a>
+              <a href="https://www.youtube.com/watch?v=1Rs2ND1ryYc" target="_blank" rel="noopener" class="resource-link">freeCodeCamp CSS Course</a>
+            </div>
+            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Practice:</strong> Style your profile page with Flexbox. Make it mobile-friendly.</div>
+          </article>
+          <article class="card p-6 space-y-4">
+            <h3 class="text-xl font-bold">1.3 Bootstrap</h3>
+            <p class="text-sm text-gray-500">6–8 hours</p>
+            <div class="grid sm:grid-cols-2 gap-2">
+              <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank" rel="noopener" class="resource-link">Official Bootstrap 5 Docs</a>
+              <a href="https://www.youtube.com/watch?v=4sosXZsdy-s" target="_blank" rel="noopener" class="resource-link">Bootstrap 5 Crash Course</a>
+            </div>
+            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Mini project:</strong> Rebuild profile with Bootstrap navbar + cards.</div>
+          </article>
+        </section>
+
+        <section id="m2" class="space-y-6">
+          <div class="module-accent pl-4">
+            <div class="text-sm font-semibold text-orange-500 mb-1">MODULE 2 · 4–5 WEEKS</div>
+            <h2 class="text-2xl font-bold">JavaScript</h2>
+          </div>
+          <article class="card p-6 space-y-4">
+            <h3 class="text-xl font-bold">2.1 Core JavaScript</h3>
+            <p class="text-sm text-gray-700 dark:text-gray-300">Variables, functions, loops, arrays, objects. Master fundamentals before frameworks.</p>
+            <div class="grid sm:grid-cols-2 gap-2">
+              <a href="https://javascript.info/" target="_blank" rel="noopener" class="resource-link">javascript.info</a>
+              <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript" target="_blank" rel="noopener" class="resource-link">MDN Learn JavaScript</a>
+              <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/" target="_blank" rel="noopener" class="resource-link">freeCodeCamp JS</a>
+              <a href="https://www.youtube.com/watch?v=PkZNo7MFNFg" target="_blank" rel="noopener" class="resource-link">freeCodeCamp JS Full Course</a>
+            </div>
+            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Projects:</strong> Calculator + To-do list (pure JS).</div>
+          </article>
+          <article class="card p-6 space-y-4">
+            <h3 class="text-xl font-bold">2.2 DOM, Fetch & JSON</h3>
+            <div class="grid sm:grid-cols-2 gap-2">
+              <a href="https://javascript.info/document" target="_blank" rel="noopener" class="resource-link">javascript.info DOM</a>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch" target="_blank" rel="noopener" class="resource-link">MDN Fetch API</a>
+            </div>
+            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Project:</strong> Weather or Quote app using a free API.</div>
+          </article>
+        </section>
+
+        <section id="m3" class="space-y-6">
+          <div class="module-accent pl-4">
+            <div class="text-sm font-semibold text-orange-500 mb-1">MODULE 3 · 1 WEEK</div>
+            <h2 class="text-2xl font-bold">Git & GitHub</h2>
+          </div>
+          <article class="card p-6 space-y-4">
+            <div class="grid sm:grid-cols-2 gap-2">
+              <a href="https://git-scm.com/doc" target="_blank" rel="noopener" class="resource-link">Official Git Docs</a>
+              <a href="https://skills.github.com/" target="_blank" rel="noopener" class="resource-link">GitHub Skills</a>
+              <a href="https://www.youtube.com/watch?v=RGOj5yH7evk" target="_blank" rel="noopener" class="resource-link">Git Crash Course</a>
+            </div>
+            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Practice:</strong> Push every project to GitHub with clean commits.</div>
+          </article>
+        </section>
+
+        <section id="m4" class="space-y-6">
+          <div class="module-accent pl-4">
+            <div class="text-sm font-semibold text-orange-500 mb-1">MODULE 4 · 4–6 WEEKS</div>
+            <h2 class="text-2xl font-bold">Frontend Framework</h2>
+          </div>
+          <article class="card p-6 space-y-4">
+            <p class="text-sm text-gray-700 dark:text-gray-300">Choose <strong>one</strong>: Vue (easier) or React (more jobs). Learn components, state, routing.</p>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-700">
+                <div class="font-bold mb-2">Vue.js</div>
+                <a href="https://vuejs.org/tutorial/" target="_blank" rel="noopener" class="resource-link mb-2">Official Vue Tutorial</a>
+                <a href="https://vuejs.org/guide/introduction.html" target="_blank" rel="noopener" class="resource-link">Vue Guide</a>
+              </div>
+              <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-700">
+                <div class="font-bold mb-2">React</div>
+                <a href="https://react.dev/learn" target="_blank" rel="noopener" class="resource-link mb-2">Official React Learn</a>
+                <a href="https://www.freecodecamp.org/learn/front-end-development-libraries/" target="_blank" rel="noopener" class="resource-link">freeCodeCamp Frontend</a>
+              </div>
+            </div>
+            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Project:</strong> Notes app or improved to-do with your framework.</div>
+          </article>
+        </section>
+
+        <section id="m5" class="space-y-6">
+          <div class="module-accent pl-4">
+            <div class="text-sm font-semibold text-orange-500 mb-1">MODULE 5 · 5–7 WEEKS</div>
+            <h2 class="text-2xl font-bold">Backend — PHP & Laravel</h2>
+          </div>
+          <article class="card p-6 space-y-4">
+            <p class="text-sm text-gray-700 dark:text-gray-300">Laravel is the modern PHP framework (MVC, Auth, Eloquent, APIs).</p>
+            <div class="grid sm:grid-cols-2 gap-2">
+              <a href="https://www.php.net/manual/en/" target="_blank" rel="noopener" class="resource-link">PHP Manual</a>
+              <a href="https://laravel.com/docs" target="_blank" rel="noopener" class="resource-link">Laravel Docs</a>
+              <a href="https://laracasts.com/series/laravel-8-from-scratch" target="_blank" rel="noopener" class="resource-link">Laracasts Laravel From Scratch</a>
+            </div>
+            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Project:</strong> CRUD blog/inventory with authentication.</div>
+          </article>
+        </section>
+
+        <section id="capstone" class="card p-6 md:p-8 border-orange-200 dark:border-orange-900 bg-gradient-to-br from-orange-50 to-purple-50 dark:from-orange-950/20 dark:to-purple-950/20">
+          <div class="text-sm font-semibold text-orange-600 mb-2">FINAL PROJECT</div>
+          <h2 class="text-2xl font-bold mb-3">Capstone — Full Stack App</h2>
+          <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">Build and deploy a complete app (task manager, job board, or mini e-commerce) with:</p>
+          <ul class="text-sm space-y-2 mb-4 list-disc pl-5 text-gray-700 dark:text-gray-300">
+            <li>Authentication (register / login)</li>
+            <li>Database + CRUD</li>
+            <li>Responsive frontend</li>
+            <li>Live deployment (Railway / Render free tier)</li>
+            <li>Public GitHub repo + README</li>
+          </ul>
+          <p class="text-sm font-medium">This becomes the main piece of your developer portfolio.</p>
+        </section>
+
+        <section class="card p-6">
+          <h2 class="text-lg font-bold mb-3">Completion checklist</h2>
+          <ul class="text-sm space-y-2">
+            <li>☐ All module exercises finished</li>
+            <li>☐ At least 4 projects on GitHub</li>
+            <li>☐ Capstone deployed with live link</li>
+            <li>☐ README for every major project</li>
+          </ul>
+        </section>
+
+        <div class="flex flex-wrap gap-4 pt-4 border-t border-gray-200 dark:border-gray-800">
+          <a href="../dashboard.html" class="text-sm text-orange-600 hover:underline">← Dashboard</a>
+          <a href="../index.html" class="text-sm text-gray-500 hover:underline">All paths</a>
+        </div>
       </div>
     </div>
-
-    <section class="mb-14 p-6 rounded-2xl diagram-box border border-orange-200 dark:border-orange-900/50">
-      <h2 class="text-xl font-bold mb-4">Learning Roadmap</h2>
-      <div class="space-y-0">
-        <div class="roadmap-step pl-10 relative">
-          <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-sm">1</div>
-          <div class="pb-6">
-            <h3 class="font-semibold">Foundation (Month 1)</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">HTML • CSS • Bootstrap • Responsive Design</p>
-          </div>
-        </div>
-        <div class="roadmap-step pl-10 relative">
-          <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-sm">2</div>
-          <div class="pb-6">
-            <h3 class="font-semibold">Interactive Web (Month 2)</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">JavaScript • DOM • Fetch API • JSON • Git & GitHub</p>
-          </div>
-        </div>
-        <div class="roadmap-step pl-10 relative">
-          <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-sm">3</div>
-          <div class="pb-6">
-            <h3 class="font-semibold">Modern Front-End (Month 3)</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">Vue.js or React • Components • State • Routing</p>
-          </div>
-        </div>
-        <div class="roadmap-step pl-10 relative">
-          <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-sm">4</div>
-          <div class="pb-6">
-            <h3 class="font-semibold">Back-End Basics (Month 4)</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">PHP • Laravel intro • MVC • CRUD • Final Project</p>
-          </div>
-        </div>
-        <div class="roadmap-step pl-10 relative">
-          <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold text-sm">5</div>
-          <div class="pb-6">
-            <h3 class="font-semibold">Full Stack Extension (Months 5–6)</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">Advanced Laravel • MySQL • APIs • Deployment • Career Prep</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-4">Prerequisites</h2>
-      <ul class="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-300">
-        <li>Basic computer literacy</li>
-        <li>Willingness to practice every day</li>
-        <li>No prior coding experience required</li>
-      </ul>
-      <p class="mt-3 text-sm text-gray-500">Roman Urdu: Computer ka basic use aata ho, daily practice karne ka dil ho. Pehle se coding aani zaroori nahi.</p>
-    </section>
-
-    <section id="module-1" class="mb-16">
-      <div class="flex items-center gap-3 mb-6">
-        <span class="w-10 h-10 rounded-xl bg-blue-500 text-white flex items-center justify-center font-bold">1</span>
-        <div>
-          <h2 class="text-2xl font-bold">Module 1: Front-End Fundamentals</h2>
-          <p class="text-sm text-gray-500">Duration: 3–4 weeks • Difficulty: Beginner</p>
-        </div>
-      </div>
-
-      <div class="space-y-8">
-        <article class="p-6 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
-          <h3 class="text-xl font-bold mb-2">1.1 HTML – Structure of the Web</h3>
-          <div class="text-sm text-gray-500 mb-4">Estimated time: 6–8 hours</div>
-          <h4 class="font-semibold mt-4 mb-2">Learning Objectives</h4>
-          <ul class="list-disc pl-5 text-sm space-y-1 mb-4">
-            <li>Understand what HTML is and why it exists</li>
-            <li>Write semantic HTML5 documents</li>
-            <li>Use headings, paragraphs, lists, links, images, forms</li>
-            <li>Structure a simple multi-page website</li>
-          </ul>
-          <h4 class="font-semibold mt-4 mb-2">Concept Explanation (English)</h4>
-          <p class="text-sm leading-relaxed mb-3">HTML (HyperText Markup Language) is the skeleton of every webpage. Browsers read HTML tags and display content. Tags like &lt;h1&gt;, &lt;p&gt;, &lt;a&gt;, &lt;img&gt; tell the browser what each piece of content means.</p>
-          <h4 class="font-semibold mt-4 mb-2">Roman Urdu Explanation</h4>
-          <p class="text-sm leading-relaxed mb-4 bg-orange-50 dark:bg-orange-950/30 p-3 rounded-lg">HTML ko aap webpage ki haddiyon (skeleton) samajh sakte ho. Browser HTML tags padhta hai aur content dikhata hai. Har tag ka apna matlab hota hai – heading, paragraph, link, image wagaira.</p>
-          <h4 class="font-semibold mt-4 mb-2">Free Resources (Verified Free)</h4>
-          <ul class="space-y-2 text-sm">
-            <li>• <a class="text-orange-600 hover:underline" href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank" rel="noopener">MDN Web Docs – Learn HTML</a> (Official, free, best)</li>
-            <li>• <a class="text-orange-600 hover:underline" href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank" rel="noopener">freeCodeCamp Responsive Web Design</a> (Free interactive)</li>
-            <li>• <a class="text-orange-600 hover:underline" href="https://www.youtube.com/watch?v=pQN-pnXPaVg" target="_blank" rel="noopener">freeCodeCamp HTML Full Course (YouTube)</a></li>
-            <li>• <a class="text-orange-600 hover:underline" href="https://web.dev/learn/html" target="_blank" rel="noopener">web.dev Learn HTML</a> (Google, free)</li>
-          </ul>
-          <h4 class="font-semibold mt-6 mb-2">Practice Exercise</h4>
-          <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-xl text-sm">
-            <p class="font-medium mb-2">Build a personal profile page with:</p>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Your name as &lt;h1&gt;</li>
-              <li>A short bio paragraph</li>
-              <li>A list of 5 skills</li>
-              <li>A photo (or placeholder image)</li>
-              <li>A link to your future GitHub</li>
-            </ul>
-            <p class="mt-2 text-gray-500">Roman Urdu: Apna personal profile page banao – naam, bio, skills list, photo, aur GitHub link ke sath.</p>
-          </div>
-          <h4 class="font-semibold mt-6 mb-2">Quick Quiz</h4>
-          <div class="space-y-3 text-sm" data-quiz="html-1">
-            <p class="font-medium">1. Which tag is used for the main heading of a page?</p>
-            <div class="quiz-option border rounded-lg p-3" data-correct="true">&lt;h1&gt;</div>
-            <div class="quiz-option border rounded-lg p-3" data-correct="false">&lt;head&gt;</div>
-            <div class="quiz-option border rounded-lg p-3" data-correct="false">&lt;title&gt;</div>
-            <div class="quiz-option border rounded-lg p-3" data-correct="false">&lt;header&gt;</div>
-          </div>
-        </article>
-
-        <article class="p-6 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
-          <h3 class="text-xl font-bold mb-2">1.2 CSS – Styling the Web</h3>
-          <div class="text-sm text-gray-500 mb-4">Estimated time: 10–12 hours</div>
-          <h4 class="font-semibold mt-4 mb-2">Learning Objectives</h4>
-          <ul class="list-disc pl-5 text-sm space-y-1 mb-4">
-            <li>Understand the CSS box model</li>
-            <li>Use selectors, properties, and values</li>
-            <li>Apply Flexbox and basic Grid</li>
-            <li>Make simple responsive layouts</li>
-          </ul>
-          <h4 class="font-semibold mt-4 mb-2">Concept (English)</h4>
-          <p class="text-sm mb-3">CSS (Cascading Style Sheets) controls how HTML looks – colors, spacing, fonts, layout. The cascade means more specific rules override general ones.</p>
-          <h4 class="font-semibold mt-4 mb-2">Roman Urdu</h4>
-          <p class="text-sm mb-4 bg-orange-50 dark:bg-orange-950/30 p-3 rounded-lg">CSS webpage ka look control karta hai – colors, spacing, fonts, layout. Cascade ka matlab hai ke specific rules general rules ko override kar deti hain.</p>
-          <h4 class="font-semibold mt-4 mb-2">Free Resources</h4>
-          <ul class="space-y-2 text-sm">
-            <li>• <a class="text-orange-600 hover:underline" href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank">MDN Learn CSS</a></li>
-            <li>• <a class="text-orange-600 hover:underline" href="https://web.dev/learn/css" target="_blank">web.dev Learn CSS</a></li>
-            <li>• <a class="text-orange-600 hover:underline" href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a> (Free game)</li>
-            <li>• <a class="text-orange-600 hover:underline" href="https://cssgridgarden.com/" target="_blank">Grid Garden</a> (Free game)</li>
-            <li>• <a class="text-orange-600 hover:underline" href="https://www.youtube.com/watch?v=1Rs2ND1ryYc" target="_blank">freeCodeCamp CSS Full Course</a></li>
-          </ul>
-          <h4 class="font-semibold mt-6 mb-2">Practice</h4>
-          <p class="text-sm p-4 bg-gray-50 dark:bg-gray-800 rounded-xl">Style your HTML profile page. Add a nice color scheme, center the content with Flexbox, and make it look clean on mobile.</p>
-        </article>
-
-        <article class="p-6 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
-          <h3 class="text-xl font-bold mb-2">1.3 Bootstrap & Responsive Design</h3>
-          <div class="text-sm text-gray-500 mb-4">Estimated time: 6–8 hours</div>
-          <p class="text-sm mb-3">Bootstrap is a free CSS framework that gives you ready-made responsive components. Understanding the 12-column grid is key.</p>
-          <p class="text-sm mb-4 bg-orange-50 dark:bg-orange-950/30 p-3 rounded-lg">Bootstrap ek free CSS framework hai jisme ready-made responsive components milte hain. 12-column grid samajhna zaroori hai.</p>
-          <h4 class="font-semibold mb-2">Free Resources</h4>
-          <ul class="space-y-1 text-sm">
-            <li>• <a class="text-orange-600 hover:underline" href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank">Official Bootstrap 5 Docs</a></li>
-            <li>• <a class="text-orange-600 hover:underline" href="https://www.youtube.com/watch?v=4sosXZsdy-s" target="_blank">Bootstrap 5 Crash Course</a></li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section id="module-2" class="mb-16">
-      <div class="flex items-center gap-3 mb-6">
-        <span class="w-10 h-10 rounded-xl bg-blue-500 text-white flex items-center justify-center font-bold">2</span>
-        <div>
-          <h2 class="text-2xl font-bold">Module 2: Interactive Web Development</h2>
-          <p class="text-sm text-gray-500">JavaScript • DOM • Fetch • Git</p>
-        </div>
-      </div>
-      <article class="p-6 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 mb-6">
-        <h3 class="text-xl font-bold mb-2">2.1 JavaScript Fundamentals</h3>
-        <p class="text-sm mb-3">Variables, data types, functions, conditionals, loops, arrays, objects.</p>
-        <p class="text-sm mb-4 bg-orange-50 dark:bg-orange-950/30 p-3 rounded-lg">JavaScript webpage ko interactive banata hai. Variables, functions, loops, arrays – yeh sab iske foundations hain.</p>
-        <h4 class="font-semibold mb-2">Free Resources</h4>
-        <ul class="space-y-1 text-sm">
-          <li>• <a class="text-orange-600 hover:underline" href="https://javascript.info/" target="_blank">javascript.info (Excellent free book)</a></li>
-          <li>• <a class="text-orange-600 hover:underline" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript" target="_blank">MDN Learn JavaScript</a></li>
-          <li>• <a class="text-orange-600 hover:underline" href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/" target="_blank">freeCodeCamp JS Algorithms</a></li>
-          <li>• <a class="text-orange-600 hover:underline" href="https://www.youtube.com/watch?v=PkZNo7MFNFg" target="_blank">freeCodeCamp JS Full Course</a></li>
-        </ul>
-        <h4 class="font-semibold mt-4 mb-2">Practice</h4>
-        <p class="text-sm">Build a simple calculator and a to-do list using pure JavaScript (no frameworks).</p>
-      </article>
-      <article class="p-6 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 mb-6">
-        <h3 class="text-xl font-bold mb-2">2.2 DOM, Fetch API & JSON</h3>
-        <p class="text-sm mb-3">Manipulate the page with JavaScript, call APIs, work with JSON data.</p>
-        <ul class="space-y-1 text-sm mb-3">
-          <li>• <a class="text-orange-600 hover:underline" href="https://javascript.info/document" target="_blank">javascript.info – Document & DOM</a></li>
-          <li>• <a class="text-orange-600 hover:underline" href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch" target="_blank">MDN Fetch API</a></li>
-        </ul>
-        <p class="text-sm">Project idea: Weather app or Random Quote generator using a free public API.</p>
-      </article>
-      <article class="p-6 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
-        <h3 class="text-xl font-bold mb-2">2.3 Git & GitHub</h3>
-        <p class="text-sm mb-3">Version control is non-negotiable for any developer.</p>
-        <ul class="space-y-1 text-sm">
-          <li>• <a class="text-orange-600 hover:underline" href="https://git-scm.com/doc" target="_blank">Official Git Documentation</a></li>
-          <li>• <a class="text-orange-600 hover:underline" href="https://skills.github.com/" target="_blank">GitHub Skills (Free interactive)</a></li>
-          <li>• <a class="text-orange-600 hover:underline" href="https://www.youtube.com/watch?v=RGOj5yH7evk" target="_blank">Git & GitHub Crash Course</a></li>
-        </ul>
-      </article>
-    </section>
-
-    <section id="module-3" class="mb-16">
-      <div class="flex items-center gap-3 mb-6">
-        <span class="w-10 h-10 rounded-xl bg-blue-500 text-white flex items-center justify-center font-bold">3</span>
-        <div>
-          <h2 class="text-2xl font-bold">Module 3: Modern Front-End Framework</h2>
-          <p class="text-sm text-gray-500">Vue.js (recommended for beginners) or React</p>
-        </div>
-      </div>
-      <article class="p-6 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
-        <h3 class="text-xl font-bold mb-2">3.1 Vue.js or React Components & State</h3>
-        <p class="text-sm mb-3">Choose one. Vue is gentler for absolute beginners; React has more jobs.</p>
-        <h4 class="font-semibold mb-2">Free Vue Resources</h4>
-        <ul class="space-y-1 text-sm mb-4">
-          <li>• <a class="text-orange-600 hover:underline" href="https://vuejs.org/tutorial/" target="_blank">Official Vue Tutorial</a></li>
-          <li>• <a class="text-orange-600 hover:underline" href="https://vuejs.org/guide/introduction.html" target="_blank">Vue Official Guide</a></li>
-        </ul>
-        <h4 class="font-semibold mb-2">Free React Resources</h4>
-        <ul class="space-y-1 text-sm">
-          <li>• <a class="text-orange-600 hover:underline" href="https://react.dev/learn" target="_blank">Official React Learn</a></li>
-          <li>• <a class="text-orange-600 hover:underline" href="https://www.freecodecamp.org/learn/front-end-development-libraries/" target="_blank">freeCodeCamp Front End Libraries</a></li>
-        </ul>
-      </article>
-    </section>
-
-    <section id="module-4" class="mb-16">
-      <div class="flex items-center gap-3 mb-6">
-        <span class="w-10 h-10 rounded-xl bg-blue-500 text-white flex items-center justify-center font-bold">4</span>
-        <div>
-          <h2 class="text-2xl font-bold">Module 4: Back-End Basics & Projects</h2>
-          <p class="text-sm text-gray-500">PHP • Laravel • MVC • CRUD</p>
-        </div>
-      </div>
-      <article class="p-6 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
-        <h3 class="text-xl font-bold mb-2">4.1 PHP & Laravel Fundamentals</h3>
-        <p class="text-sm mb-3">PHP powers a huge part of the web. Laravel is the most popular modern PHP framework.</p>
-        <ul class="space-y-1 text-sm">
-          <li>• <a class="text-orange-600 hover:underline" href="https://www.php.net/manual/en/" target="_blank">Official PHP Manual</a></li>
-          <li>• <a class="text-orange-600 hover:underline" href="https://laravel.com/docs" target="_blank">Official Laravel Documentation</a> (excellent)</li>
-          <li>• <a class="text-orange-600 hover:underline" href="https://laracasts.com/series/laravel-8-from-scratch" target="_blank">Laracasts – Laravel From Scratch</a> (many free videos)</li>
-        </ul>
-        <h4 class="font-semibold mt-4 mb-2">Capstone Project (Regular Program)</h4>
-        <p class="text-sm p-4 bg-gray-50 dark:bg-gray-800 rounded-xl">Build a complete CRUD blog or simple inventory system with Laravel: authentication, create/read/update/delete posts, basic styling with Bootstrap or Tailwind.</p>
-      </article>
-    </section>
-
-    <section id="fullstack" class="mb-16">
-      <div class="flex items-center gap-3 mb-6">
-        <span class="w-10 h-10 rounded-xl bg-purple-600 text-white flex items-center justify-center font-bold">FS</span>
-        <div>
-          <h2 class="text-2xl font-bold">Full Stack Bootcamp Extension (Months 5–6)</h2>
-          <p class="text-sm text-gray-500">Matches Skill Up Full Stack Bootcamp outcomes</p>
-        </div>
-      </div>
-      <div class="p-6 rounded-2xl border border-purple-200 dark:border-purple-900 bg-white dark:bg-gray-900 space-y-4 text-sm">
-        <p>• Advanced Laravel (Authentication, Middleware, Eloquent ORM, API Resources)</p>
-        <p>• MySQL database design</p>
-        <p>• Building and consuming REST APIs</p>
-        <p>• Hosting & Deployment (free tiers: Railway, Render, Vercel, InfinityFree, etc.)</p>
-        <p>• LinkedIn optimization, freelancing strategy, portfolio polishing</p>
-        <h4 class="font-semibold mt-4">Final Capstone</h4>
-        <p class="p-4 bg-purple-50 dark:bg-purple-950/40 rounded-xl">Full-stack application (e.g. task manager, mini e-commerce, or job board) with authentication, database, API, responsive front-end, and deployed live URL + GitHub repo.</p>
-      </div>
-    </section>
-
-    <section class="mb-16 p-6 rounded-2xl bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-900">
-      <h2 class="text-xl font-bold mb-3">Completion Criteria</h2>
-      <ul class="list-disc pl-5 space-y-1 text-sm">
-        <li>Complete all module exercises</li>
-        <li>Pass module quizzes (≥70%)</li>
-        <li>Finish the Regular Program project (CRUD app)</li>
-        <li>For Full Stack path: finish and deploy the Capstone</li>
-        <li>Push all projects to GitHub</li>
-      </ul>
-      <p class="mt-4 text-sm">You can generate a free OpenSkill completion certificate (self-issued, non-accredited) once you mark the path complete in the dashboard.</p>
-    </section>
-
-    <div class="text-center py-8">
-      <a href="../index.html" class="text-orange-600 hover:underline">← Back to all paths</a>
-    </div>
-  </main>
+  </div>
 
   <script src="../js/theme.js"></script>
   <script src="../js/language.js"></script>
