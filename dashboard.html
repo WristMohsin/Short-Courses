@@ -3,85 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard – OpenSkill Academy</title>
-  <script>
-    (function(){
-      var t = localStorage.getItem('theme') || 'system';
-      if (t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches))
-        document.documentElement.classList.add('dark');
-    })();
-  </script>
+  <title>Dashboard — OpenSkill Academy</title>
+  <script>(function(){var t=localStorage.getItem('theme')||'system';if(t==='dark'||(t==='system'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark');})();</script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class' }</script>
+  <script>tailwind.config={darkMode:'class'}</script>
   <link rel="stylesheet" href="css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 antialiased min-h-screen">
+<body>
   <header class="site-header">
-    <div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="index.html" class="font-bold flex items-center gap-2 text-sm">
-        <span class="w-7 h-7 rounded-lg bg-gradient-to-br from-orange-500 to-purple-600 text-white text-xs flex items-center justify-center font-bold">OS</span>
-        OpenSkill Academy
-      </a>
-      <nav class="flex items-center gap-4 text-sm">
-        <a href="index.html" class="hover:text-orange-500">Home</a>
-        <a href="dashboard.html" class="text-orange-500 font-medium">Dashboard</a>
-        <button type="button" id="themeToggle" class="p-2">🌓</button>
+    <div class="container h-14 flex items-center justify-between">
+      <a href="index.html" class="font-semibold text-sm">OpenSkill Academy</a>
+      <nav class="flex items-center gap-6 text-sm">
+        <a href="index.html" class="nav-link">Catalog</a>
+        <a href="dashboard.html" class="font-medium">Dashboard</a>
+        <button type="button" id="themeToggle" class="nav-link">◐</button>
       </nav>
     </div>
   </header>
-
-  <main class="max-w-7xl mx-auto px-4 py-10">
-    <h1 class="text-3xl font-extrabold mb-2">Dashboard</h1>
-    <p class="text-gray-600 dark:text-gray-400 mb-8">Open a path and follow modules in order. Web Development is the recommended starting path for coding.</p>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      <a href="courses/web-development.html" class="path-card">
-        <div class="text-xs text-orange-600 font-semibold mb-1">Recommended first</div>
-        <h2 class="font-bold text-lg mb-1">Web Development</h2>
-        <p class="text-sm text-gray-500 mb-3">Lessons · code examples · quizzes · capstone</p>
-        <span class="text-sm text-orange-600 font-medium">Open path →</span>
-      </a>
-      <a href="courses/uiux-design.html" class="path-card">
-        <h2 class="font-bold text-lg mb-1">UI/UX & Graphics</h2>
-        <p class="text-sm text-gray-500 mb-3">Principles · Figma · 3 quizzes</p>
-        <span class="text-sm text-orange-600 font-medium">Open path →</span>
-      </a>
-      <a href="courses/digital-marketing.html" class="path-card">
-        <h2 class="font-bold text-lg mb-1">Digital Marketing + SEO</h2>
-        <p class="text-sm text-gray-500 mb-3">SEO · social · ASO · quizzes</p>
-        <span class="text-sm text-orange-600 font-medium">Open path →</span>
-      </a>
-      <a href="courses/content-writing.html" class="path-card">
-        <h2 class="font-bold text-lg mb-1">Content Writing</h2>
-        <p class="text-sm text-gray-500 mb-3">SEO writing · copy · portfolio</p>
-        <span class="text-sm text-orange-600 font-medium">Open path →</span>
-      </a>
-      <a href="courses/video-editing.html" class="path-card">
-        <h2 class="font-bold text-lg mb-1">Video Editing</h2>
-        <p class="text-sm text-gray-500 mb-3">DaVinci Resolve free</p>
-        <span class="text-sm text-orange-600 font-medium">Open path →</span>
-      </a>
-      <a href="courses/unity-game-dev.html" class="path-card">
-        <h2 class="font-bold text-lg mb-1">Unity Game Dev</h2>
-        <p class="text-sm text-gray-500 mb-3">C# · Unity · itch.io</p>
-        <span class="text-sm text-orange-600 font-medium">Open path →</span>
-      </a>
-      <a href="courses/3d-modeling.html" class="path-card">
-        <h2 class="font-bold text-lg mb-1">3D Modeling (Blender)</h2>
-        <p class="text-sm text-gray-500 mb-3">Fully free Blender path</p>
-        <span class="text-sm text-orange-600 font-medium">Open path →</span>
-      </a>
+  <main class="container py-12">
+    <h1 class="text-2xl font-bold tracking-tight mb-2">Dashboard</h1>
+    <p class="text-[var(--muted)] text-sm mb-10 max-w-xl">Select a path. Complete modules in sequence. Mark lessons and tasks on each course page to track progress in this browser.</p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <a href="courses/web-development.html" class="path-card" style="border-color:var(--accent)"><span class="text-xs font-semibold uppercase tracking-wide" style="color:var(--accent)">Primary</span><h2 class="font-semibold mt-1">Web Development</h2><p class="text-sm text-[var(--muted)] mt-1">Regular + Full Stack · detailed curriculum</p></a>
+      <a href="courses/uiux-design.html" class="path-card"><h2 class="font-semibold">UI/UX & Graphics</h2><p class="text-sm text-[var(--muted)] mt-1">Design + Figma + screenshot design</p></a>
+      <a href="courses/digital-marketing.html" class="path-card"><h2 class="font-semibold">Digital Marketing</h2><p class="text-sm text-[var(--muted)] mt-1">SEO · ASO · Lead generation</p></a>
+      <a href="courses/content-writing.html" class="path-card"><h2 class="font-semibold">Content Writing</h2><p class="text-sm text-[var(--muted)] mt-1">Regular + Bootcamp scope</p></a>
+      <a href="courses/video-editing.html" class="path-card"><h2 class="font-semibold">Video Editing</h2><p class="text-sm text-[var(--muted)] mt-1">DaVinci Resolve free stack</p></a>
+      <a href="courses/unity-game-dev.html" class="path-card"><h2 class="font-semibold">Unity 3D</h2><p class="text-sm text-[var(--muted)] mt-1">Regular + Bootcamp</p></a>
+      <a href="courses/3d-modeling.html" class="path-card"><h2 class="font-semibold">3D Modeling</h2><p class="text-sm text-[var(--muted)] mt-1">Blender Regular + Bootcamp</p></a>
     </div>
-
-    <div class="mt-10 card p-6">
-      <h2 class="font-bold mb-3">Learning order</h2>
-      <ol class="list-decimal pl-5 space-y-2 text-sm text-gray-700 dark:text-gray-300">
-        <li>Open the path page</li>
-        <li>Follow modules top to bottom</li>
-        <li>Read → practice → quiz</li>
-        <li>Use optional video only if stuck</li>
-        <li>Complete and publish the capstone</li>
+    <div class="card p-6 mt-10">
+      <h2 class="font-semibold mb-3">Study protocol</h2>
+      <ol class="text-sm text-[var(--muted)] space-y-2 list-decimal pl-5">
+        <li>One path at a time until the capstone is public.</li>
+        <li>Read → practice task → quiz before the next module.</li>
+        <li>Optional video only after written material.</li>
+        <li>Publish work; progress is not complete without artifacts.</li>
       </ol>
     </div>
   </main>
