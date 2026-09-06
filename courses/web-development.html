@@ -1,227 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web Development – OpenSkill Academy</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={darkMode:'class'}</script>
-  <link rel="stylesheet" href="../css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    .code-box { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.85rem; }
-    .video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.75rem; }
-    .video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Web Development – OpenSkill Academy</title>
+<script>(function(){var t=localStorage.getItem('theme')||'system';if(t==='dark'||(t==='system'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark');})();</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={darkMode:'class'}</script>
+<link rel="stylesheet" href="../css/styles.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+.code-box{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.82rem;line-height:1.55}
+.video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:.75rem}
+.video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.optional-video{border:1px dashed #d1d5db}.dark .optional-video{border-color:#4b5563}
+.syntax-callout{border-left:3px solid #8b5cf6;background:rgba(139,92,246,.08)}
+.task-tier{font-size:.7rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+</style>
 </head>
-<body class="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-sans antialiased">
-  <header class="sticky top-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur border-b border-gray-200 dark:border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="../index.html" class="font-bold flex items-center gap-2 text-sm">
-        <span class="w-7 h-7 rounded-lg bg-gradient-to-br from-orange-500 to-purple-600 text-white text-xs flex items-center justify-center font-bold">OS</span>
-        OpenSkill Academy
-      </a>
-      <div class="flex items-center gap-3 text-sm">
-        <a href="../dashboard.html" class="hover:text-orange-500">Dashboard</a>
-        <button id="langToggle" class="px-2.5 py-1 border rounded-full text-xs">EN | RU</button>
-        <button id="themeToggle" class="p-1.5">🌓</button>
-      </div>
-    </div>
-  </header>
-
-  <div class="max-w-7xl mx-auto px-4 py-8">
-    <div class="grid lg:grid-cols-12 gap-8">
-      <aside class="lg:col-span-3 hidden lg:block">
-        <div class="course-sidebar card p-4">
-          <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Course Menu</div>
-          <nav class="space-y-1 text-sm">
-            <a href="#overview" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40 font-medium">Overview</a>
-            <a href="#html" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">HTML Explained</a>
-            <a href="#css" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">CSS Explained</a>
-            <a href="#js" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">JavaScript Explained</a>
-            <a href="#git" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">Git & GitHub</a>
-            <a href="#framework" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">Vue / React</a>
-            <a href="#backend" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">PHP & Laravel</a>
-            <a href="#capstone" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">Capstone</a>
-          </nav>
-        </div>
-      </aside>
-
-      <div class="lg:col-span-9 space-y-12">
-        <section id="overview">
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="badge bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300">Beginner → Advanced</span>
-            <span class="badge bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300">100% Free</span>
-          </div>
-          <h1 class="text-3xl md:text-4xl font-extrabold mb-3">Web Development</h1>
-          <p class="text-lg text-gray-600 dark:text-gray-300 mb-4">W3Schools-style: har concept page pe explain, code example, video is page pe hi play. Bahar jaane ki zarurat nahi.</p>
-          <a href="#html" class="inline-block px-5 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm">Start HTML →</a>
-        </section>
-
-        <section id="html" class="space-y-6">
-          <div class="module-accent pl-4">
-            <div class="text-sm font-semibold text-orange-500 mb-1">MODULE 1</div>
-            <h2 class="text-2xl font-bold">HTML — Structure of the Web</h2>
-          </div>
-          <article class="card p-6 space-y-5">
-            <h3 class="text-xl font-bold">What is HTML?</h3>
-            <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-              <strong>HTML</strong> (HyperText Markup Language) webpage ka skeleton hai. Browser HTML tags padhta hai aur content dikhata hai.
-              Har tag ka matlab hota hai — heading, paragraph, link, image, form, etc.
-            </p>
-            <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-              Example: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">&lt;h1&gt;</code> main heading,
-              <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">&lt;p&gt;</code> paragraph,
-              <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">&lt;a&gt;</code> link.
-            </p>
-            <h4 class="font-semibold">Basic HTML Document</h4>
-            <pre class="code-box bg-gray-900 text-green-400 p-4 rounded-xl overflow-x-auto"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;My First Page&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Hello World&lt;/h1&gt;
-  &lt;p&gt;This is my first webpage.&lt;/p&gt;
-  &lt;a href="https://google.com"&gt;Go to Google&lt;/a&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-            <h4 class="font-semibold">Watch: HTML Full Course (is page pe)</h4>
-            <div class="video-wrap">
-              <iframe src="https://www.youtube.com/embed/pQN-pnXPaVg" title="HTML Full Course" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-            </div>
-            <p class="text-xs text-gray-500">freeCodeCamp HTML Full Course — embedded, yahin dekh sakte ho</p>
-            <h4 class="font-semibold">Important Tags</h4>
-            <div class="overflow-x-auto">
-              <table class="w-full text-sm border border-gray-200 dark:border-gray-700">
-                <thead class="bg-gray-100 dark:bg-gray-800"><tr><th class="p-2 text-left">Tag</th><th class="p-2 text-left">Meaning</th></tr></thead>
-                <tbody>
-                  <tr class="border-t border-gray-200 dark:border-gray-700"><td class="p-2"><code>&lt;h1&gt; to &lt;h6&gt;</code></td><td class="p-2">Headings</td></tr>
-                  <tr class="border-t border-gray-200 dark:border-gray-700"><td class="p-2"><code>&lt;p&gt;</code></td><td class="p-2">Paragraph</td></tr>
-                  <tr class="border-t border-gray-200 dark:border-gray-700"><td class="p-2"><code>&lt;a href=""&gt;</code></td><td class="p-2">Link</td></tr>
-                  <tr class="border-t border-gray-200 dark:border-gray-700"><td class="p-2"><code>&lt;img src=""&gt;</code></td><td class="p-2">Image</td></tr>
-                  <tr class="border-t border-gray-200 dark:border-gray-700"><td class="p-2"><code>&lt;ul&gt; / &lt;li&gt;</code></td><td class="p-2">List</td></tr>
-                  <tr class="border-t border-gray-200 dark:border-gray-700"><td class="p-2"><code>&lt;div&gt;</code></td><td class="p-2">Container</td></tr>
-                  <tr class="border-t border-gray-200 dark:border-gray-700"><td class="p-2"><code>&lt;form&gt; / &lt;input&gt;</code></td><td class="p-2">Forms</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="bg-orange-50 dark:bg-orange-950/30 rounded-xl p-4 text-sm">
-              <strong>Practice:</strong> index.html banao — naam (h1), bio (p), 5 skills (list), image, link. Browser mein kholo.
-            </div>
-          </article>
-        </section>
-
-        <section id="css" class="space-y-6">
-          <div class="module-accent pl-4">
-            <div class="text-sm font-semibold text-orange-500 mb-1">MODULE 1</div>
-            <h2 class="text-2xl font-bold">CSS — Styling</h2>
-          </div>
-          <article class="card p-6 space-y-5">
-            <h3 class="text-xl font-bold">What is CSS?</h3>
-            <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">CSS HTML ka look control karta hai — colors, fonts, spacing, layout.</p>
-            <pre class="code-box bg-gray-900 text-green-400 p-4 rounded-xl overflow-x-auto"><code>h1 {
-  color: orange;
-  font-size: 32px;
-  text-align: center;
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 antialiased" data-course="web-dev" data-lessons="8" data-quizzes="4" data-tasks="8">
+<header class="site-header"><div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
+<a href="../index.html" class="font-bold flex items-center gap-2 text-sm"><span class="w-7 h-7 rounded-lg bg-gradient-to-br from-orange-500 to-purple-600 text-white text-xs flex items-center justify-center font-bold">OS</span> OpenSkill</a>
+<div class="flex items-center gap-3 text-sm"><a href="../dashboard.html" class="hover:text-orange-500">Dashboard</a><button type="button" id="themeToggle" class="p-1.5">🌓</button></div>
+</div></header>
+<div class="sticky top-14 z-40 bg-white/95 dark:bg-gray-900/95 border-b border-gray-200 dark:border-gray-800 backdrop-blur">
+<div class="max-w-7xl mx-auto px-4 py-2 flex items-center gap-4 text-sm">
+<span class="font-medium shrink-0" data-progress-label>0% complete</span>
+<div class="flex-1 h-2 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden"><div class="h-full bg-orange-500 rounded-full transition-all" data-progress-bar style="width:0%"></div></div>
+<span class="text-xs text-gray-500 hidden sm:inline">Mark lessons & tasks to update</span>
+</div></div>
+<div class="max-w-7xl mx-auto px-4 py-8"><div class="grid lg:grid-cols-12 gap-8">
+<aside class="lg:col-span-3 hidden lg:block"><div class="course-sidebar card p-4">
+<div class="text-xs font-semibold text-gray-500 uppercase mb-3">Contents</div>
+<nav class="space-y-0.5 text-sm">
+<a href="#overview" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">Overview</a>
+<a href="#html" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">1. HTML</a>
+<a href="#q-html" class="block px-3 py-2 rounded-lg text-gray-500 pl-5">Quiz HTML</a>
+<a href="#css" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">2. CSS { }</a>
+<a href="#q-css" class="block px-3 py-2 rounded-lg text-gray-500 pl-5">Quiz CSS</a>
+<a href="#js" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">3. JavaScript</a>
+<a href="#q-js" class="block px-3 py-2 rounded-lg text-gray-500 pl-5">Quiz JS</a>
+<a href="#dom" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">4. DOM</a>
+<a href="#git" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">5. Git</a>
+<a href="#projects" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">Projects</a>
+<a href="#capstone" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">Capstone</a>
+</nav></div></aside>
+<div class="lg:col-span-9 space-y-14">
+<section id="overview">
+<div class="flex flex-wrap gap-2 mb-4"><span class="badge bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300">Beginner → Advanced</span><span class="badge bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300">100% Free</span></div>
+<h1 class="text-3xl md:text-4xl font-extrabold mb-3">Web Development</h1>
+<p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">Concepts MDN (Mozilla Developer Network) se align. Har syntax — tags, <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">{ }</code>, functions — kyun use hote hain, yahan explained. Pehle text, task, quiz. Video optional.</p>
+<p class="text-sm text-gray-500">Reference: <a class="text-orange-600 hover:underline" href="https://developer.mozilla.org/en-US/docs/Learn_web_development" target="_blank" rel="noopener">MDN Learn Web Development</a></p>
+</section>
+<section id="html" class="space-y-6">
+<div class="module-accent pl-4"><div class="text-sm font-semibold text-orange-500 mb-1">MODULE 1 · HTML</div><h2 class="text-2xl font-bold">HTML — page structure</h2></div>
+<article class="card p-6 space-y-4">
+<h3 class="text-xl font-bold">HTML kya hai?</h3>
+<p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">HTML (HyperText Markup Language) browser ko batata hai content kya hai. Yeh programming language nahi — <strong>markup</strong> hai. Tags: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded"><p></code> open, <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded"></p></code> close.</p>
+<pre class="code-box bg-gray-900 text-green-400 p-4 rounded-xl overflow-x-auto"><code><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Page title</title>
+  </head>
+  <body>
+    <h1>Main heading</h1>
+    <p>Paragraph.</p>
+  </body>
+</html></code></pre>
+<div class="syntax-callout rounded-r-xl p-4 text-sm"><strong>Syntax:</strong> DOCTYPE modern mode. lang accessibility. head=metadata; body=visible content.</div>
+</article>
+<article class="card p-6 space-y-4">
+<h3 class="text-xl font-bold">Tags table</h3>
+<div class="overflow-x-auto text-sm"><table class="w-full border border-gray-200 dark:border-gray-700">
+<thead class="bg-gray-100 dark:bg-gray-800"><tr><th class="p-2 text-left">Tag</th><th class="p-2 text-left">Kaam</th></tr></thead>
+<tbody>
+<tr class="border-t border-gray-200 dark:border-gray-700"><td class="p-2"><code><h1>–<h6></code></td><td class="p-2">Headings (h1 primary title)</td></tr>
+<tr class="border-t border-gray-200 dark:border-gray-700"><td class="p-2"><code><a href=""></code></td><td class="p-2">Link</td></tr>
+<tr class="border-t border-gray-200 dark:border-gray-700"><td class="p-2"><code><img src="" alt=""></code></td><td class="p-2">Image + alt for a11y</td></tr>
+<tr class="border-t border-gray-200 dark:border-gray-700"><td class="p-2"><code><ul>/<ol>+<li></code></td><td class="p-2">Lists</td></tr>
+<tr class="border-t border-gray-200 dark:border-gray-700"><td class="p-2"><code><div>/<span></code></td><td class="p-2">Containers</td></tr>
+<tr class="border-t border-gray-200 dark:border-gray-700"><td class="p-2"><code><form>/<input></code></td><td class="p-2">Forms</td></tr>
+</tbody></table></div>
+<button type="button" data-mark-lesson="html-basics" class="btn-primary text-sm mt-2">Mark lesson done</button>
+</article>
+<article class="card p-6 space-y-3"><span class="task-tier text-green-600">Task · Basic</span>
+<h3 class="font-bold">Task 1 — Intro page</h3>
+<p class="text-sm text-gray-700 dark:text-gray-300">index.html: h1 name, p bio, ul 5 skills, link, image. Browser mein open.</p>
+<button type="button" data-mark-task="t1-html-intro" class="btn-secondary text-sm">Mark task complete</button>
+</article>
+<div class="optional-video card p-4 space-y-2"><div class="text-xs font-semibold text-gray-500 uppercase">Optional video</div>
+<div class="video-wrap"><iframe src="https://www.youtube.com/embed/pQN-pnXPaVg" title="HTML" allowfullscreen allow="accelerometer;clipboard-write;encrypted-media;gyroscope;picture-in-picture"></iframe></div></div>
+</section>
+<section id="q-html" class="card p-6 space-y-5 border-orange-200 dark:border-orange-900">
+<h3 class="text-lg font-bold">Quiz · HTML</h3>
+<div data-quiz="qh1" class="space-y-2 text-sm"><p class="font-medium">1. head vs body?</p>
+<div class="quiz-option rounded-lg p-3" data-correct="false">Same cheez</div>
+<div class="quiz-option rounded-lg p-3" data-correct="true">head=metadata/title; body=visible content</div>
+<div class="quiz-option rounded-lg p-3" data-correct="false">head sirf CSS</div>
+<p class="quiz-feedback hidden text-sm mt-2 font-medium"></p></div>
+<div data-quiz="qh2" class="space-y-2 text-sm"><p class="font-medium">2. alt attribute?</p>
+<div class="quiz-option rounded-lg p-3" data-correct="true">Screen readers + image fail hone pe text</div>
+<div class="quiz-option rounded-lg p-3" data-correct="false">Zoom karta hai</div>
+<div class="quiz-option rounded-lg p-3" data-correct="false">Sirf secret SEO code</div>
+<p class="quiz-feedback hidden text-sm mt-2 font-medium"></p></div>
+</section>
+<section id="css" class="space-y-6">
+<div class="module-accent pl-4"><div class="text-sm font-semibold text-orange-500 mb-1">MODULE 2 · CSS</div><h2 class="text-2xl font-bold">CSS — look aur curly braces { }</h2></div>
+<article class="card p-6 space-y-4">
+<h3 class="text-xl font-bold">CSS rule anatomy</h3>
+<p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">CSS HTML ka color, size, spacing, layout control karti hai. Rule pattern (MDN style rule):</p>
+<pre class="code-box bg-gray-900 text-green-400 p-4 rounded-xl overflow-x-auto"><code>selector {
+  property: value;
 }</code></pre>
-            <h4 class="font-semibold">Watch: CSS Full Course (is page pe)</h4>
-            <div class="video-wrap">
-              <iframe src="https://www.youtube.com/embed/1Rs2ND1ryYc" title="CSS Course" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-            </div>
-            <a href="https://flexboxfroggy.com/" target="_blank" rel="noopener" class="resource-link inline-flex">Flexbox Froggy (practice game)</a>
-            <div class="bg-orange-50 dark:bg-orange-950/30 rounded-xl p-4 text-sm">
-              <strong>Practice:</strong> Apne page pe CSS lagao — color, Flexbox center, mobile responsive.
-            </div>
-          </article>
-        </section>
-
-        <section id="js" class="space-y-6">
-          <div class="module-accent pl-4">
-            <div class="text-sm font-semibold text-orange-500 mb-1">MODULE 2</div>
-            <h2 class="text-2xl font-bold">JavaScript</h2>
-          </div>
-          <article class="card p-6 space-y-5">
-            <h3 class="text-xl font-bold">What is JavaScript?</h3>
-            <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">JavaScript page ko interactive banata hai — click, forms, data fetch.</p>
-            <pre class="code-box bg-gray-900 text-green-400 p-4 rounded-xl overflow-x-auto"><code>&lt;button onclick="sayHello()"&gt;Click me&lt;/button&gt;
-&lt;script&gt;
-  function sayHello() {
-    alert("Hello from JavaScript!");
-  }
-&lt;/script&gt;</code></pre>
-            <h4 class="font-semibold">Watch: JavaScript Full Course (is page pe)</h4>
-            <div class="video-wrap">
-              <iframe src="https://www.youtube.com/embed/PkZNo7MFNFg" title="JS Course" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-            </div>
-            <div class="bg-orange-50 dark:bg-orange-950/30 rounded-xl p-4 text-sm">
-              <strong>Projects:</strong> (1) Calculator (2) To-do list — pure JS
-            </div>
-          </article>
-        </section>
-
-        <section id="git" class="space-y-6">
-          <div class="module-accent pl-4">
-            <div class="text-sm font-semibold text-orange-500 mb-1">MODULE 3</div>
-            <h2 class="text-2xl font-bold">Git & GitHub</h2>
-          </div>
-          <article class="card p-6 space-y-5">
-            <p class="text-sm text-gray-700 dark:text-gray-300">Git = version control. GitHub = code online. Har project GitHub pe hona chahiye.</p>
-            <div class="video-wrap">
-              <iframe src="https://www.youtube.com/embed/RGOj5yH7evk" title="Git GitHub" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-            </div>
-            <div class="bg-orange-50 dark:bg-orange-950/30 rounded-xl p-4 text-sm">
-              <strong>Practice:</strong> Har project GitHub pe push karo.
-            </div>
-          </article>
-        </section>
-
-        <section id="framework" class="space-y-6">
-          <div class="module-accent pl-4">
-            <div class="text-sm font-semibold text-orange-500 mb-1">MODULE 4</div>
-            <h2 class="text-2xl font-bold">Vue or React</h2>
-          </div>
-          <article class="card p-6 space-y-4">
-            <p class="text-sm text-gray-700 dark:text-gray-300">Ek choose karo. Vue soft for beginners; React zyada jobs.</p>
-            <div class="grid sm:grid-cols-2 gap-4">
-              <a href="https://vuejs.org/tutorial/" target="_blank" class="resource-link">Official Vue Tutorial</a>
-              <a href="https://react.dev/learn" target="_blank" class="resource-link">Official React Learn</a>
-            </div>
-          </article>
-        </section>
-
-        <section id="backend" class="space-y-6">
-          <div class="module-accent pl-4">
-            <div class="text-sm font-semibold text-orange-500 mb-1">MODULE 5</div>
-            <h2 class="text-2xl font-bold">PHP & Laravel</h2>
-          </div>
-          <article class="card p-6 space-y-4">
-            <p class="text-sm text-gray-700 dark:text-gray-300">Laravel = modern PHP (MVC, Auth, database).</p>
-            <div class="grid sm:grid-cols-2 gap-2">
-              <a href="https://laravel.com/docs" target="_blank" class="resource-link">Laravel Docs</a>
-              <a href="https://www.php.net/manual/en/" target="_blank" class="resource-link">PHP Manual</a>
-            </div>
-          </article>
-        </section>
-
-        <section id="capstone" class="card p-6 border-orange-200 dark:border-orange-900 bg-gradient-to-br from-orange-50 to-purple-50 dark:from-orange-950/20 dark:to-purple-950/20">
-          <div class="text-sm font-semibold text-orange-600 mb-2">FINAL PROJECT</div>
-          <h2 class="text-2xl font-bold mb-3">Capstone — Full Stack App</h2>
-          <ul class="text-sm space-y-1 list-disc pl-5">
-            <li>Auth + Database + CRUD</li>
-            <li>Responsive UI</li>
-            <li>Live deploy + GitHub README</li>
-          </ul>
-        </section>
-
-        <div class="flex gap-4 pt-4 border-t border-gray-200 dark:border-gray-800">
-          <a href="../dashboard.html" class="text-sm text-orange-600 hover:underline">← Dashboard</a>
-          <a href="../index.html" class="text-sm text-gray-500 hover:underline">All paths</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="../js/theme.js"></script>
-  <script src="../js/language.js"></script>
+<div class="syntax-callout rounded-r-xl p-4 text-sm space-y-2">
+<p><strong>Curly braces { } kyun?</strong></p>
+<p>Selector batata hai <em>kis</em> element pe style. <code>{</code> se <code>}</code> tak declarations group hoti hain. Bina braces browser nahi samajhta kaunsi properties is selector ki hain. Same “block” idea JS functions mein bhi.</p>
+<pre class="code-box bg-gray-900 text-green-400 p-3 rounded-lg"><code>h1 {
+  color: orange;
+  font-size: 2rem;
+}</code></pre>
+</div>
+</article>
+<article class="card p-6 space-y-4">
+<h3 class="text-xl font-bold">Selectors</h3>
+<p class="text-sm text-gray-700 dark:text-gray-300"><strong>Type</strong> p { } · <strong>Class</strong> .btn { } · <strong>ID</strong> #hero { } (unique).</p>
+<button type="button" data-mark-lesson="css-basics" class="btn-primary text-sm">Mark lesson done</button>
+</article>
+<article class="card p-6 space-y-4">
+<h3 class="text-xl font-bold">Box model</h3>
+<p class="text-sm text-gray-700 dark:text-gray-300">content + padding + border + margin. <code>box-sizing: border-box</code> se width mein padding+border include — modern layout standard.</p>
+</article>
+<article class="card p-6 space-y-3"><span class="task-tier text-green-600">Basic</span> <span class="task-tier text-amber-600">Intermediate</span>
+<h3 class="font-bold">Task 2 — Style intro</h3>
+<p class="text-sm text-gray-700 dark:text-gray-300">CSS lagao: colors, .card class with padding + radius.</p>
+<button type="button" data-mark-task="t2-css-style" class="btn-secondary text-sm">Mark task complete</button>
+</article>
+<article class="card p-6 space-y-3"><span class="task-tier text-amber-600">Intermediate</span>
+<h3 class="font-bold">Task 3 — Flexbox center</h3>
+<p class="text-sm text-gray-700 dark:text-gray-300">Full viewport center with flex. Practice: <a href="https://flexboxfroggy.com/" target="_blank" rel="noopener" class="text-orange-600 hover:underline">Flexbox Froggy</a></p>
+<button type="button" data-mark-task="t3-flexbox" class="btn-secondary text-sm">Mark task complete</button>
+</article>
+</section>
+<section id="q-css" class="card p-6 space-y-5 border-orange-200 dark:border-orange-900">
+<h3 class="text-lg font-bold">Quiz · CSS</h3>
+<div data-quiz="qc1" class="space-y-2 text-sm"><p class="font-medium">1. { } ka role CSS mein?</p>
+<div class="quiz-option rounded-lg p-3" data-correct="true">Selector ke baad property declarations group karna</div>
+<div class="quiz-option rounded-lg p-3" data-correct="false">Sirf comments</div>
+<div class="quiz-option rounded-lg p-3" data-correct="false">HTML tags replace</div>
+<p class="quiz-feedback hidden text-sm mt-2 font-medium"></p></div>
+<div data-quiz="qc2" class="space-y-2 text-sm"><p class="font-medium">2. Class selector?</p>
+<div class="quiz-option rounded-lg p-3" data-correct="false">#btn { }</div>
+<div class="quiz-option rounded-lg p-3" data-correct="true">.btn { }</div>
+<div class="quiz-option rounded-lg p-3" data-correct="false">btn { } (yeh type selector hai)</div>
+<p class="quiz-feedback hidden text-sm mt-2 font-medium"></p></div>
+<div data-quiz="qc3" class="space-y-2 text-sm"><p class="font-medium">3. border-box?</p>
+<div class="quiz-option rounded-lg p-3" data-correct="true">width/height mein padding+border count</div>
+<div class="quiz-option rounded-lg p-3" data-correct="false">Margin always zero</div>
+<div class="quiz-option rounded-lg p-3" data-correct="false">Element hide</div>
+<p class="quiz-feedback hidden text-sm mt-2 font-medium"></p></div>
+</section>
+<section id="js" class="space-y-6">
+<div class="module-accent pl-4"><div class="text-sm font-semibold text-orange-500 mb-1">MODULE 3 · JS</div><h2 class="text-2xl font-bold">JavaScript — variables, functions, { }</h2></div>
+<article class="card p-6 space-y-4">
+<p class="text-sm text-gray-700 dark:text-gray-300">JS page interactive banata hai: clicks, forms, fetch, DOM updates.</p>
+<p class="text-sm text-gray-700 dark:text-gray-300"><code>const</code> = no reassign · <code>let</code> = reassign OK · prefer over <code>var</code> (MDN).</p>
+<pre class="code-box bg-gray-900 text-green-400 p-4 rounded-xl overflow-x-auto"><code>const siteName = "OpenSkill";
+let score = 0;
+score = score + 1;</code></pre>
+</article>
+<article class="card p-6 space-y-4">
+<h3 class="text-xl font-bold">Functions aur braces</h3>
+<p class="text-sm text-gray-700 dark:text-gray-300">Function body block statement hai jo { } se delimit hoti hai (MDN). Multiple statements group. Control flow (if/for) mein bhi braces recommend — baad mein lines add karte waqt bugs kam.</p>
+<pre class="code-box bg-gray-900 text-green-400 p-4 rounded-xl overflow-x-auto"><code>function greet(name) {
+  return "Hello, " + name;
+}
+const double = (n) => {
+  return n * 2;
+};</code></pre>
+<div class="syntax-callout rounded-r-xl p-4 text-sm"><strong>Object { name: "Ali" }</strong> = data. <strong>function(){ }</strong> = code block. Same symbol, different meaning by context.</div>
+<button type="button" data-mark-lesson="js-basics" class="btn-primary text-sm">Mark lesson done</button>
+</article>
+<article class="card p-6 space-y-3"><span class="task-tier text-green-600">Basic</span>
+<h3 class="font-bold">Task 4 — Button + alert</h3>
+<button type="button" data-mark-task="t4-js-button" class="btn-secondary text-sm">Mark task complete</button>
+</article>
+<article class="card p-6 space-y-3"><span class="task-tier text-amber-600">Intermediate</span>
+<h3 class="font-bold">Task 5 — Counter / calculator</h3>
+<button type="button" data-mark-task="t5-counter" class="btn-secondary text-sm">Mark task complete</button>
+</article>
+</section>
+<section id="q-js" class="card p-6 space-y-5 border-orange-200 dark:border-orange-900">
+<h3 class="text-lg font-bold">Quiz · JavaScript</h3>
+<div data-quiz="qj1" class="space-y-2 text-sm"><p class="font-medium">1. Function { } kyun?</p>
+<div class="quiz-option rounded-lg p-3" data-correct="true">Statements ko executable block mein group karna</div>
+<div class="quiz-option rounded-lg p-3" data-correct="false">CSS rule copy</div>
+<div class="quiz-option rounded-lg p-3" data-correct="false">HTML requirement</div>
+<p class="quiz-feedback hidden text-sm mt-2 font-medium"></p></div>
+<div data-quiz="qj2" class="space-y-2 text-sm"><p class="font-medium">2. const reassign?</p>
+<div class="quiz-option rounded-lg p-3" data-correct="true">TypeError — allowed nahi</div>
+<div class="quiz-option rounded-lg p-3" data-correct="false">Silently ignored</div>
+<div class="quiz-option rounded-lg p-3" data-correct="false">Becomes let</div>
+<p class="quiz-feedback hidden text-sm mt-2 font-medium"></p></div>
+<div data-quiz="qj3" class="space-y-2 text-sm"><p class="font-medium">3. Object braces vs function braces?</p>
+<div class="quiz-option rounded-lg p-3" data-correct="true">Object=data properties; function=code block</div>
+<div class="quiz-option rounded-lg p-3" data-correct="false">Bilkul same</div>
+<div class="quiz-option rounded-lg p-3" data-correct="false">Object braces HTML hain</div>
+<p class="quiz-feedback hidden text-sm mt-2 font-medium"></p></div>
+</section>
+<section id="dom" class="space-y-6">
+<div class="module-accent pl-4"><div class="text-sm font-semibold text-orange-500 mb-1">MODULE 4</div><h2 class="text-2xl font-bold">DOM</h2></div>
+<article class="card p-6 space-y-4">
+<p class="text-sm text-gray-700 dark:text-gray-300">DOM = HTML tree in browser. querySelector, textContent, addEventListener.</p>
+<pre class="code-box bg-gray-900 text-green-400 p-4 rounded-xl overflow-x-auto"><code>const title = document.querySelector('h1');
+title.textContent = 'Updated';
+document.querySelector('#save').addEventListener('click', () => alert('Saved'));</code></pre>
+<button type="button" data-mark-lesson="dom" class="btn-primary text-sm">Mark lesson done</button>
+</article>
+<article class="card p-6 space-y-3"><span class="task-tier text-amber-600">Intermediate</span>
+<h3 class="font-bold">Task 6 — To-do list (vanilla JS)</h3>
+<button type="button" data-mark-task="t6-todo" class="btn-secondary text-sm">Mark task complete</button>
+</article>
+</section>
+<section id="git" class="space-y-6">
+<div class="module-accent pl-4"><div class="text-sm font-semibold text-orange-500 mb-1">MODULE 5</div><h2 class="text-2xl font-bold">Git & GitHub</h2></div>
+<article class="card p-6 space-y-4">
+<p class="text-sm text-gray-700 dark:text-gray-300">git add → commit → push. Portfolio = public repos.</p>
+<button type="button" data-mark-lesson="git" class="btn-primary text-sm">Mark lesson done</button>
+</article>
+<article class="card p-6 space-y-3"><span class="task-tier text-green-600">Basic</span>
+<h3 class="font-bold">Task 7 — Public GitHub repo + README</h3>
+<button type="button" data-mark-task="t7-github" class="btn-secondary text-sm">Mark task complete</button>
+</article>
+</section>
+<section id="projects" class="space-y-6">
+<div class="module-accent pl-4"><div class="text-sm font-semibold text-orange-500 mb-1">PROJECTS</div><h2 class="text-2xl font-bold">Basic → Advanced</h2></div>
+<div class="card p-5 mb-3"><span class="task-tier text-green-600">Basic</span><h3 class="font-bold mt-1">Multi-section personal site</h3></div>
+<div class="card p-5 mb-3"><span class="task-tier text-amber-600">Intermediate</span><h3 class="font-bold mt-1">To-do + localStorage</h3></div>
+<div class="card p-5"><span class="task-tier text-red-600">Advanced</span><h3 class="font-bold mt-1">API fetch mini-app</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400">fetch + loading + error states</p>
+<button type="button" data-mark-task="t8-api" class="btn-secondary text-sm mt-2">Mark advanced task done</button>
+</div>
+</section>
+<section id="capstone" class="card p-6 border-orange-200 dark:border-orange-900 bg-gradient-to-br from-orange-50 to-purple-50 dark:from-orange-950/20 dark:to-purple-950/20">
+<div class="text-sm font-semibold text-orange-600 mb-2">CAPSTONE</div>
+<h2 class="text-2xl font-bold mb-3">Full stack direction</h2>
+<p class="text-sm text-gray-700 dark:text-gray-300 mb-3">Vue/React official tutorial → Laravel CRUD + auth → deploy + README.</p>
+<ul class="text-sm list-disc pl-5 space-y-1"><li><a class="text-orange-600 hover:underline" href="https://react.dev/learn" target="_blank" rel="noopener">react.dev/learn</a></li>
+<li><a class="text-orange-600 hover:underline" href="https://laravel.com/docs" target="_blank" rel="noopener">Laravel docs</a></li></ul>
+<button type="button" data-mark-lesson="capstone-read" class="btn-primary text-sm mt-4">Mark section read</button>
+</section>
+<div class="flex gap-4 pt-4 border-t border-gray-200 dark:border-gray-800">
+<a href="../dashboard.html" class="text-sm text-orange-600 hover:underline">← Dashboard</a>
+</div>
+</div></div></div>
+<script src="../js/theme.js"></script>
+<script src="../js/quiz.js"></script>
+<script src="../js/progress.js"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){Progress.init('web-dev');});</script>
 </body>
 </html>
