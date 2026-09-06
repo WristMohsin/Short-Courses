@@ -3,259 +3,225 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web Development Path – OpenSkill Academy</title>
+  <title>Web Development – OpenSkill Academy</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config={darkMode:'class'}</script>
   <link rel="stylesheet" href="../css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    .code-box { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.85rem; }
+    .video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.75rem; }
+    .video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-sans antialiased">
   <header class="sticky top-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur border-b border-gray-200 dark:border-gray-800">
     <div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="../index.html" class="font-bold flex items-center gap-2 text-sm md:text-base">
+      <a href="../index.html" class="font-bold flex items-center gap-2 text-sm">
         <span class="w-7 h-7 rounded-lg bg-gradient-to-br from-orange-500 to-purple-600 text-white text-xs flex items-center justify-center font-bold">OS</span>
-        <span class="hidden sm:inline">OpenSkill Academy</span>
+        OpenSkill Academy
       </a>
-      <div class="flex items-center gap-2 md:gap-4 text-sm">
-        <a href="../dashboard.html" class="hover:text-orange-500 hidden md:inline">Dashboard</a>
-        <button id="langToggle" class="px-2.5 py-1 border border-gray-300 dark:border-gray-600 rounded-full text-xs">EN | RU</button>
-        <button id="themeToggle" class="p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">🌓</button>
+      <div class="flex items-center gap-3 text-sm">
+        <a href="../dashboard.html" class="hover:text-orange-500">Dashboard</a>
+        <button id="langToggle" class="px-2.5 py-1 border rounded-full text-xs">EN | RU</button>
+        <button id="themeToggle" class="p-1.5">🌓</button>
       </div>
     </div>
   </header>
 
-  <div class="max-w-7xl mx-auto px-4 py-8 md:py-12">
+  <div class="max-w-7xl mx-auto px-4 py-8">
     <div class="grid lg:grid-cols-12 gap-8">
       <aside class="lg:col-span-3 hidden lg:block">
         <div class="course-sidebar card p-4">
-          <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Course Navigation</div>
+          <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Course Menu</div>
           <nav class="space-y-1 text-sm">
             <a href="#overview" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40 font-medium">Overview</a>
-            <a href="#roadmap" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">Roadmap</a>
-            <div class="pt-2 pb-1 px-3 text-xs font-semibold text-gray-400">MODULES</div>
-            <a href="#m1" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">1. HTML & CSS</a>
-            <a href="#m2" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">2. JavaScript</a>
-            <a href="#m3" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">3. Git & GitHub</a>
-            <a href="#m4" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">4. Frontend Framework</a>
-            <a href="#m5" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">5. Backend & Laravel</a>
-            <a href="#capstone" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">Capstone Project</a>
+            <a href="#html" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">HTML Explained</a>
+            <a href="#css" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">CSS Explained</a>
+            <a href="#js" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">JavaScript Explained</a>
+            <a href="#git" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">Git & GitHub</a>
+            <a href="#framework" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">Vue / React</a>
+            <a href="#backend" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">PHP & Laravel</a>
+            <a href="#capstone" class="block px-3 py-2 rounded-lg hover:bg-orange-50 dark:hover:bg-orange-950/40">Capstone</a>
           </nav>
         </div>
       </aside>
 
-      <div class="lg:col-span-9 space-y-10">
+      <div class="lg:col-span-9 space-y-12">
         <section id="overview">
           <div class="flex flex-wrap gap-2 mb-4">
             <span class="badge bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300">Beginner → Advanced</span>
             <span class="badge bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300">100% Free</span>
-            <span class="badge bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300">180–300 hours</span>
           </div>
-          <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-3">Web Development</h1>
-          <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mb-6">
-            Complete free path from zero to job-ready. Covers Skill Up Regular + Full Stack Bootcamp using only free official docs, free courses, and free tools.
-          </p>
-          <div class="flex flex-wrap gap-3">
-            <a href="#m1" class="px-5 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm transition">Start Module 1</a>
-            <a href="#roadmap" class="px-5 py-2.5 rounded-xl border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold text-sm transition">View Roadmap</a>
-          </div>
+          <h1 class="text-3xl md:text-4xl font-extrabold mb-3">Web Development</h1>
+          <p class="text-lg text-gray-600 dark:text-gray-300 mb-4">W3Schools-style: har concept page pe explain, code example, video is page pe hi play. Bahar jaane ki zarurat nahi.</p>
+          <a href="#html" class="inline-block px-5 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm">Start HTML →</a>
         </section>
 
-        <section class="card p-6">
-          <h2 class="text-lg font-bold mb-4">What you will be able to do</h2>
-          <div class="grid sm:grid-cols-2 gap-3 text-sm">
-            <div class="flex gap-2"><span class="text-green-500">✓</span> Build responsive websites (HTML, CSS, Bootstrap)</div>
-            <div class="flex gap-2"><span class="text-green-500">✓</span> Write interactive JavaScript applications</div>
-            <div class="flex gap-2"><span class="text-green-500">✓</span> Use Git & GitHub professionally</div>
-            <div class="flex gap-2"><span class="text-green-500">✓</span> Build apps with Vue.js or React</div>
-            <div class="flex gap-2"><span class="text-green-500">✓</span> Create backends with PHP & Laravel</div>
-            <div class="flex gap-2"><span class="text-green-500">✓</span> Deploy projects and build a portfolio</div>
-          </div>
-        </section>
-
-        <section id="roadmap">
-          <h2 class="text-2xl font-bold mb-6">Learning Roadmap</h2>
-          <div class="space-y-0">
-            <div class="roadmap-line pb-8"><div class="absolute left-0 w-8 h-8 rounded-full bg-orange-500 text-white flex items-center justify-center text-sm font-bold">1</div><h3 class="font-semibold text-lg">Foundation — HTML, CSS, Bootstrap</h3><p class="text-sm text-gray-500 mt-1">3–4 weeks</p></div>
-            <div class="roadmap-line pb-8"><div class="absolute left-0 w-8 h-8 rounded-full bg-orange-500 text-white flex items-center justify-center text-sm font-bold">2</div><h3 class="font-semibold text-lg">JavaScript Fundamentals</h3><p class="text-sm text-gray-500 mt-1">4–5 weeks</p></div>
-            <div class="roadmap-line pb-8"><div class="absolute left-0 w-8 h-8 rounded-full bg-orange-500 text-white flex items-center justify-center text-sm font-bold">3</div><h3 class="font-semibold text-lg">Git & GitHub</h3><p class="text-sm text-gray-500 mt-1">1 week</p></div>
-            <div class="roadmap-line pb-8"><div class="absolute left-0 w-8 h-8 rounded-full bg-orange-500 text-white flex items-center justify-center text-sm font-bold">4</div><h3 class="font-semibold text-lg">Modern Frontend (Vue or React)</h3><p class="text-sm text-gray-500 mt-1">4–6 weeks</p></div>
-            <div class="roadmap-line pb-8"><div class="absolute left-0 w-8 h-8 rounded-full bg-orange-500 text-white flex items-center justify-center text-sm font-bold">5</div><h3 class="font-semibold text-lg">Backend — PHP & Laravel</h3><p class="text-sm text-gray-500 mt-1">5–7 weeks</p></div>
-            <div class="roadmap-line"><div class="absolute left-0 w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center text-sm font-bold">6</div><h3 class="font-semibold text-lg">Capstone & Portfolio</h3><p class="text-sm text-gray-500 mt-1">Full-stack project + deployment</p></div>
-          </div>
-        </section>
-
-        <section id="m1" class="space-y-6">
+        <section id="html" class="space-y-6">
           <div class="module-accent pl-4">
-            <div class="text-sm font-semibold text-orange-500 mb-1">MODULE 1 · 3–4 WEEKS</div>
-            <h2 class="text-2xl font-bold">HTML, CSS & Responsive Design</h2>
+            <div class="text-sm font-semibold text-orange-500 mb-1">MODULE 1</div>
+            <h2 class="text-2xl font-bold">HTML — Structure of the Web</h2>
           </div>
-          <article class="card p-6 space-y-4">
-            <h3 class="text-xl font-bold">1.1 HTML — Structure of the Web</h3>
-            <p class="text-sm text-gray-500">6–8 hours</p>
-            <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">HTML is the skeleton of every webpage. Learn semantic HTML5: headings, paragraphs, lists, links, images, forms, and page structure.</p>
-            <div class="grid sm:grid-cols-2 gap-2">
-              <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank" rel="noopener" class="resource-link">MDN — Learn HTML</a>
-              <a href="https://web.dev/learn/html" target="_blank" rel="noopener" class="resource-link">web.dev Learn HTML</a>
-              <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank" rel="noopener" class="resource-link">freeCodeCamp Responsive Web Design</a>
-              <a href="https://www.youtube.com/watch?v=pQN-pnXPaVg" target="_blank" rel="noopener" class="resource-link">freeCodeCamp HTML Full Course</a>
+          <article class="card p-6 space-y-5">
+            <h3 class="text-xl font-bold">What is HTML?</h3>
+            <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+              <strong>HTML</strong> (HyperText Markup Language) webpage ka skeleton hai. Browser HTML tags padhta hai aur content dikhata hai.
+              Har tag ka matlab hota hai — heading, paragraph, link, image, form, etc.
+            </p>
+            <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+              Example: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">&lt;h1&gt;</code> main heading,
+              <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">&lt;p&gt;</code> paragraph,
+              <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">&lt;a&gt;</code> link.
+            </p>
+            <h4 class="font-semibold">Basic HTML Document</h4>
+            <pre class="code-box bg-gray-900 text-green-400 p-4 rounded-xl overflow-x-auto"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello World&lt;/h1&gt;
+  &lt;p&gt;This is my first webpage.&lt;/p&gt;
+  &lt;a href="https://google.com"&gt;Go to Google&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            <h4 class="font-semibold">Watch: HTML Full Course (is page pe)</h4>
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/pQN-pnXPaVg" title="HTML Full Course" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
             </div>
-            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Practice:</strong> Build a personal profile page (name, bio, skills list, image, GitHub link).</div>
-            <div data-quiz="html1" class="space-y-2 text-sm">
-              <p class="font-medium">Quiz: Main heading tag?</p>
-              <div class="quiz-option rounded-lg p-3" data-correct="true">&lt;h1&gt;</div>
-              <div class="quiz-option rounded-lg p-3" data-correct="false">&lt;head&gt;</div>
-              <div class="quiz-option rounded-lg p-3" data-correct="false">&lt;title&gt;</div>
+            <p class="text-xs text-gray-500">freeCodeCamp HTML Full Course — embedded, yahin dekh sakte ho</p>
+            <h4 class="font-semibold">Important Tags</h4>
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm border border-gray-200 dark:border-gray-700">
+                <thead class="bg-gray-100 dark:bg-gray-800"><tr><th class="p-2 text-left">Tag</th><th class="p-2 text-left">Meaning</th></tr></thead>
+                <tbody>
+                  <tr class="border-t border-gray-200 dark:border-gray-700"><td class="p-2"><code>&lt;h1&gt; to &lt;h6&gt;</code></td><td class="p-2">Headings</td></tr>
+                  <tr class="border-t border-gray-200 dark:border-gray-700"><td class="p-2"><code>&lt;p&gt;</code></td><td class="p-2">Paragraph</td></tr>
+                  <tr class="border-t border-gray-200 dark:border-gray-700"><td class="p-2"><code>&lt;a href=""&gt;</code></td><td class="p-2">Link</td></tr>
+                  <tr class="border-t border-gray-200 dark:border-gray-700"><td class="p-2"><code>&lt;img src=""&gt;</code></td><td class="p-2">Image</td></tr>
+                  <tr class="border-t border-gray-200 dark:border-gray-700"><td class="p-2"><code>&lt;ul&gt; / &lt;li&gt;</code></td><td class="p-2">List</td></tr>
+                  <tr class="border-t border-gray-200 dark:border-gray-700"><td class="p-2"><code>&lt;div&gt;</code></td><td class="p-2">Container</td></tr>
+                  <tr class="border-t border-gray-200 dark:border-gray-700"><td class="p-2"><code>&lt;form&gt; / &lt;input&gt;</code></td><td class="p-2">Forms</td></tr>
+                </tbody>
+              </table>
             </div>
-          </article>
-          <article class="card p-6 space-y-4">
-            <h3 class="text-xl font-bold">1.2 CSS — Styling</h3>
-            <p class="text-sm text-gray-500">10–14 hours</p>
-            <p class="text-sm text-gray-700 dark:text-gray-300">Box model, selectors, Flexbox, Grid, responsive design.</p>
-            <div class="grid sm:grid-cols-2 gap-2">
-              <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank" rel="noopener" class="resource-link">MDN Learn CSS</a>
-              <a href="https://web.dev/learn/css" target="_blank" rel="noopener" class="resource-link">web.dev Learn CSS</a>
-              <a href="https://flexboxfroggy.com/" target="_blank" rel="noopener" class="resource-link">Flexbox Froggy</a>
-              <a href="https://cssgridgarden.com/" target="_blank" rel="noopener" class="resource-link">Grid Garden</a>
-              <a href="https://www.youtube.com/watch?v=1Rs2ND1ryYc" target="_blank" rel="noopener" class="resource-link">freeCodeCamp CSS Course</a>
+            <div class="bg-orange-50 dark:bg-orange-950/30 rounded-xl p-4 text-sm">
+              <strong>Practice:</strong> index.html banao — naam (h1), bio (p), 5 skills (list), image, link. Browser mein kholo.
             </div>
-            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Practice:</strong> Style your profile page with Flexbox. Make it mobile-friendly.</div>
-          </article>
-          <article class="card p-6 space-y-4">
-            <h3 class="text-xl font-bold">1.3 Bootstrap</h3>
-            <p class="text-sm text-gray-500">6–8 hours</p>
-            <div class="grid sm:grid-cols-2 gap-2">
-              <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank" rel="noopener" class="resource-link">Official Bootstrap 5 Docs</a>
-              <a href="https://www.youtube.com/watch?v=4sosXZsdy-s" target="_blank" rel="noopener" class="resource-link">Bootstrap 5 Crash Course</a>
-            </div>
-            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Mini project:</strong> Rebuild profile with Bootstrap navbar + cards.</div>
           </article>
         </section>
 
-        <section id="m2" class="space-y-6">
+        <section id="css" class="space-y-6">
           <div class="module-accent pl-4">
-            <div class="text-sm font-semibold text-orange-500 mb-1">MODULE 2 · 4–5 WEEKS</div>
+            <div class="text-sm font-semibold text-orange-500 mb-1">MODULE 1</div>
+            <h2 class="text-2xl font-bold">CSS — Styling</h2>
+          </div>
+          <article class="card p-6 space-y-5">
+            <h3 class="text-xl font-bold">What is CSS?</h3>
+            <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">CSS HTML ka look control karta hai — colors, fonts, spacing, layout.</p>
+            <pre class="code-box bg-gray-900 text-green-400 p-4 rounded-xl overflow-x-auto"><code>h1 {
+  color: orange;
+  font-size: 32px;
+  text-align: center;
+}</code></pre>
+            <h4 class="font-semibold">Watch: CSS Full Course (is page pe)</h4>
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/1Rs2ND1ryYc" title="CSS Course" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            </div>
+            <a href="https://flexboxfroggy.com/" target="_blank" rel="noopener" class="resource-link inline-flex">Flexbox Froggy (practice game)</a>
+            <div class="bg-orange-50 dark:bg-orange-950/30 rounded-xl p-4 text-sm">
+              <strong>Practice:</strong> Apne page pe CSS lagao — color, Flexbox center, mobile responsive.
+            </div>
+          </article>
+        </section>
+
+        <section id="js" class="space-y-6">
+          <div class="module-accent pl-4">
+            <div class="text-sm font-semibold text-orange-500 mb-1">MODULE 2</div>
             <h2 class="text-2xl font-bold">JavaScript</h2>
           </div>
-          <article class="card p-6 space-y-4">
-            <h3 class="text-xl font-bold">2.1 Core JavaScript</h3>
-            <p class="text-sm text-gray-700 dark:text-gray-300">Variables, functions, loops, arrays, objects. Master fundamentals before frameworks.</p>
-            <div class="grid sm:grid-cols-2 gap-2">
-              <a href="https://javascript.info/" target="_blank" rel="noopener" class="resource-link">javascript.info</a>
-              <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript" target="_blank" rel="noopener" class="resource-link">MDN Learn JavaScript</a>
-              <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/" target="_blank" rel="noopener" class="resource-link">freeCodeCamp JS</a>
-              <a href="https://www.youtube.com/watch?v=PkZNo7MFNFg" target="_blank" rel="noopener" class="resource-link">freeCodeCamp JS Full Course</a>
+          <article class="card p-6 space-y-5">
+            <h3 class="text-xl font-bold">What is JavaScript?</h3>
+            <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300">JavaScript page ko interactive banata hai — click, forms, data fetch.</p>
+            <pre class="code-box bg-gray-900 text-green-400 p-4 rounded-xl overflow-x-auto"><code>&lt;button onclick="sayHello()"&gt;Click me&lt;/button&gt;
+&lt;script&gt;
+  function sayHello() {
+    alert("Hello from JavaScript!");
+  }
+&lt;/script&gt;</code></pre>
+            <h4 class="font-semibold">Watch: JavaScript Full Course (is page pe)</h4>
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/PkZNo7MFNFg" title="JS Course" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
             </div>
-            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Projects:</strong> Calculator + To-do list (pure JS).</div>
-          </article>
-          <article class="card p-6 space-y-4">
-            <h3 class="text-xl font-bold">2.2 DOM, Fetch & JSON</h3>
-            <div class="grid sm:grid-cols-2 gap-2">
-              <a href="https://javascript.info/document" target="_blank" rel="noopener" class="resource-link">javascript.info DOM</a>
-              <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch" target="_blank" rel="noopener" class="resource-link">MDN Fetch API</a>
+            <div class="bg-orange-50 dark:bg-orange-950/30 rounded-xl p-4 text-sm">
+              <strong>Projects:</strong> (1) Calculator (2) To-do list — pure JS
             </div>
-            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Project:</strong> Weather or Quote app using a free API.</div>
           </article>
         </section>
 
-        <section id="m3" class="space-y-6">
+        <section id="git" class="space-y-6">
           <div class="module-accent pl-4">
-            <div class="text-sm font-semibold text-orange-500 mb-1">MODULE 3 · 1 WEEK</div>
+            <div class="text-sm font-semibold text-orange-500 mb-1">MODULE 3</div>
             <h2 class="text-2xl font-bold">Git & GitHub</h2>
           </div>
-          <article class="card p-6 space-y-4">
-            <div class="grid sm:grid-cols-2 gap-2">
-              <a href="https://git-scm.com/doc" target="_blank" rel="noopener" class="resource-link">Official Git Docs</a>
-              <a href="https://skills.github.com/" target="_blank" rel="noopener" class="resource-link">GitHub Skills</a>
-              <a href="https://www.youtube.com/watch?v=RGOj5yH7evk" target="_blank" rel="noopener" class="resource-link">Git Crash Course</a>
+          <article class="card p-6 space-y-5">
+            <p class="text-sm text-gray-700 dark:text-gray-300">Git = version control. GitHub = code online. Har project GitHub pe hona chahiye.</p>
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/RGOj5yH7evk" title="Git GitHub" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
             </div>
-            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Practice:</strong> Push every project to GitHub with clean commits.</div>
+            <div class="bg-orange-50 dark:bg-orange-950/30 rounded-xl p-4 text-sm">
+              <strong>Practice:</strong> Har project GitHub pe push karo.
+            </div>
           </article>
         </section>
 
-        <section id="m4" class="space-y-6">
+        <section id="framework" class="space-y-6">
           <div class="module-accent pl-4">
-            <div class="text-sm font-semibold text-orange-500 mb-1">MODULE 4 · 4–6 WEEKS</div>
-            <h2 class="text-2xl font-bold">Frontend Framework</h2>
+            <div class="text-sm font-semibold text-orange-500 mb-1">MODULE 4</div>
+            <h2 class="text-2xl font-bold">Vue or React</h2>
           </div>
           <article class="card p-6 space-y-4">
-            <p class="text-sm text-gray-700 dark:text-gray-300">Choose <strong>one</strong>: Vue (easier) or React (more jobs). Learn components, state, routing.</p>
+            <p class="text-sm text-gray-700 dark:text-gray-300">Ek choose karo. Vue soft for beginners; React zyada jobs.</p>
             <div class="grid sm:grid-cols-2 gap-4">
-              <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-700">
-                <div class="font-bold mb-2">Vue.js</div>
-                <a href="https://vuejs.org/tutorial/" target="_blank" rel="noopener" class="resource-link mb-2">Official Vue Tutorial</a>
-                <a href="https://vuejs.org/guide/introduction.html" target="_blank" rel="noopener" class="resource-link">Vue Guide</a>
-              </div>
-              <div class="p-4 rounded-xl border border-gray-200 dark:border-gray-700">
-                <div class="font-bold mb-2">React</div>
-                <a href="https://react.dev/learn" target="_blank" rel="noopener" class="resource-link mb-2">Official React Learn</a>
-                <a href="https://www.freecodecamp.org/learn/front-end-development-libraries/" target="_blank" rel="noopener" class="resource-link">freeCodeCamp Frontend</a>
-              </div>
+              <a href="https://vuejs.org/tutorial/" target="_blank" class="resource-link">Official Vue Tutorial</a>
+              <a href="https://react.dev/learn" target="_blank" class="resource-link">Official React Learn</a>
             </div>
-            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Project:</strong> Notes app or improved to-do with your framework.</div>
           </article>
         </section>
 
-        <section id="m5" class="space-y-6">
+        <section id="backend" class="space-y-6">
           <div class="module-accent pl-4">
-            <div class="text-sm font-semibold text-orange-500 mb-1">MODULE 5 · 5–7 WEEKS</div>
-            <h2 class="text-2xl font-bold">Backend — PHP & Laravel</h2>
+            <div class="text-sm font-semibold text-orange-500 mb-1">MODULE 5</div>
+            <h2 class="text-2xl font-bold">PHP & Laravel</h2>
           </div>
           <article class="card p-6 space-y-4">
-            <p class="text-sm text-gray-700 dark:text-gray-300">Laravel is the modern PHP framework (MVC, Auth, Eloquent, APIs).</p>
+            <p class="text-sm text-gray-700 dark:text-gray-300">Laravel = modern PHP (MVC, Auth, database).</p>
             <div class="grid sm:grid-cols-2 gap-2">
-              <a href="https://www.php.net/manual/en/" target="_blank" rel="noopener" class="resource-link">PHP Manual</a>
-              <a href="https://laravel.com/docs" target="_blank" rel="noopener" class="resource-link">Laravel Docs</a>
-              <a href="https://laracasts.com/series/laravel-8-from-scratch" target="_blank" rel="noopener" class="resource-link">Laracasts Laravel From Scratch</a>
+              <a href="https://laravel.com/docs" target="_blank" class="resource-link">Laravel Docs</a>
+              <a href="https://www.php.net/manual/en/" target="_blank" class="resource-link">PHP Manual</a>
             </div>
-            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Project:</strong> CRUD blog/inventory with authentication.</div>
           </article>
         </section>
 
-        <section id="capstone" class="card p-6 md:p-8 border-orange-200 dark:border-orange-900 bg-gradient-to-br from-orange-50 to-purple-50 dark:from-orange-950/20 dark:to-purple-950/20">
+        <section id="capstone" class="card p-6 border-orange-200 dark:border-orange-900 bg-gradient-to-br from-orange-50 to-purple-50 dark:from-orange-950/20 dark:to-purple-950/20">
           <div class="text-sm font-semibold text-orange-600 mb-2">FINAL PROJECT</div>
           <h2 class="text-2xl font-bold mb-3">Capstone — Full Stack App</h2>
-          <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">Build and deploy a complete app (task manager, job board, or mini e-commerce) with:</p>
-          <ul class="text-sm space-y-2 mb-4 list-disc pl-5 text-gray-700 dark:text-gray-300">
-            <li>Authentication (register / login)</li>
-            <li>Database + CRUD</li>
-            <li>Responsive frontend</li>
-            <li>Live deployment (Railway / Render free tier)</li>
-            <li>Public GitHub repo + README</li>
-          </ul>
-          <p class="text-sm font-medium">This becomes the main piece of your developer portfolio.</p>
-        </section>
-
-        <section class="card p-6">
-          <h2 class="text-lg font-bold mb-3">Completion checklist</h2>
-          <ul class="text-sm space-y-2">
-            <li>☐ All module exercises finished</li>
-            <li>☐ At least 4 projects on GitHub</li>
-            <li>☐ Capstone deployed with live link</li>
-            <li>☐ README for every major project</li>
+          <ul class="text-sm space-y-1 list-disc pl-5">
+            <li>Auth + Database + CRUD</li>
+            <li>Responsive UI</li>
+            <li>Live deploy + GitHub README</li>
           </ul>
         </section>
 
-        <div class="flex flex-wrap gap-4 pt-4 border-t border-gray-200 dark:border-gray-800">
+        <div class="flex gap-4 pt-4 border-t border-gray-200 dark:border-gray-800">
           <a href="../dashboard.html" class="text-sm text-orange-600 hover:underline">← Dashboard</a>
           <a href="../index.html" class="text-sm text-gray-500 hover:underline">All paths</a>
         </div>
       </div>
     </div>
   </div>
-
   <script src="../js/theme.js"></script>
   <script src="../js/language.js"></script>
-  <script>
-    document.querySelectorAll('[data-quiz] .quiz-option').forEach(opt => {
-      opt.addEventListener('click', function() {
-        const parent = this.closest('[data-quiz]');
-        parent.querySelectorAll('.quiz-option').forEach(o => {
-          o.classList.remove('correct','wrong');
-          if (o.dataset.correct === 'true') o.classList.add('correct');
-          else if (o === this) o.classList.add('wrong');
-        });
-      });
-    });
-  </script>
 </body>
 </html>
