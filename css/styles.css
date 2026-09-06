@@ -18,3 +18,8 @@ body { font-family: 'Inter', system-ui, sans-serif; }
 .roadmap-step::after { content: ''; position: absolute; left: 1.25rem; top: 2.5rem; bottom: -1rem; width: 2px; background: #e5e7eb; }
 .dark .roadmap-step::after { background: #374151; }
 .roadmap-step:last-child::after { display: none; }
+.lesson-nav { position: sticky; top: 4.5rem; }
+.resource-card { transition: transform 0.15s, box-shadow 0.15s; }
+.resource-card:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
+.badge-free { background: linear-gradient(135deg, #22c55e, #16a34a); }
+.module-header { background: linear-gradient(90deg, rgba(249,115,22,0.08), transparent); }

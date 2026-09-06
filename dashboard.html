@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard – OpenSkill Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:'class'}</script>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-sans antialiased min-h-screen">
+  <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
+      <a href="index.html" class="font-bold flex items-center gap-2">
+        <span class="w-7 h-7 rounded-lg bg-gradient-to-br from-orange-500 to-purple-600 text-white text-xs flex items-center justify-center">OS</span>
+        OpenSkill Academy
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="index.html" class="hover:text-orange-500">Home</a>
+        <a href="index.html#paths" class="hover:text-orange-500">Paths</a>
+        <a href="dashboard.html" class="text-orange-500">Dashboard</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button id="langToggle" class="text-sm px-3 py-1 border rounded-full">EN | RU</button>
+        <button id="themeToggle" class="p-2">🌓</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 py-10">
+    <div class="mb-10">
+      <h1 class="text-3xl md:text-4xl font-extrabold mb-2">Your Learning Dashboard</h1>
+      <p class="text-gray-600 dark:text-gray-400">Track progress, continue learning, and build your portfolio. Progress is saved in your browser.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="p-6 rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
+        <div class="text-sm text-gray-500 mb-1">Learning Streak</div>
+        <div class="text-3xl font-bold text-orange-500" id="streak">0 days</div>
+      </div>
+      <div class="p-6 rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
+        <div class="text-sm text-gray-500 mb-1">Paths Started</div>
+        <div class="text-3xl font-bold" id="pathsStarted">0</div>
+      </div>
+      <div class="p-6 rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
+        <div class="text-sm text-gray-500 mb-1">Overall Progress</div>
+        <div class="text-3xl font-bold text-green-500" id="overallProgress">0%</div>
+      </div>
+    </div>
+
+    <h2 class="text-xl font-bold mb-4">All Learning Paths (A → Z)</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+      <a href="courses/web-development.html" class="block p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-orange-400 transition">
+        <div class="font-bold mb-1">1. Web Development</div>
+        <p class="text-sm text-gray-500 mb-3">HTML → CSS → JS → Vue/React → PHP/Laravel → Capstone</p>
+        <div class="text-xs text-orange-600 font-medium">Flagship path • Most complete</div>
+      </a>
+      <a href="courses/uiux-design.html" class="block p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-pink-400 transition">
+        <div class="font-bold mb-1">2. UI/UX & Graphics</div>
+        <p class="text-sm text-gray-500 mb-3">Design principles → Free tools → Figma → Portfolio</p>
+      </a>
+      <a href="courses/digital-marketing.html" class="block p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-green-400 transition">
+        <div class="font-bold mb-1">3. Digital Marketing + SEO + ASO</div>
+        <p class="text-sm text-gray-500 mb-3">Social → SEO → Analytics → ASO → Capstone plan</p>
+      </a>
+      <a href="courses/content-writing.html" class="block p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-amber-400 transition">
+        <div class="font-bold mb-1">4. Content Writing</div>
+        <p class="text-sm text-gray-500 mb-3">Fundamentals → SEO writing → Copy → Portfolio</p>
+      </a>
+      <a href="courses/video-editing.html" class="block p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-red-400 transition">
+        <div class="font-bold mb-1">5. Video Editing</div>
+        <p class="text-sm text-gray-500 mb-3">DaVinci Resolve free → Color → Capstone video</p>
+      </a>
+      <a href="courses/unity-game-dev.html" class="block p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-indigo-400 transition">
+        <div class="font-bold mb-1">6. Unity Game Development</div>
+        <p class="text-sm text-gray-500 mb-3">C# → Unity → Mini-games → itch.io portfolio</p>
+      </a>
+      <a href="courses/3d-modeling.html" class="block p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-teal-400 transition">
+        <div class="font-bold mb-1">7. 3D Modeling (Blender)</div>
+        <p class="text-sm text-gray-500 mb-3">Blender free → Modeling → Texturing → Portfolio</p>
+      </a>
+    </div>
+
+    <div class="p-6 rounded-2xl bg-orange-50 dark:bg-orange-950/30 border border-orange-200 dark:border-orange-900">
+      <h2 class="font-bold text-lg mb-2">How to learn A → Z (Professional method)</h2>
+      <ol class="list-decimal pl-5 space-y-2 text-sm text-gray-700 dark:text-gray-300">
+        <li><strong>Choose ONE path only</strong> — Focus beats starting 5 courses.</li>
+        <li><strong>Follow the roadmap in order</strong> — Do not skip fundamentals.</li>
+        <li><strong>Do every practice exercise</strong> — Reading is not enough. Build.</li>
+        <li><strong>Use only free resources listed</strong> — Official docs + free YouTube + free tools.</li>
+        <li><strong>Finish the Capstone</strong> — Put it on GitHub / Figma / itch.io / ArtStation.</li>
+        <li><strong>Come back to Dashboard</strong> — Track what you finished.</li>
+      </ol>
+    </div>
+  </main>
+
+  <script src="js/theme.js"></script>
+  <script src="js/language.js"></script>
+  <script src="js/progress.js"></script>
+  <script>
+    const p = typeof Progress !== 'undefined' ? Progress.get() : {};
+    const started = Object.keys(p).length;
+    document.getElementById('pathsStarted').textContent = started;
+    if (started > 0) document.getElementById('overallProgress').textContent = Math.min(100, started * 15) + '%';
+  </script>
+</body>
+</html>
