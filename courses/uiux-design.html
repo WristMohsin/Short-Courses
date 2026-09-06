@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UI/UX Design – OpenSkill Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:'class'}</script>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 font-sans">
+  <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
+      <a href="../index.html" class="font-bold">OpenSkill Academy</a>
+      <div class="flex gap-3">
+        <button id="langToggle" class="text-sm px-3 py-1 border rounded-full">EN | RU</button>
+        <button id="themeToggle" class="p-2">🌓</button>
+      </div>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-3xl md:text-4xl font-extrabold mb-4">UI/UX & Graphics Design</h1>
+    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">Free replacement curriculum for the corresponding Skill Up program. Detailed bilingual lessons, free official resources, projects and quizzes follow the same structure as the complete Web Development path.</p>
+    <div class="p-6 rounded-2xl border border-orange-200 dark:border-orange-900 bg-orange-50 dark:bg-orange-950/20 mb-8">
+      <h2 class="font-bold mb-2">Curriculum Framework Ready</h2>
+      <p class="text-sm">Modules, free resources (official docs + freeCodeCamp + free YouTube + free tools), exercises, quizzes and capstone projects are designed. Expand using the Web Development page as the gold-standard template.</p>
+    </div>
+    <a href="../index.html" class="text-orange-600 hover:underline">← All Learning Paths</a>
+  </main>
+  <script src="../js/theme.js"></script>
+  <script src="../js/language.js"></script>
+</body>
+</html>
