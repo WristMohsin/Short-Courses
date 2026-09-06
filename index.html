@@ -3,176 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OpenSkill Academy – Free Industry Skills</title>
-  <meta name="description" content="100% free structured learning paths: Web Development, UI/UX, Digital Marketing, Content Writing, Video Editing, Unity, Blender. Self-explanatory lessons, quizzes, projects." />
-  <script>
-    (function(){
-      var t = localStorage.getItem('theme') || 'system';
-      if (t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches))
-        document.documentElement.classList.add('dark');
-    })();
-  </script>
+  <title>OpenSkill Academy — Free Professional Skill Paths</title>
+  <meta name="description" content="University-style free curricula mapped from Skill Up: web, UI/UX, marketing, SEO, ASO, content, video, Unity, 3D, lead generation." />
+  <script>(function(){var t=localStorage.getItem('theme')||'system';if(t==='dark'||(t==='system'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark');})();</script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class' }</script>
+  <script>tailwind.config={darkMode:'class'}</script>
   <link rel="stylesheet" href="css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <style>.serif{font-family:'Source Serif 4',Georgia,serif}</style>
 </head>
-<body class="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 antialiased">
+<body>
   <header class="site-header">
-    <div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="index.html" class="font-bold flex items-center gap-2 text-sm md:text-base">
-        <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500 to-purple-600 text-white text-xs flex items-center justify-center font-bold">OS</span>
-        <span>OpenSkill <span class="text-orange-500">Academy</span></span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-        <a href="#paths" class="hover:text-orange-500">Paths</a>
-        <a href="#how" class="hover:text-orange-500">How it works</a>
-        <a href="dashboard.html" class="hover:text-orange-500">Dashboard</a>
+    <div class="container h-14 flex items-center justify-between">
+      <a href="index.html" class="font-semibold text-sm tracking-tight">OpenSkill Academy</a>
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#catalog" class="nav-link">Full catalog</a>
+        <a href="#paths" class="nav-link">Learning paths</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
       </nav>
-      <div class="flex items-center gap-2">
-        <button type="button" id="langToggle" class="text-xs px-2.5 py-1 border border-gray-300 dark:border-gray-600 rounded-full">EN | RU</button>
-        <button type="button" id="themeToggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Theme">🌓</button>
-        <a href="dashboard.html" class="md:hidden text-sm font-medium text-orange-600">Dashboard</a>
+      <div class="flex items-center gap-3">
+        <button type="button" id="themeToggle" class="nav-link text-lg" aria-label="Theme">◐</button>
+        <a href="dashboard.html" class="btn btn-primary text-xs md:text-sm">Enter dashboard</a>
       </div>
     </div>
   </header>
-
   <main>
-    <section class="relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-purple-500/5 to-transparent pointer-events-none"></div>
-      <div class="max-w-7xl mx-auto px-4 py-16 md:py-24 relative">
-        <div class="max-w-2xl">
-          <p class="inline-flex items-center gap-2 text-sm font-medium text-orange-700 dark:text-orange-300 bg-orange-100 dark:bg-orange-900/40 px-3 py-1 rounded-full mb-5">
-            <span class="w-2 h-2 rounded-full bg-orange-500"></span>
-            100% Free · No login · 7 paths
-          </p>
-          <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">
-            Learn real skills.<br>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-purple-600">Pay nothing.</span>
-          </h1>
-          <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Structured paths with self-explanatory lessons, practice tasks, quizzes, and capstone projects. Official free resources only.
-          </p>
-          <div class="flex flex-wrap gap-3">
-            <a href="courses/web-development.html" class="btn-primary">Start Web Development</a>
-            <a href="dashboard.html" class="btn-secondary">Open Dashboard</a>
+    <section class="border-b" style="border-color:var(--line)">
+      <div class="container py-16 md:py-24 max-w-3xl">
+        <p class="text-xs font-semibold tracking-widest uppercase mb-4" style="color:var(--muted)">Open curriculum · No tuition</p>
+        <h1 class="serif text-3xl md:text-5xl font-bold leading-tight tracking-tight mb-5">Professional skill programs,<br class="hidden sm:block"/> delivered as free structured paths.</h1>
+        <p class="text-base md:text-lg leading-relaxed mb-8 max-w-2xl" style="color:var(--muted)">Mapped from the Skill Up (Codiea) 2026 prospectus — every Regular and Bootcamp program has a free path using official documentation and projects. Built for serious self-learners.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="courses/web-development.html" class="btn btn-primary">Start Web Development</a>
+          <a href="#catalog" class="btn btn-outline">Browse full catalog</a>
+        </div>
+        <dl class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-6 text-sm">
+          <div><dt class="text-xs uppercase tracking-wide" style="color:var(--muted)">Programs mapped</dt><dd class="font-semibold text-lg mt-1">21</dd></div>
+          <div><dt class="text-xs uppercase tracking-wide" style="color:var(--muted)">Cost</dt><dd class="font-semibold text-lg mt-1">PKR 0</dd></div>
+          <div><dt class="text-xs uppercase tracking-wide" style="color:var(--muted)">Login</dt><dd class="font-semibold text-lg mt-1">Not required</dd></div>
+          <div><dt class="text-xs uppercase tracking-wide" style="color:var(--muted)">Mode</dt><dd class="font-semibold text-lg mt-1">Self-paced</dd></div>
+        </dl>
+      </div>
+    </section>
+    <section id="catalog" class="py-16 md:py-20">
+      <div class="container">
+        <h2 class="section-title">Complete program catalog</h2>
+        <p class="section-sub">All Regular (4-month) and Bootcamp (6-month) offerings from the prospectus, with free path links. Original fees for reference only.</p>
+        <div class="card overflow-hidden">
+          <div class="hidden sm:grid gap-4 px-4 py-3 text-xs uppercase tracking-wide font-semibold border-b" style="grid-template-columns:1fr auto auto auto;color:var(--muted);border-color:var(--line)">
+            <span>Program</span><span>Duration</span><span>Was</span><span></span>
           </div>
-          <ul class="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-500">
-            <li>✓ Self-explanatory text first</li>
-            <li>✓ Quizzes after modules</li>
-            <li>✓ Optional videos only</li>
-            <li>✓ Portfolio projects</li>
-          </ul>
+          <div id="catalogBody">
+            <a href="courses/web-development.html" class="table-row"><span><strong>Regular Web Development Training</strong><br><span class="text-xs" style="color:var(--muted)">Beginner</span></span><span class="text-sm" style="color:var(--muted)">4 months</span><span class="text-sm" style="color:var(--muted)">PKR 7k/mo</span><span class="text-xs font-semibold" style="color:var(--accent)">Open →</span></a>
+            <a href="courses/web-development.html" class="table-row"><span><strong>Full Stack Web Development Bootcamp</strong></span><span class="text-sm" style="color:var(--muted)">6 months</span><span class="text-sm" style="color:var(--muted)">PKR 10k/mo</span><span class="text-xs font-semibold" style="color:var(--accent)">Open →</span></a>
+            <a href="courses/uiux-design.html" class="table-row"><span><strong>Regular Graphics Design Training</strong></span><span class="text-sm" style="color:var(--muted)">4 months</span><span class="text-sm" style="color:var(--muted)">PKR 7k/mo</span><span class="text-xs font-semibold" style="color:var(--accent)">Open →</span></a>
+            <a href="courses/uiux-design.html" class="table-row"><span><strong>UI/UX Design Bootcamp</strong></span><span class="text-sm" style="color:var(--muted)">6 months</span><span class="text-sm" style="color:var(--muted)">PKR 10k/mo</span><span class="text-xs font-semibold" style="color:var(--accent)">Open →</span></a>
+            <a href="courses/content-writing.html" class="table-row"><span><strong>Regular Content Writing Training</strong></span><span class="text-sm" style="color:var(--muted)">4 months</span><span class="text-sm" style="color:var(--muted)">PKR 7k/mo</span><span class="text-xs font-semibold" style="color:var(--accent)">Open →</span></a>
+            <a href="courses/content-writing.html" class="table-row"><span><strong>Content Writing Bootcamp</strong></span><span class="text-sm" style="color:var(--muted)">6 months</span><span class="text-sm" style="color:var(--muted)">PKR 10k/mo</span><span class="text-xs font-semibold" style="color:var(--accent)">Open →</span></a>
+            <a href="courses/digital-marketing.html" class="table-row"><span><strong>Regular Digital Marketing Training</strong></span><span class="text-sm" style="color:var(--muted)">4 months</span><span class="text-sm" style="color:var(--muted)">PKR 7k/mo</span><span class="text-xs font-semibold" style="color:var(--accent)">Open →</span></a>
+            <a href="courses/digital-marketing.html" class="table-row"><span><strong>Digital Marketing Bootcamp</strong></span><span class="text-sm" style="color:var(--muted)">6 months</span><span class="text-sm" style="color:var(--muted)">PKR 10k/mo</span><span class="text-xs font-semibold" style="color:var(--accent)">Open →</span></a>
+            <a href="courses/digital-marketing.html#seo" class="table-row"><span><strong>Regular SEO Training</strong></span><span class="text-sm" style="color:var(--muted)">4 months</span><span class="text-sm" style="color:var(--muted)">PKR 7k/mo</span><span class="text-xs font-semibold" style="color:var(--accent)">Open →</span></a>
+            <a href="courses/digital-marketing.html#aso" class="table-row"><span><strong>Regular ASO Training</strong></span><span class="text-sm" style="color:var(--muted)">4 months</span><span class="text-sm" style="color:var(--muted)">PKR 7k/mo</span><span class="text-xs font-semibold" style="color:var(--accent)">Open →</span></a>
+            <a href="courses/digital-marketing.html#aso" class="table-row"><span><strong>ASO Bootcamp</strong></span><span class="text-sm" style="color:var(--muted)">6 months</span><span class="text-sm" style="color:var(--muted)">PKR 10k/mo</span><span class="text-xs font-semibold" style="color:var(--accent)">Open →</span></a>
+            <a href="courses/video-editing.html" class="table-row"><span><strong>Regular Video Editing Training</strong></span><span class="text-sm" style="color:var(--muted)">4 months</span><span class="text-sm" style="color:var(--muted)">PKR 7k/mo</span><span class="text-xs font-semibold" style="color:var(--accent)">Open →</span></a>
+            <a href="courses/video-editing.html" class="table-row"><span><strong>Video Editing Bootcamp</strong></span><span class="text-sm" style="color:var(--muted)">6 months</span><span class="text-sm" style="color:var(--muted)">PKR 10k/mo</span><span class="text-xs font-semibold" style="color:var(--accent)">Open →</span></a>
+            <a href="courses/unity-game-dev.html" class="table-row"><span><strong>Regular Unity 3D Training</strong></span><span class="text-sm" style="color:var(--muted)">4 months</span><span class="text-sm" style="color:var(--muted)">PKR 7k/mo</span><span class="text-xs font-semibold" style="color:var(--accent)">Open →</span></a>
+            <a href="courses/unity-game-dev.html" class="table-row"><span><strong>Unity 3D Game Development Bootcamp</strong></span><span class="text-sm" style="color:var(--muted)">6 months</span><span class="text-sm" style="color:var(--muted)">PKR 10k/mo</span><span class="text-xs font-semibold" style="color:var(--accent)">Open →</span></a>
+            <a href="courses/3d-modeling.html" class="table-row"><span><strong>Regular 3D Modeling Training</strong></span><span class="text-sm" style="color:var(--muted)">4 months</span><span class="text-sm" style="color:var(--muted)">PKR 7k/mo</span><span class="text-xs font-semibold" style="color:var(--accent)">Open →</span></a>
+            <a href="courses/3d-modeling.html" class="table-row"><span><strong>3D Modeling Bootcamp</strong></span><span class="text-sm" style="color:var(--muted)">6 months</span><span class="text-sm" style="color:var(--muted)">PKR 10k/mo</span><span class="text-xs font-semibold" style="color:var(--accent)">Open →</span></a>
+            <a href="courses/uiux-design.html#graphics" class="table-row"><span><strong>Regular Game Screenshot Design Training</strong></span><span class="text-sm" style="color:var(--muted)">4 months</span><span class="text-sm" style="color:var(--muted)">PKR 7k/mo</span><span class="text-xs font-semibold" style="color:var(--accent)">Open →</span></a>
+            <a href="courses/uiux-design.html#graphics" class="table-row"><span><strong>Game Screenshot Design Bootcamp</strong></span><span class="text-sm" style="color:var(--muted)">6 months</span><span class="text-sm" style="color:var(--muted)">PKR 10k/mo</span><span class="text-xs font-semibold" style="color:var(--accent)">Open →</span></a>
+            <a href="courses/digital-marketing.html#lead" class="table-row"><span><strong>Regular Lead Generation Training</strong></span><span class="text-sm" style="color:var(--muted)">4 months</span><span class="text-sm" style="color:var(--muted)">PKR 7k/mo</span><span class="text-xs font-semibold" style="color:var(--accent)">Open →</span></a>
+            <a href="courses/digital-marketing.html#lead" class="table-row"><span><strong>Lead Generation Bootcamp</strong></span><span class="text-sm" style="color:var(--muted)">6 months</span><span class="text-sm" style="color:var(--muted)">PKR 10k/mo</span><span class="text-xs font-semibold" style="color:var(--accent)">Open →</span></a>
+          </div>
+        </div>
+        <p class="text-xs mt-4" style="color:var(--muted)">Related programs share a free learning path where curricula overlap. All materials are free and legal.</p>
+      </div>
+    </section>
+    <section id="paths" class="py-16 border-t" style="border-color:var(--line);background:var(--surface)">
+      <div class="container">
+        <h2 class="section-title">Consolidated learning paths</h2>
+        <p class="section-sub">Seven free paths cover all 21 prospectus programs.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <a href="courses/web-development.html" class="path-card"><h3 class="font-semibold mb-1">Web Development</h3><p class="text-sm" style="color:var(--muted)">Regular + Full Stack Bootcamp</p></a>
+          <a href="courses/uiux-design.html" class="path-card"><h3 class="font-semibold mb-1">UI/UX & Graphics</h3><p class="text-sm" style="color:var(--muted)">Graphics + UI/UX + Screenshot design</p></a>
+          <a href="courses/digital-marketing.html" class="path-card"><h3 class="font-semibold mb-1">Digital Marketing</h3><p class="text-sm" style="color:var(--muted)">SEO · ASO · Lead generation</p></a>
+          <a href="courses/content-writing.html" class="path-card"><h3 class="font-semibold mb-1">Content Writing</h3><p class="text-sm" style="color:var(--muted)">Regular + Bootcamp</p></a>
+          <a href="courses/video-editing.html" class="path-card"><h3 class="font-semibold mb-1">Video Editing</h3><p class="text-sm" style="color:var(--muted)">Regular + Bootcamp</p></a>
+          <a href="courses/unity-game-dev.html" class="path-card"><h3 class="font-semibold mb-1">Unity 3D</h3><p class="text-sm" style="color:var(--muted)">Regular + Bootcamp</p></a>
+          <a href="courses/3d-modeling.html" class="path-card"><h3 class="font-semibold mb-1">3D Modeling</h3><p class="text-sm" style="color:var(--muted)">Blender Regular + Bootcamp</p></a>
         </div>
       </div>
     </section>
-
-    <section id="paths" class="py-16 md:py-20 bg-white dark:bg-gray-900 border-y border-gray-200 dark:border-gray-800">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="mb-10">
-          <h2 class="text-3xl font-bold mb-2">Choose one path</h2>
-          <p class="text-gray-600 dark:text-gray-400">Focus on a single path from start to capstone. Click any card to open.</p>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="pathCards">
-          <a href="courses/web-development.html" class="path-card group">
-            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 mb-4 flex items-center justify-center text-white font-bold">W</div>
-            <h3 class="font-bold text-lg mb-1 group-hover:text-orange-500">Web Development</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">HTML → CSS → JS → Vue/React → Laravel</p>
-            <div class="text-xs text-gray-500">Beginner → Advanced · Flagship</div>
-          </a>
-          <a href="courses/uiux-design.html" class="path-card group">
-            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 mb-4 flex items-center justify-center text-white font-bold">U</div>
-            <h3 class="font-bold text-lg mb-1 group-hover:text-orange-500">UI/UX & Graphics</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Principles → Tools → Figma → Case study</p>
-            <div class="text-xs text-gray-500">Quizzes after modules</div>
-          </a>
-          <a href="courses/digital-marketing.html" class="path-card group">
-            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 mb-4 flex items-center justify-center text-white font-bold">D</div>
-            <h3 class="font-bold text-lg mb-1 group-hover:text-orange-500">Digital Marketing + SEO</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Social → SEO → Analytics → ASO</p>
-            <div class="text-xs text-gray-500">Campaign plan capstone</div>
-          </a>
-          <a href="courses/content-writing.html" class="path-card group">
-            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 mb-4 flex items-center justify-center text-white font-bold">C</div>
-            <h3 class="font-bold text-lg mb-1 group-hover:text-orange-500">Content Writing</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Clarity → SEO blogs → Copy → Portfolio</p>
-            <div class="text-xs text-gray-500">Practice + quizzes</div>
-          </a>
-          <a href="courses/video-editing.html" class="path-card group">
-            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-red-500 to-pink-500 mb-4 flex items-center justify-center text-white font-bold">V</div>
-            <h3 class="font-bold text-lg mb-1 group-hover:text-orange-500">Video Editing</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">DaVinci Resolve free path</p>
-            <div class="text-xs text-gray-500">Capstone video</div>
-          </a>
-          <a href="courses/unity-game-dev.html" class="path-card group">
-            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 mb-4 flex items-center justify-center text-white font-bold">G</div>
-            <h3 class="font-bold text-lg mb-1 group-hover:text-orange-500">Unity Game Dev</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">C# → Unity → itch.io</p>
-            <div class="text-xs text-gray-500">Mini-game portfolio</div>
-          </a>
-          <a href="courses/3d-modeling.html" class="path-card group">
-            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500 mb-4 flex items-center justify-center text-white font-bold">3</div>
-            <h3 class="font-bold text-lg mb-1 group-hover:text-orange-500">3D Modeling (Blender)</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Modeling → Texturing → Renders</p>
-            <div class="text-xs text-gray-500">Blender 100% free</div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="courses" class="py-16">
-      <div class="max-w-7xl mx-auto px-4">
-        <h2 class="text-2xl font-bold mb-2">Course catalog</h2>
-        <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">Skill Up mapping — all free replacements.</p>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" id="courseGrid"></div>
-      </div>
-    </section>
-
-    <section id="how" class="py-16 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
-      <div class="max-w-4xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-8">How to learn here</h2>
-        <ol class="space-y-4 text-sm text-gray-700 dark:text-gray-300">
-          <li class="flex gap-4 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
-            <span class="font-bold text-orange-500 text-lg shrink-0">1</span>
-            <div><strong>Open one path only.</strong> Web Development is best for coding careers.</div>
-          </li>
-          <li class="flex gap-4 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
-            <span class="font-bold text-orange-500 text-lg shrink-0">2</span>
-            <div><strong>Read the lesson text first.</strong> Do the practice task before moving on.</div>
-          </li>
-          <li class="flex gap-4 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
-            <span class="font-bold text-orange-500 text-lg shrink-0">3</span>
-            <div><strong>Take the quiz</strong> after each module. Wrong → re-read that section.</div>
-          </li>
-          <li class="flex gap-4 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
-            <span class="font-bold text-orange-500 text-lg shrink-0">4</span>
-            <div><strong>Optional videos</strong> only if text was unclear.</div>
-          </li>
-          <li class="flex gap-4 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
-            <span class="font-bold text-orange-500 text-lg shrink-0">5</span>
-            <div><strong>Finish the capstone</strong> and publish on GitHub / Figma / itch.io / ArtStation.</div>
-          </li>
-        </ol>
-        <div class="text-center mt-8">
-          <a href="courses/web-development.html" class="btn-primary">Begin Web Development →</a>
-        </div>
+    <section class="py-16 border-t" style="border-color:var(--line)">
+      <div class="container max-w-2xl">
+        <h2 class="section-title">Academic expectations</h2>
+        <ul class="text-sm space-y-3 leading-relaxed list-disc pl-5" style="color:var(--muted)">
+          <li>Lessons target adult learners; process and syntax are explained in full, not simplified cartoons.</li>
+          <li>Progress requires tasks and quizzes — not video consumption alone.</li>
+          <li>Capstones should be public portfolio artifacts.</li>
+          <li>Independent free alternative; not affiliated with Skill Up / Codiea.</li>
+        </ul>
       </div>
     </section>
   </main>
-
-  <footer class="py-10 bg-gray-900 text-gray-400 text-sm">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between gap-6">
-      <div>
-        <div class="text-white font-bold mb-1">OpenSkill Academy</div>
-        <p class="max-w-sm">Free legal alternative to paid short courses. Not affiliated with Skill Up / Codiea.</p>
-      </div>
-      <a href="https://github.com/WristMohsin/Short-Courses" class="text-orange-400 hover:underline">GitHub</a>
+  <footer class="footer">
+    <div class="container flex flex-col sm:flex-row justify-between gap-4">
+      <div><div class="font-semibold mb-1" style="color:var(--ink)">OpenSkill Academy</div><p>Free replacement curricula. Legal resources only.</p></div>
+      <a href="https://github.com/WristMohsin/Short-Courses" style="color:var(--accent)">Source repository</a>
     </div>
   </footer>
-
   <script src="js/theme.js"></script>
-  <script src="js/language.js"></script>
-  <script src="js/progress.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
