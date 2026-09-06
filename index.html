@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenSkill Academy – 100% Free SkillUp Alternative</title>
+  <meta name="description" content="Free bilingual (English + Roman Urdu) project-based learning platform replacing Skill Up paid courses with official free resources." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:'#fff7ed',100:'#ffedd5',500:'#f97316',600:'#ea580c',700:'#c2410c',900:'#7c2d12' }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-sans antialiased transition-colors duration-200">
+  <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-2 font-bold text-xl">
+          <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500 to-purple-600 flex items-center justify-center text-white text-sm">OS</span>
+          <span>OpenSkill <span class="text-orange-500">Academy</span></span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="#paths" class="hover:text-orange-500">Learning Paths</a>
+          <a href="#courses" class="hover:text-orange-500">Courses</a>
+          <a href="#resources" class="hover:text-orange-500">Free Resources</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button id="langToggle" class="px-3 py-1.5 rounded-full text-sm font-medium border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800">
+            EN | RU
+          </button>
+          <button id="themeToggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Toggle theme">
+            <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-purple-500/5 to-transparent"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300 text-sm font-medium mb-6">
+          <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+          100% Free • No Login Required • Bilingual
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6" data-i18n="hero.title">
+          Learn Industry Skills<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-purple-600">Completely Free</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed" data-i18n="hero.subtitle">
+          High-quality free alternative to Skill Up paid courses. Official documentation, free university material, curated free YouTube, real projects, quizzes, and bilingual (English + Roman Urdu) support.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#paths" class="px-6 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold shadow-lg shadow-orange-500/25 transition">
+            Start Learning Free
+          </a>
+          <a href="courses/web-development.html" class="px-6 py-3 rounded-xl border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold transition">
+            Web Development Path →
+          </a>
+        </div>
+        <div class="mt-10 flex flex-wrap gap-6 text-sm text-gray-500 dark:text-gray-400">
+          <div class="flex items-center gap-2"><span class="text-green-500">✓</span> No payment ever</div>
+          <div class="flex items-center gap-2"><span class="text-green-500">✓</span> Project-based</div>
+          <div class="flex items-center gap-2"><span class="text-green-500">✓</span> Roman Urdu support</div>
+          <div class="flex items-center gap-2"><span class="text-green-500">✓</span> Progress tracking</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="paths" class="py-16 md:py-24 bg-white dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="paths.title">Learning Paths</h2>
+        <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto" data-i18n="paths.subtitle">Structured roadmaps from absolute beginner to job-ready projects. Choose a path and follow the free curriculum.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="pathCards"></div>
+    </div>
+  </section>
+
+  <section id="courses" class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-10">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-2">All Free Courses</h2>
+          <p class="text-gray-600 dark:text-gray-400">Mapped 1:1 from the Skill Up prospectus with free resources only.</p>
+        </div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" id="courseGrid"></div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gradient-to-b from-orange-50 to-white dark:from-gray-900 dark:to-gray-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-12">How OpenSkill Works</h2>
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-14 h-14 rounded-2xl bg-orange-500 text-white flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+          <h3 class="font-semibold mb-2">Choose Path</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Pick Web, Design, Marketing, Game Dev, etc.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 rounded-2xl bg-purple-500 text-white flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+          <h3 class="font-semibold mb-2">Follow Modules</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Lessons + free videos + diagrams + practice.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 rounded-2xl bg-blue-500 text-white flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+          <h3 class="font-semibold mb-2">Build Projects</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Real projects + quizzes + portfolio pieces.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 rounded-2xl bg-green-500 text-white flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+          <h3 class="font-semibold mb-2">Capstone & Portfolio</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Complete a substantial project and showcase it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 border-y border-gray-200 dark:border-gray-800">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h3 class="text-xl font-bold mb-3">English | Roman Urdu</h3>
+      <p class="text-gray-600 dark:text-gray-400">Har lesson, exercise, quiz aur project dono languages mein available hai. Technical terms (API, Git, Framework etc.) English mein rehte hain lekin unki simple Roman Urdu explanation di jati hai.</p>
+    </div>
+  </section>
+
+  <footer class="py-12 bg-gray-900 text-gray-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between gap-8">
+        <div>
+          <div class="font-bold text-white text-lg mb-2">OpenSkill Academy</div>
+          <p class="text-sm max-w-sm">Free, legal, high-quality alternative to paid short courses. Built for Pakistani and global learners.</p>
+        </div>
+        <div class="text-sm">
+          <p>All recommended resources are free and legally accessible.</p>
+          <p class="mt-2">Not affiliated with Skill Up / Codiea.</p>
+        </div>
+      </div>
+      <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
+        Open source educational project • <a href="https://github.com/WristMohsin/Short-Courses" class="text-orange-400 hover:underline">WristMohsin/Short-Courses</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/language.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
