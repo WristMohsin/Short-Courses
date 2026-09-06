@@ -1,0 +1,20 @@
+:root {
+  --brand: #f97316;
+}
+body { font-family: 'Inter', system-ui, sans-serif; }
+.prose code { background: #f3f4f6; padding: 0.15rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+.dark .prose code { background: #1f2937; }
+.lesson-card:hover { transform: translateY(-2px); }
+.progress-ring { transition: stroke-dashoffset 0.5s; }
+.quiz-option { cursor: pointer; transition: all 0.15s; }
+.quiz-option:hover { border-color: #f97316; }
+.quiz-option.correct { border-color: #22c55e; background: #f0fdf4; }
+.quiz-option.wrong { border-color: #ef4444; background: #fef2f2; }
+.dark .quiz-option.correct { background: #14532d; }
+.dark .quiz-option.wrong { background: #7f1d1d; }
+.diagram-box { background: linear-gradient(135deg, #fff7ed 0%, #faf5ff 100%); }
+.dark .diagram-box { background: linear-gradient(135deg, #1c1917 0%, #1e1b4b 100%); }
+.roadmap-step { position: relative; }
+.roadmap-step::after { content: ''; position: absolute; left: 1.25rem; top: 2.5rem; bottom: -1rem; width: 2px; background: #e5e7eb; }
+.dark .roadmap-step::after { background: #374151; }
+.roadmap-step:last-child::after { display: none; }
