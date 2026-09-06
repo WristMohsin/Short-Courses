@@ -1,0 +1,222 @@
+{
+  "paths": [
+    {
+      "id": "web-dev",
+      "title": "Web Development",
+      "titleRu": "Web Development",
+      "desc": "From HTML basics to Full Stack (HTML, CSS, JS, Vue/React, PHP, Laravel)",
+      "descRu": "HTML basics se Full Stack tak (HTML, CSS, JS, Vue/React, PHP, Laravel)",
+      "level": "Beginner → Advanced",
+      "duration": "4–6 months",
+      "color": "from-blue-500 to-cyan-500",
+      "href": "courses/web-development.html",
+      "skills": ["HTML", "CSS", "JavaScript", "Git", "Vue/React", "PHP", "Laravel"]
+    },
+    {
+      "id": "uiux",
+      "title": "UI/UX & Graphics Design",
+      "titleRu": "UI/UX & Graphics Design",
+      "desc": "Design thinking, Figma, Photoshop, Illustrator, portfolio projects",
+      "descRu": "Design thinking, Figma, Photoshop, Illustrator, portfolio projects",
+      "level": "Beginner → Advanced",
+      "duration": "4–6 months",
+      "color": "from-pink-500 to-rose-500",
+      "href": "courses/uiux-design.html",
+      "skills": ["Figma", "Design Principles", "Prototyping", "Photoshop", "Illustrator"]
+    },
+    {
+      "id": "digital-marketing",
+      "title": "Digital Marketing + SEO + ASO",
+      "titleRu": "Digital Marketing + SEO + ASO",
+      "desc": "Social media, Google Ads, SEO, App Store Optimization",
+      "descRu": "Social media, Google Ads, SEO, App Store Optimization",
+      "level": "Beginner → Intermediate",
+      "duration": "4–6 months",
+      "color": "from-green-500 to-emerald-500",
+      "href": "courses/digital-marketing.html",
+      "skills": ["SEO", "Social Ads", "Analytics", "ASO", "Content Strategy"]
+    },
+    {
+      "id": "content-writing",
+      "title": "Content Writing",
+      "titleRu": "Content Writing",
+      "desc": "SEO writing, copywriting, storytelling, freelancing prep",
+      "descRu": "SEO writing, copywriting, storytelling, freelancing prep",
+      "level": "Beginner → Intermediate",
+      "duration": "4–6 months",
+      "color": "from-amber-500 to-orange-500",
+      "href": "courses/content-writing.html",
+      "skills": ["SEO Writing", "Copywriting", "Editing", "Portfolio"]
+    },
+    {
+      "id": "video-editing",
+      "title": "Video Editing",
+      "titleRu": "Video Editing",
+      "desc": "Premiere Pro / DaVinci / After Effects free alternatives + free tools",
+      "descRu": "Premiere Pro / DaVinci / After Effects free alternatives + free tools",
+      "level": "Beginner → Advanced",
+      "duration": "4–6 months",
+      "color": "from-red-500 to-pink-500",
+      "href": "courses/video-editing.html",
+      "skills": ["Editing", "Motion Graphics", "Color Grading", "Storytelling"]
+    },
+    {
+      "id": "game-dev",
+      "title": "Unity 3D & Game Dev",
+      "titleRu": "Unity 3D & Game Dev",
+      "desc": "Unity Engine, C#, game mechanics, monetization, portfolio games",
+      "descRu": "Unity Engine, C#, game mechanics, monetization, portfolio games",
+      "level": "Beginner → Advanced",
+      "duration": "4–6 months",
+      "color": "from-indigo-500 to-violet-500",
+      "href": "courses/unity-game-dev.html",
+      "skills": ["Unity", "C#", "3D Games", "Physics", "Monetization"]
+    },
+    {
+      "id": "3d-modeling",
+      "title": "3D Modeling (Blender)",
+      "titleRu": "3D Modeling (Blender)",
+      "desc": "Blender modeling, texturing, lighting, rendering – completely free",
+      "descRu": "Blender modeling, texturing, lighting, rendering – completely free",
+      "level": "Beginner → Advanced",
+      "duration": "4–6 months",
+      "color": "from-teal-500 to-cyan-500",
+      "href": "courses/3d-modeling.html",
+      "skills": ["Blender", "Modeling", "Texturing", "Rendering", "Sculpting"]
+    }
+  ],
+  "courses": [
+    {
+      "id": "web-regular",
+      "path": "web-dev",
+      "title": "Regular Web Development",
+      "titleRu": "Regular Web Development",
+      "duration": "4 months",
+      "feeOriginal": "PKR 7,000/month",
+      "level": "Beginner",
+      "mode": "Self-paced Free",
+      "certificate": "OpenSkill Certified Web Developer (Free)",
+      "href": "courses/web-development.html"
+    },
+    {
+      "id": "web-fullstack",
+      "path": "web-dev",
+      "title": "Full Stack Web Development Bootcamp",
+      "titleRu": "Full Stack Web Development Bootcamp",
+      "duration": "6 months",
+      "feeOriginal": "PKR 10,000/month",
+      "level": "Intermediate → Advanced",
+      "mode": "Self-paced Free",
+      "certificate": "OpenSkill Professional Full Stack Developer (Free)",
+      "href": "courses/web-development.html#fullstack"
+    },
+    {
+      "id": "uiux-bootcamp",
+      "path": "uiux",
+      "title": "UI/UX Design Bootcamp",
+      "titleRu": "UI/UX Design Bootcamp",
+      "duration": "6 months",
+      "feeOriginal": "PKR 10,000/month",
+      "level": "Beginner → Advanced",
+      "mode": "Self-paced Free",
+      "certificate": "OpenSkill Professional UI/UX Designer (Free)",
+      "href": "courses/uiux-design.html"
+    },
+    {
+      "id": "graphics-regular",
+      "path": "uiux",
+      "title": "Regular Graphics Design",
+      "titleRu": "Regular Graphics Design",
+      "duration": "4 months",
+      "feeOriginal": "PKR 7,000/month",
+      "level": "Beginner",
+      "mode": "Self-paced Free",
+      "certificate": "OpenSkill Certified Graphics Designer (Free)",
+      "href": "courses/uiux-design.html#graphics"
+    },
+    {
+      "id": "dm-regular",
+      "path": "digital-marketing",
+      "title": "Regular Digital Marketing",
+      "titleRu": "Regular Digital Marketing",
+      "duration": "4 months",
+      "feeOriginal": "PKR 7,000/month",
+      "level": "Beginner",
+      "mode": "Self-paced Free",
+      "certificate": "OpenSkill Certified Digital Marketer (Free)",
+      "href": "courses/digital-marketing.html"
+    },
+    {
+      "id": "seo-regular",
+      "path": "digital-marketing",
+      "title": "SEO Training",
+      "titleRu": "SEO Training",
+      "duration": "4 months",
+      "feeOriginal": "PKR 7,000/month",
+      "level": "Beginner → Intermediate",
+      "mode": "Self-paced Free",
+      "certificate": "OpenSkill Certified SEO Specialist (Free)",
+      "href": "courses/digital-marketing.html#seo"
+    },
+    {
+      "id": "aso-regular",
+      "path": "digital-marketing",
+      "title": "ASO (App Store Optimization)",
+      "titleRu": "ASO (App Store Optimization)",
+      "duration": "4 months",
+      "feeOriginal": "PKR 7,000/month",
+      "level": "Beginner → Intermediate",
+      "mode": "Self-paced Free",
+      "certificate": "OpenSkill Certified ASO Specialist (Free)",
+      "href": "courses/digital-marketing.html#aso"
+    },
+    {
+      "id": "content-regular",
+      "path": "content-writing",
+      "title": "Content Writing Training",
+      "titleRu": "Content Writing Training",
+      "duration": "4 months",
+      "feeOriginal": "PKR 7,000/month",
+      "level": "Beginner",
+      "mode": "Self-paced Free",
+      "certificate": "OpenSkill Certified Content Writer (Free)",
+      "href": "courses/content-writing.html"
+    },
+    {
+      "id": "video-regular",
+      "path": "video-editing",
+      "title": "Video Editing Training",
+      "titleRu": "Video Editing Training",
+      "duration": "4 months",
+      "feeOriginal": "PKR 7,000/month",
+      "level": "Beginner",
+      "mode": "Self-paced Free",
+      "certificate": "OpenSkill Certified Video Editor (Free)",
+      "href": "courses/video-editing.html"
+    },
+    {
+      "id": "unity-regular",
+      "path": "game-dev",
+      "title": "Unity 3D Game Development",
+      "titleRu": "Unity 3D Game Development",
+      "duration": "4–6 months",
+      "feeOriginal": "PKR 7,000–10,000/month",
+      "level": "Beginner → Advanced",
+      "mode": "Self-paced Free",
+      "certificate": "OpenSkill Certified Unity Developer (Free)",
+      "href": "courses/unity-game-dev.html"
+    },
+    {
+      "id": "3d-regular",
+      "path": "3d-modeling",
+      "title": "3D Modeling with Blender",
+      "titleRu": "3D Modeling with Blender",
+      "duration": "4–6 months",
+      "feeOriginal": "PKR 7,000–10,000/month",
+      "level": "Beginner → Advanced",
+      "mode": "Self-paced Free",
+      "certificate": "OpenSkill Certified 3D Modeler (Free)",
+      "href": "courses/3d-modeling.html"
+    }
+  ]
+}
