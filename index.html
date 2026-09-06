@@ -1,145 +1,172 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="system">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OpenSkill Academy – 100% Free SkillUp Alternative</title>
-  <meta name="description" content="Free bilingual (English + Roman Urdu) project-based learning platform replacing Skill Up paid courses with official free resources." />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>OpenSkill Academy – Free Industry Skills</title>
+  <meta name="description" content="100% free structured learning paths: Web Development, UI/UX, Digital Marketing, Content Writing, Video Editing, Unity, Blender. Self-explanatory lessons, quizzes, projects." />
   <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: { 50:'#fff7ed',100:'#ffedd5',500:'#f97316',600:'#ea580c',700:'#c2410c',900:'#7c2d12' }
-          }
-        }
-      }
-    }
+    (function(){
+      var t = localStorage.getItem('theme') || 'system';
+      if (t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches))
+        document.documentElement.classList.add('dark');
+    })();
   </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class' }</script>
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-sans antialiased transition-colors duration-200">
-  <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur border-b border-gray-200 dark:border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <a href="index.html" class="flex items-center gap-2 font-bold text-xl">
-          <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500 to-purple-600 flex items-center justify-center text-white text-sm">OS</span>
-          <span>OpenSkill <span class="text-orange-500">Academy</span></span>
-        </a>
-        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-          <a href="#paths" class="hover:text-orange-500">Learning Paths</a>
-          <a href="#courses" class="hover:text-orange-500">Courses</a>
-          <a href="dashboard.html" class="hover:text-orange-500">Dashboard</a>
-        </nav>
-        <div class="flex items-center gap-3">
-          <button id="langToggle" class="px-3 py-1.5 rounded-full text-sm font-medium border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800">EN | RU</button>
-          <button id="themeToggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Toggle theme">🌓</button>
-        </div>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 antialiased">
+  <header class="site-header">
+    <div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
+      <a href="index.html" class="font-bold flex items-center gap-2 text-sm md:text-base">
+        <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500 to-purple-600 text-white text-xs flex items-center justify-center font-bold">OS</span>
+        <span>OpenSkill <span class="text-orange-500">Academy</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="#paths" class="hover:text-orange-500">Paths</a>
+        <a href="#how" class="hover:text-orange-500">How it works</a>
+        <a href="dashboard.html" class="hover:text-orange-500">Dashboard</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button type="button" id="langToggle" class="text-xs px-2.5 py-1 border border-gray-300 dark:border-gray-600 rounded-full">EN | RU</button>
+        <button type="button" id="themeToggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Theme">🌓</button>
+        <a href="dashboard.html" class="md:hidden text-sm font-medium text-orange-600">Dashboard</a>
       </div>
     </div>
   </header>
 
-  <section class="relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-purple-500/5 to-transparent"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative">
-      <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300 text-sm font-medium mb-6">
-          <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-          100% Free • No Login Required • A → Z Paths
-        </div>
-        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6">
-          Learn Industry Skills<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-purple-600">Completely Free</span>
-        </h1>
-        <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-          Professional free alternative to Skill Up paid courses. Structured A→Z paths, free official resources only, real projects, and portfolio-ready capstones.
-        </p>
-        <div class="flex flex-wrap gap-4">
-          <a href="dashboard.html" class="px-6 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold shadow-lg shadow-orange-500/25 transition">Open Dashboard</a>
-          <a href="courses/web-development.html" class="px-6 py-3 rounded-xl border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 font-semibold transition">Start Web Development →</a>
-        </div>
-        <div class="mt-10 flex flex-wrap gap-6 text-sm text-gray-500 dark:text-gray-400">
-          <div class="flex items-center gap-2"><span class="text-green-500">✓</span> No payment ever</div>
-          <div class="flex items-center gap-2"><span class="text-green-500">✓</span> Project-based</div>
-          <div class="flex items-center gap-2"><span class="text-green-500">✓</span> 7 complete paths</div>
-          <div class="flex items-center gap-2"><span class="text-green-500">✓</span> Progress tracking</div>
+  <main>
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-purple-500/5 to-transparent pointer-events-none"></div>
+      <div class="max-w-7xl mx-auto px-4 py-16 md:py-24 relative">
+        <div class="max-w-2xl">
+          <p class="inline-flex items-center gap-2 text-sm font-medium text-orange-700 dark:text-orange-300 bg-orange-100 dark:bg-orange-900/40 px-3 py-1 rounded-full mb-5">
+            <span class="w-2 h-2 rounded-full bg-orange-500"></span>
+            100% Free · No login · 7 paths
+          </p>
+          <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">
+            Learn real skills.<br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-purple-600">Pay nothing.</span>
+          </h1>
+          <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            Structured paths with self-explanatory lessons, practice tasks, quizzes, and capstone projects. Official free resources only.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="courses/web-development.html" class="btn-primary">Start Web Development</a>
+            <a href="dashboard.html" class="btn-secondary">Open Dashboard</a>
+          </div>
+          <ul class="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-500">
+            <li>✓ Self-explanatory text first</li>
+            <li>✓ Quizzes after modules</li>
+            <li>✓ Optional videos only</li>
+            <li>✓ Portfolio projects</li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="paths" class="py-16 md:py-24 bg-white dark:bg-gray-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Learning Paths</h2>
-        <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Structured roadmaps from absolute beginner to job-ready projects. Choose one path and follow it end-to-end.</p>
+    <section id="paths" class="py-16 md:py-20 bg-white dark:bg-gray-900 border-y border-gray-200 dark:border-gray-800">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="mb-10">
+          <h2 class="text-3xl font-bold mb-2">Choose one path</h2>
+          <p class="text-gray-600 dark:text-gray-400">Focus on a single path from start to capstone. Click any card to open.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="pathCards">
+          <a href="courses/web-development.html" class="path-card group">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 mb-4 flex items-center justify-center text-white font-bold">W</div>
+            <h3 class="font-bold text-lg mb-1 group-hover:text-orange-500">Web Development</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">HTML → CSS → JS → Vue/React → Laravel</p>
+            <div class="text-xs text-gray-500">Beginner → Advanced · Flagship</div>
+          </a>
+          <a href="courses/uiux-design.html" class="path-card group">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 mb-4 flex items-center justify-center text-white font-bold">U</div>
+            <h3 class="font-bold text-lg mb-1 group-hover:text-orange-500">UI/UX & Graphics</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Principles → Tools → Figma → Case study</p>
+            <div class="text-xs text-gray-500">Quizzes after modules</div>
+          </a>
+          <a href="courses/digital-marketing.html" class="path-card group">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 mb-4 flex items-center justify-center text-white font-bold">D</div>
+            <h3 class="font-bold text-lg mb-1 group-hover:text-orange-500">Digital Marketing + SEO</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Social → SEO → Analytics → ASO</p>
+            <div class="text-xs text-gray-500">Campaign plan capstone</div>
+          </a>
+          <a href="courses/content-writing.html" class="path-card group">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 mb-4 flex items-center justify-center text-white font-bold">C</div>
+            <h3 class="font-bold text-lg mb-1 group-hover:text-orange-500">Content Writing</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Clarity → SEO blogs → Copy → Portfolio</p>
+            <div class="text-xs text-gray-500">Practice + quizzes</div>
+          </a>
+          <a href="courses/video-editing.html" class="path-card group">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-red-500 to-pink-500 mb-4 flex items-center justify-center text-white font-bold">V</div>
+            <h3 class="font-bold text-lg mb-1 group-hover:text-orange-500">Video Editing</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">DaVinci Resolve free path</p>
+            <div class="text-xs text-gray-500">Capstone video</div>
+          </a>
+          <a href="courses/unity-game-dev.html" class="path-card group">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 mb-4 flex items-center justify-center text-white font-bold">G</div>
+            <h3 class="font-bold text-lg mb-1 group-hover:text-orange-500">Unity Game Dev</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">C# → Unity → itch.io</p>
+            <div class="text-xs text-gray-500">Mini-game portfolio</div>
+          </a>
+          <a href="courses/3d-modeling.html" class="path-card group">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500 mb-4 flex items-center justify-center text-white font-bold">3</div>
+            <h3 class="font-bold text-lg mb-1 group-hover:text-orange-500">3D Modeling (Blender)</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Modeling → Texturing → Renders</p>
+            <div class="text-xs text-gray-500">Blender 100% free</div>
+          </a>
+        </div>
       </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="pathCards"></div>
-    </div>
-  </section>
+    </section>
 
-  <section id="courses" class="py-16 md:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="mb-10">
-        <h2 class="text-3xl md:text-4xl font-bold mb-2">All Free Courses</h2>
-        <p class="text-gray-600 dark:text-gray-400">Mapped from the Skill Up prospectus — replaced with free resources only.</p>
+    <section id="courses" class="py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-2xl font-bold mb-2">Course catalog</h2>
+        <p class="text-gray-600 dark:text-gray-400 text-sm mb-6">Skill Up mapping — all free replacements.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" id="courseGrid"></div>
       </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" id="courseGrid"></div>
-    </div>
-  </section>
+    </section>
 
-  <section class="py-16 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">A → Z Learning System</h2>
-      <div class="grid md:grid-cols-2 gap-6 text-sm">
-        <div class="p-5 rounded-xl border border-gray-200 dark:border-gray-700">
-          <div class="font-bold text-orange-500 mb-2">1. Pick ONE Path</div>
-          <p class="text-gray-600 dark:text-gray-400">Web Development, UI/UX, Digital Marketing, Content Writing, Video Editing, Unity, or Blender. Focus beats multitasking.</p>
-        </div>
-        <div class="p-5 rounded-xl border border-gray-200 dark:border-gray-700">
-          <div class="font-bold text-orange-500 mb-2">2. Follow Modules in Order</div>
-          <p class="text-gray-600 dark:text-gray-400">Every path has a clear roadmap from absolute beginner to portfolio project.</p>
-        </div>
-        <div class="p-5 rounded-xl border border-gray-200 dark:border-gray-700">
-          <div class="font-bold text-orange-500 mb-2">3. Practice + Free Resources Only</div>
-          <p class="text-gray-600 dark:text-gray-400">Official docs, freeCodeCamp, free YouTube, free tools. No paid courses required.</p>
-        </div>
-        <div class="p-5 rounded-xl border border-gray-200 dark:border-gray-700">
-          <div class="font-bold text-orange-500 mb-2">4. Capstone → Portfolio</div>
-          <p class="text-gray-600 dark:text-gray-400">Finish the final project, put it on GitHub/Figma/itch.io and use it for jobs or freelancing.</p>
+    <section id="how" class="py-16 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">How to learn here</h2>
+        <ol class="space-y-4 text-sm text-gray-700 dark:text-gray-300">
+          <li class="flex gap-4 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
+            <span class="font-bold text-orange-500 text-lg shrink-0">1</span>
+            <div><strong>Open one path only.</strong> Web Development is best for coding careers.</div>
+          </li>
+          <li class="flex gap-4 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
+            <span class="font-bold text-orange-500 text-lg shrink-0">2</span>
+            <div><strong>Read the lesson text first.</strong> Do the practice task before moving on.</div>
+          </li>
+          <li class="flex gap-4 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
+            <span class="font-bold text-orange-500 text-lg shrink-0">3</span>
+            <div><strong>Take the quiz</strong> after each module. Wrong → re-read that section.</div>
+          </li>
+          <li class="flex gap-4 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
+            <span class="font-bold text-orange-500 text-lg shrink-0">4</span>
+            <div><strong>Optional videos</strong> only if text was unclear.</div>
+          </li>
+          <li class="flex gap-4 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
+            <span class="font-bold text-orange-500 text-lg shrink-0">5</span>
+            <div><strong>Finish the capstone</strong> and publish on GitHub / Figma / itch.io / ArtStation.</div>
+          </li>
+        </ol>
+        <div class="text-center mt-8">
+          <a href="courses/web-development.html" class="btn-primary">Begin Web Development →</a>
         </div>
       </div>
-      <div class="text-center mt-8">
-        <a href="dashboard.html" class="inline-block px-6 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold">Open Dashboard →</a>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <section class="py-12 border-y border-gray-200 dark:border-gray-800">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h3 class="text-xl font-bold mb-3">English | Roman Urdu</h3>
-      <p class="text-gray-600 dark:text-gray-400">Language toggle is ready. Full Roman Urdu explanations will be expanded path by path. Technical terms stay in English with simple explanations.</p>
-    </div>
-  </section>
-
-  <footer class="py-12 bg-gray-900 text-gray-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row justify-between gap-8">
-        <div>
-          <div class="font-bold text-white text-lg mb-2">OpenSkill Academy</div>
-          <p class="text-sm max-w-sm">Free, legal, high-quality alternative to paid short courses. Built for Pakistani and global learners.</p>
-        </div>
-        <div class="text-sm">
-          <p>All recommended resources are free and legally accessible.</p>
-          <p class="mt-2">Not affiliated with Skill Up / Codiea.</p>
-        </div>
+  <footer class="py-10 bg-gray-900 text-gray-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between gap-6">
+      <div>
+        <div class="text-white font-bold mb-1">OpenSkill Academy</div>
+        <p class="max-w-sm">Free legal alternative to paid short courses. Not affiliated with Skill Up / Codiea.</p>
       </div>
-      <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
-        Open source educational project • <a href="https://github.com/WristMohsin/Short-Courses" class="text-orange-400 hover:underline">WristMohsin/Short-Courses</a>
-      </div>
+      <a href="https://github.com/WristMohsin/Short-Courses" class="text-orange-400 hover:underline">GitHub</a>
     </div>
   </footer>
 
