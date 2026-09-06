@@ -3,29 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Content Writing – OpenSkill Academy</title>
+  <title>Free Content Writing – OpenSkill Academy</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config={darkMode:'class'}</script>
   <link rel="stylesheet" href="../css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 font-sans">
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-sans antialiased">
   <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur border-b border-gray-200 dark:border-gray-800">
     <div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="../index.html" class="font-bold">OpenSkill Academy</a>
-      <div class="flex gap-3">
+      <a href="../index.html" class="font-bold flex items-center gap-2"><span class="w-7 h-7 rounded-lg bg-gradient-to-br from-orange-500 to-purple-600 text-white text-xs flex items-center justify-center">OS</span> OpenSkill</a>
+      <div class="flex items-center gap-3">
         <button id="langToggle" class="text-sm px-3 py-1 border rounded-full">EN | RU</button>
         <button id="themeToggle" class="p-2">🌓</button>
       </div>
     </div>
   </header>
-  <main class="max-w-4xl mx-auto px-4 py-12">
-    <h1 class="text-3xl md:text-4xl font-extrabold mb-4">Content Writing</h1>
-    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">Free replacement curriculum for the corresponding Skill Up program. Detailed bilingual lessons, free official resources, projects and quizzes follow the same structure as the complete Web Development path.</p>
-    <div class="p-6 rounded-2xl border border-orange-200 dark:border-orange-900 bg-orange-50 dark:bg-orange-950/20 mb-8">
-      <h2 class="font-bold mb-2">Curriculum Framework Ready</h2>
-      <p class="text-sm">Modules, free resources (official docs + freeCodeCamp + free YouTube + free tools), exercises, quizzes and capstone projects are designed. Expand using the Web Development page as the gold-standard template.</p>
+  <main class="max-w-5xl mx-auto px-4 py-10">
+    <div class="mb-10">
+      <div class="text-sm text-orange-600 font-medium mb-2">Learning Path • Free Replacement for Skill Up Content Writing</div>
+      <h1 class="text-3xl md:text-5xl font-extrabold mb-4">Content Writing</h1>
+      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl">Free curriculum for Content Writing. Grammar, SEO writing, copywriting, storytelling, portfolio and freelancing prep.</p>
+      <div class="mt-6 flex flex-wrap gap-3 text-sm">
+        <span class="px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300">Beginner → Intermediate</span>
+        <span class="px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300">100% Free</span>
+      </div>
     </div>
-    <a href="../index.html" class="text-orange-600 hover:underline">← All Learning Paths</a>
+    <section class="mb-10 p-6 rounded-2xl diagram-box border border-amber-200 dark:border-amber-900/50">
+      <h2 class="text-xl font-bold mb-3">Roadmap</h2>
+      <ol class="list-decimal pl-5 space-y-1 text-sm">
+        <li>Writing Fundamentals</li>
+        <li>Web & Blog Writing + SEO Writing</li>
+        <li>Copywriting & Ad Writing</li>
+        <li>Creative & Technical Writing</li>
+        <li>Editing, Portfolio & Freelancing</li>
+      </ol>
+    </section>
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold mb-4">Free Resources</h2>
+      <article class="p-6 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 space-y-2 text-sm">
+        <p>• <a class="text-orange-600 hover:underline" href="https://owl.purdue.edu/owl/general_writing/" target="_blank">Purdue OWL</a></p>
+        <p>• <a class="text-orange-600 hover:underline" href="https://moz.com/blog" target="_blank">Moz Blog – SEO writing</a></p>
+        <p>• <a class="text-orange-600 hover:underline" href="https://www.hubspot.com/resources/courses" target="_blank">HubSpot Content Marketing free course</a></p>
+        <p>• <a class="text-orange-600 hover:underline" href="https://copyblogger.com/" target="_blank">Copyblogger</a></p>
+      </article>
+    </section>
+    <section class="mb-12 p-6 rounded-2xl bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-900">
+      <h2 class="text-xl font-bold mb-2">Capstone</h2>
+      <p class="text-sm">Publish a portfolio of at least 8 pieces and a short freelancing profile.</p>
+    </section>
+    <div class="text-center py-8"><a href="../index.html" class="text-orange-600 hover:underline">← Back to all paths</a></div>
   </main>
   <script src="../js/theme.js"></script>
   <script src="../js/language.js"></script>
