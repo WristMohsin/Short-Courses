@@ -3,108 +3,203 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free UI/UX & Graphics Design – OpenSkill Academy</title>
+  <title>UI/UX & Graphics Design – OpenSkill Academy</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config={darkMode:'class'}</script>
   <link rel="stylesheet" href="../css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.75rem; }
+    .video-wrap iframe { position: absolute; top:0; left:0; width:100%; height:100%; border:0; }
+    .optional-video { border: 1px dashed #d1d5db; }
+    .dark .optional-video { border-color: #4b5563; }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-sans antialiased">
-  <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur border-b border-gray-200 dark:border-gray-800">
+  <header class="sticky top-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur border-b border-gray-200 dark:border-gray-800">
     <div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="../index.html" class="font-bold flex items-center gap-2"><span class="w-7 h-7 rounded-lg bg-gradient-to-br from-orange-500 to-purple-600 text-white text-xs flex items-center justify-center">OS</span> OpenSkill</a>
-      <div class="flex items-center gap-3">
-        <button id="langToggle" class="text-sm px-3 py-1 border rounded-full">EN | RU</button>
-        <button id="themeToggle" class="p-2">🌓</button>
+      <a href="../index.html" class="font-bold flex items-center gap-2 text-sm">
+        <span class="w-7 h-7 rounded-lg bg-gradient-to-br from-orange-500 to-purple-600 text-white text-xs flex items-center justify-center font-bold">OS</span> OpenSkill
+      </a>
+      <div class="flex items-center gap-3 text-sm">
+        <a href="../dashboard.html" class="hover:text-orange-500">Dashboard</a>
+        <button id="langToggle" class="px-2.5 py-1 border rounded-full text-xs">EN | RU</button>
+        <button id="themeToggle" class="p-1.5">🌓</button>
       </div>
     </div>
   </header>
+  <div class="max-w-7xl mx-auto px-4 py-8">
+    <div class="grid lg:grid-cols-12 gap-8">
+      <aside class="lg:col-span-3 hidden lg:block">
+        <div class="course-sidebar card p-4">
+          <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Course Menu</div>
+          <nav class="space-y-1 text-sm">
+            <a href="#overview" class="block px-3 py-2 rounded-lg hover:bg-pink-50 dark:hover:bg-pink-950/40 font-medium">Overview</a>
+            <a href="#m1" class="block px-3 py-2 rounded-lg hover:bg-pink-50 dark:hover:bg-pink-950/40">1. Design Principles</a>
+            <a href="#q1" class="block px-3 py-2 rounded-lg text-gray-500">→ Quiz 1</a>
+            <a href="#m2" class="block px-3 py-2 rounded-lg hover:bg-pink-50 dark:hover:bg-pink-950/40">2. Color & Type</a>
+            <a href="#q2" class="block px-3 py-2 rounded-lg text-gray-500">→ Quiz 2</a>
+            <a href="#m3" class="block px-3 py-2 rounded-lg hover:bg-pink-50 dark:hover:bg-pink-950/40">3. Free Tools</a>
+            <a href="#m4" class="block px-3 py-2 rounded-lg hover:bg-pink-50 dark:hover:bg-pink-950/40">4. UI/UX Process</a>
+            <a href="#q3" class="block px-3 py-2 rounded-lg text-gray-500">→ Quiz 3</a>
+            <a href="#m5" class="block px-3 py-2 rounded-lg hover:bg-pink-50 dark:hover:bg-pink-950/40">5. Figma</a>
+            <a href="#capstone" class="block px-3 py-2 rounded-lg hover:bg-pink-50 dark:hover:bg-pink-950/40">Capstone</a>
+          </nav>
+        </div>
+      </aside>
+      <div class="lg:col-span-9 space-y-12">
+        <section id="overview">
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="badge bg-pink-100 text-pink-700 dark:bg-pink-900/40 dark:text-pink-300">Beginner → Advanced</span>
+            <span class="badge bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300">100% Free</span>
+          </div>
+          <h1 class="text-3xl md:text-4xl font-extrabold mb-3">UI/UX & Graphics Design</h1>
+          <p class="text-gray-600 dark:text-gray-300 mb-2">Har concept page pe detail mein explain hai. <strong>Video sirf extra help</strong> — pehle text padho, practice karo, quiz do. Agar samajh na aaye tab video dekho.</p>
+          <a href="#m1" class="inline-block mt-3 px-5 py-2.5 rounded-xl bg-pink-500 hover:bg-pink-600 text-white font-semibold text-sm">Start Module 1</a>
+        </section>
 
-  <main class="max-w-5xl mx-auto px-4 py-10">
-    <div class="mb-10">
-      <div class="text-sm text-orange-600 font-medium mb-2">Learning Path • Free Replacement for Skill Up UI/UX & Graphics</div>
-      <h1 class="text-3xl md:text-5xl font-extrabold mb-4">UI/UX & Graphics Design</h1>
-      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl">
-        Complete free curriculum covering Graphics Design (Regular) and UI/UX Design Bootcamp from Skill Up. Uses free tools (Figma, Photopea, GIMP, Inkscape) and free official resources only.
-      </p>
-      <div class="mt-6 flex flex-wrap gap-3 text-sm">
-        <span class="px-3 py-1 rounded-full bg-pink-100 dark:bg-pink-900/40 text-pink-700 dark:text-pink-300">Beginner → Advanced</span>
-        <span class="px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300">100% Free</span>
-        <span class="px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300">~150–250 hours</span>
+        <section id="m1" class="space-y-6">
+          <div class="module-accent pl-4" style="border-color:#ec4899"><div class="text-sm font-semibold text-pink-500 mb-1">MODULE 1</div><h2 class="text-2xl font-bold">Design Principles</h2></div>
+          <article class="card p-6 space-y-4">
+            <h3 class="text-xl font-bold">1. Contrast</h3>
+            <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300"><strong>Contrast</strong> = elements ke beech clear difference. Dark text on light background = high contrast (easy read). Buttons background se alag dikhne chahiye. Accessibility: text contrast ratio ideally 4.5:1+.</p>
+          </article>
+          <article class="card p-6 space-y-4">
+            <h3 class="text-xl font-bold">2. Hierarchy</h3>
+            <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300"><strong>Visual hierarchy</strong> batati hai pehle kya dekhna hai. Bada bold heading → subheading → body. Size, weight, color se hierarchy banti hai.</p>
+          </article>
+          <article class="card p-6 space-y-4">
+            <h3 class="text-xl font-bold">3. Alignment, Proximity, Repetition, Balance</h3>
+            <ul class="text-sm space-y-2 text-gray-700 dark:text-gray-300 list-disc pl-5">
+              <li><strong>Alignment:</strong> Elements grid/line pe; random placement avoid.</li>
+              <li><strong>Proximity:</strong> Related items paas, unrelated door.</li>
+              <li><strong>Repetition:</strong> Same button/heading style dobara — consistency.</li>
+              <li><strong>Balance:</strong> Page ek taraf bhari na lage.</li>
+            </ul>
+            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Practice:</strong> 5 sites/apps pe contrast, hierarchy, alignment note karo.</div>
+          </article>
+          <div class="optional-video card p-4 space-y-2">
+            <div class="text-xs font-semibold text-gray-500 uppercase">Optional video — agar text se samajh na aaye</div>
+            <div class="video-wrap"><iframe src="https://www.youtube.com/embed/YqQx75OPRa0" title="Design Principles" allowfullscreen allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
+          </div>
+        </section>
+
+        <section id="q1" class="card p-6 space-y-4 border-pink-200 dark:border-pink-900">
+          <h3 class="text-lg font-bold">Quiz 1 — Design Principles</h3>
+          <p class="text-sm text-gray-500">Module 1 ke baad attempt karo.</p>
+          <div data-quiz="q1a" class="space-y-2 text-sm">
+            <p class="font-medium">1. Dark text on white background:</p>
+            <div class="quiz-option rounded-lg p-3" data-correct="true">High contrast</div>
+            <div class="quiz-option rounded-lg p-3" data-correct="false">Low contrast</div>
+            <div class="quiz-option rounded-lg p-3" data-correct="false">Proximity</div>
+            <p class="quiz-feedback hidden text-sm mt-2 font-medium"></p>
+          </div>
+          <div data-quiz="q1b" class="space-y-2 text-sm mt-6">
+            <p class="font-medium">2. Related items paas rakhna:</p>
+            <div class="quiz-option rounded-lg p-3" data-correct="false">Contrast</div>
+            <div class="quiz-option rounded-lg p-3" data-correct="true">Proximity</div>
+            <div class="quiz-option rounded-lg p-3" data-correct="false">Repetition</div>
+            <p class="quiz-feedback hidden text-sm mt-2 font-medium"></p>
+          </div>
+          <div data-quiz="q1c" class="space-y-2 text-sm mt-6">
+            <p class="font-medium">3. Same button style bar bar:</p>
+            <div class="quiz-option rounded-lg p-3" data-correct="true">Repetition (consistency)</div>
+            <div class="quiz-option rounded-lg p-3" data-correct="false">Contrast</div>
+            <div class="quiz-option rounded-lg p-3" data-correct="false">Hierarchy</div>
+            <p class="quiz-feedback hidden text-sm mt-2 font-medium"></p>
+          </div>
+        </section>
+
+        <section id="m2" class="space-y-6">
+          <div class="module-accent pl-4" style="border-color:#ec4899"><div class="text-sm font-semibold text-pink-500 mb-1">MODULE 2</div><h2 class="text-2xl font-bold">Color & Typography</h2></div>
+          <article class="card p-6 space-y-4">
+            <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300"><strong>Complementary</strong> = color wheel pe opposite (strong contrast). <strong>Analogous</strong> = side-by-side (soft). Brand: 1 primary + 1–2 secondary + neutrals. Tool: Coolors.co</p>
+            <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300"><strong>Sans-serif</strong> screens pe clear; max 2 font families. Google Fonts free.</p>
+            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Practice:</strong> Fictional business — 3 colors + 2 fonts style guide.</div>
+          </article>
+        </section>
+
+        <section id="q2" class="card p-6 space-y-4 border-pink-200 dark:border-pink-900">
+          <h3 class="text-lg font-bold">Quiz 2 — Color & Type</h3>
+          <div data-quiz="q2a" class="space-y-2 text-sm">
+            <p class="font-medium">1. Opposite colors on wheel:</p>
+            <div class="quiz-option rounded-lg p-3" data-correct="true">Complementary</div>
+            <div class="quiz-option rounded-lg p-3" data-correct="false">Analogous</div>
+            <div class="quiz-option rounded-lg p-3" data-correct="false">Monochrome</div>
+            <p class="quiz-feedback hidden text-sm mt-2 font-medium"></p>
+          </div>
+        </section>
+
+        <section id="m3" class="space-y-6">
+          <div class="module-accent pl-4" style="border-color:#ec4899"><div class="text-sm font-semibold text-pink-500 mb-1">MODULE 3</div><h2 class="text-2xl font-bold">Free Tools</h2></div>
+          <article class="card p-6 space-y-4">
+            <p class="text-sm text-gray-700 dark:text-gray-300"><strong>Photopea</strong> = free browser Photoshop-like. <strong>Inkscape</strong> = free vector (logos). Raster = photos; vector = scalable logos.</p>
+            <a href="https://www.photopea.com/" target="_blank" class="resource-link">Photopea</a>
+            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Projects:</strong> 3 social posts + logo + poster</div>
+            <div class="optional-video card p-4 space-y-2 mt-4">
+              <div class="text-xs font-semibold text-gray-500 uppercase">Optional video</div>
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/ZTrEuAOj5AA" title="Photopea" allowfullscreen allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
+            </div>
+          </article>
+        </section>
+
+        <section id="m4" class="space-y-6">
+          <div class="module-accent pl-4" style="border-color:#ec4899"><div class="text-sm font-semibold text-pink-500 mb-1">MODULE 4</div><h2 class="text-2xl font-bold">UI/UX Process</h2></div>
+          <article class="card p-6 space-y-4">
+            <ol class="text-sm space-y-2 list-decimal pl-5 text-gray-700 dark:text-gray-300">
+              <li><strong>Empathize</strong> — users ki problem</li>
+              <li><strong>Define</strong> — clear problem statement</li>
+              <li><strong>Ideate</strong> — solutions brainstorm</li>
+              <li><strong>Prototype</strong> — wireframe → clickable</li>
+              <li><strong>Test</strong> — feedback → improve</li>
+            </ol>
+            <p class="text-sm text-gray-700 dark:text-gray-300 mt-2"><strong>Wireframe</strong> = rough layout pehle. <strong>User flow</strong> = screen-to-screen path.</p>
+            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Practice:</strong> Persona + 5–8 wireframes</div>
+          </article>
+        </section>
+
+        <section id="q3" class="card p-6 space-y-4 border-pink-200 dark:border-pink-900">
+          <h3 class="text-lg font-bold">Quiz 3 — UI/UX Process</h3>
+          <div data-quiz="q3a" class="space-y-2 text-sm">
+            <p class="font-medium">1. Wireframe pehle focus:</p>
+            <div class="quiz-option rounded-lg p-3" data-correct="true">Layout / structure</div>
+            <div class="quiz-option rounded-lg p-3" data-correct="false">Final colors</div>
+            <div class="quiz-option rounded-lg p-3" data-correct="false">Only marketing copy</div>
+            <p class="quiz-feedback hidden text-sm mt-2 font-medium"></p>
+          </div>
+        </section>
+
+        <section id="m5" class="space-y-6">
+          <div class="module-accent pl-4" style="border-color:#ec4899"><div class="text-sm font-semibold text-pink-500 mb-1">MODULE 5</div><h2 class="text-2xl font-bold">Figma</h2></div>
+          <article class="card p-6 space-y-4">
+            <p class="text-sm text-gray-700 dark:text-gray-300">Figma free plan kaafi hai. Frames, auto-layout, components, prototype mode. Workflow: wireframe → high-fi → prototype → share.</p>
+            <a href="https://www.figma.com/" target="_blank" class="resource-link">Figma free</a>
+            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Project:</strong> 5–8 high-fi screens + prototype</div>
+            <div class="optional-video card p-4 space-y-2 mt-4">
+              <div class="text-xs font-semibold text-gray-500 uppercase">Optional video</div>
+              <div class="video-wrap"><iframe src="https://www.youtube.com/embed/FTFaQWZBqQ8" title="Figma" allowfullscreen allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
+            </div>
+          </article>
+        </section>
+
+        <section id="capstone" class="card p-6 border-pink-200 dark:border-pink-900 bg-gradient-to-br from-pink-50 to-purple-50 dark:from-pink-950/20 dark:to-purple-950/20">
+          <div class="text-sm font-semibold text-pink-600 mb-2">CAPSTONE</div>
+          <h2 class="text-2xl font-bold mb-3">Case Study + Graphics</h2>
+          <ul class="text-sm space-y-1 list-disc pl-5">
+            <li>Research + persona + flow</li>
+            <li>Wireframes → Figma → Prototype</li>
+            <li>3–5 graphics same brand</li>
+            <li>Short case study write-up</li>
+          </ul>
+        </section>
+        <div class="flex gap-4 pt-4 border-t border-gray-200 dark:border-gray-800">
+          <a href="../dashboard.html" class="text-sm text-orange-600 hover:underline">← Dashboard</a>
+        </div>
       </div>
     </div>
-
-    <section class="mb-14 p-6 rounded-2xl diagram-box border border-pink-200 dark:border-pink-900/50">
-      <h2 class="text-xl font-bold mb-4">Learning Roadmap</h2>
-      <div class="space-y-4">
-        <div class="flex gap-4"><div class="w-8 h-8 rounded-full bg-pink-500 text-white flex items-center justify-center font-bold text-sm shrink-0">1</div><div><h3 class="font-semibold">Design Fundamentals</h3><p class="text-sm text-gray-600 dark:text-gray-400">Principles, Color Theory, Typography, Composition, Branding</p></div></div>
-        <div class="flex gap-4"><div class="w-8 h-8 rounded-full bg-pink-500 text-white flex items-center justify-center font-bold text-sm shrink-0">2</div><div><h3 class="font-semibold">Graphics Tools</h3><p class="text-sm text-gray-600 dark:text-gray-400">Photopea / GIMP (Photoshop alternative) + Inkscape (Illustrator alternative)</p></div></div>
-        <div class="flex gap-4"><div class="w-8 h-8 rounded-full bg-pink-500 text-white flex items-center justify-center font-bold text-sm shrink-0">3</div><div><h3 class="font-semibold">UI/UX Foundations</h3><p class="text-sm text-gray-600 dark:text-gray-400">Design Thinking, User Research, Wireframes, User Flows</p></div></div>
-        <div class="flex gap-4"><div class="w-8 h-8 rounded-full bg-pink-500 text-white flex items-center justify-center font-bold text-sm shrink-0">4</div><div><h3 class="font-semibold">Figma & UI Design</h3><p class="text-sm text-gray-600 dark:text-gray-400">Figma (free), Components, Design Systems, Prototyping</p></div></div>
-        <div class="flex gap-4"><div class="w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold text-sm shrink-0">5</div><div><h3 class="font-semibold">Projects & Portfolio</h3><p class="text-sm text-gray-600 dark:text-gray-400">Real projects, Case studies, Portfolio, Freelancing prep</p></div></div>
-      </div>
-    </section>
-
-    <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-4">Module 1: Design Fundamentals</h2>
-      <article class="p-6 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 mb-6">
-        <h3 class="text-xl font-bold mb-2">1.1 Principles of Design, Color & Typography</h3>
-        <p class="text-sm mb-3">Learn contrast, hierarchy, alignment, proximity, repetition, balance, color theory, and typography basics.</p>
-        <h4 class="font-semibold mb-2">Free Resources</h4>
-        <ul class="space-y-1 text-sm">
-          <li>• <a class="text-orange-600 hover:underline" href="https://www.interaction-design.org/literature" target="_blank">Interaction Design Foundation (free articles)</a></li>
-          <li>• <a class="text-orange-600 hover:underline" href="https://www.youtube.com/watch?v=YqQx75OPRa0" target="_blank">Design Principles – free YouTube</a></li>
-          <li>• <a class="text-orange-600 hover:underline" href="https://www.figma.com/resource-library/" target="_blank">Figma Resource Library</a></li>
-          <li>• <a class="text-orange-600 hover:underline" href="https://fonts.google.com/" target="_blank">Google Fonts</a></li>
-        </ul>
-        <h4 class="font-semibold mt-4 mb-2">Practice</h4>
-        <p class="text-sm p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">Create a mood board and a simple brand style guide (logo concept + colors + fonts) for a fictional local business.</p>
-      </article>
-    </section>
-
-    <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-4">Module 2: Free Graphics Tools</h2>
-      <article class="p-6 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 mb-6">
-        <h3 class="text-xl font-bold mb-2">2.1 Photopea / GIMP + Inkscape</h3>
-        <p class="text-sm mb-3">Photopea.com is free and runs in browser (very similar to Photoshop). GIMP is free desktop software. Inkscape replaces Illustrator for vector work.</p>
-        <ul class="space-y-1 text-sm">
-          <li>• <a class="text-orange-600 hover:underline" href="https://www.photopea.com/" target="_blank">Photopea (free online Photoshop)</a></li>
-          <li>• <a class="text-orange-600 hover:underline" href="https://www.gimp.org/tutorials/" target="_blank">GIMP Official Tutorials</a></li>
-          <li>• <a class="text-orange-600 hover:underline" href="https://inkscape.org/learn/" target="_blank">Inkscape Learn</a></li>
-          <li>• <a class="text-orange-600 hover:underline" href="https://www.youtube.com/watch?v=ZTrEuAOj5AA" target="_blank">Photopea Full Course (YouTube)</a></li>
-        </ul>
-        <h4 class="font-semibold mt-4 mb-2">Practice</h4>
-        <p class="text-sm p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">Design social media posts, a logo, and a simple poster using Photopea + Inkscape.</p>
-      </article>
-    </section>
-
-    <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-4">Module 3–4: UI/UX with Figma</h2>
-      <article class="p-6 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 mb-6">
-        <h3 class="text-xl font-bold mb-2">3.1 Design Thinking, Research, Wireframes & Figma</h3>
-        <p class="text-sm mb-3">Figma free plan is enough for learning and most portfolio work.</p>
-        <ul class="space-y-1 text-sm">
-          <li>• <a class="text-orange-600 hover:underline" href="https://www.figma.com/resource-library/design-thinking/" target="_blank">Figma Design Thinking resources</a></li>
-          <li>• <a class="text-orange-600 hover:underline" href="https://www.figma.com/resources/learn-design/" target="_blank">Figma Learn Design</a></li>
-          <li>• <a class="text-orange-600 hover:underline" href="https://www.youtube.com/watch?v=FTFaQWZBqQ8" target="_blank">Figma UI/UX Design Course</a></li>
-          <li>• <a class="text-orange-600 hover:underline" href="https://www.nngroup.com/articles/" target="_blank">Nielsen Norman Group free articles</a></li>
-        </ul>
-        <h4 class="font-semibold mt-4 mb-2">Practice</h4>
-        <p class="text-sm p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">Wireframe and design a mobile app (e.g. local food delivery or education app) in Figma with 5–8 screens + interactive prototype.</p>
-      </article>
-    </section>
-
-    <section class="mb-12 p-6 rounded-2xl bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-900">
-      <h2 class="text-xl font-bold mb-3">Capstone Project</h2>
-      <p class="text-sm mb-2">Complete UI/UX case study: Research → Wireframes → High-fidelity UI in Figma → Prototype → Portfolio presentation.</p>
-      <p class="text-sm">Also create 3–5 graphics design pieces (social posts, logo, poster) for the same brand.</p>
-    </section>
-
-    <div class="text-center py-8">
-      <a href="../index.html" class="text-orange-600 hover:underline">← Back to all paths</a>
-    </div>
-  </main>
+  </div>
   <script src="../js/theme.js"></script>
   <script src="../js/language.js"></script>
+  <script src="../js/quiz.js"></script>
 </body>
 </html>
