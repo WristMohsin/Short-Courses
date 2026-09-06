@@ -3,57 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free Content Writing – OpenSkill Academy</title>
+  <title>Content Writing – OpenSkill Academy</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config={darkMode:'class'}</script>
   <link rel="stylesheet" href="../css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-sans antialiased">
-  <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur border-b border-gray-200 dark:border-gray-800">
+  <header class="sticky top-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur border-b border-gray-200 dark:border-gray-800">
     <div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
-      <a href="../index.html" class="font-bold flex items-center gap-2"><span class="w-7 h-7 rounded-lg bg-gradient-to-br from-orange-500 to-purple-600 text-white text-xs flex items-center justify-center">OS</span> OpenSkill</a>
-      <div class="flex items-center gap-3">
-        <button id="langToggle" class="text-sm px-3 py-1 border rounded-full">EN | RU</button>
-        <button id="themeToggle" class="p-2">🌓</button>
+      <a href="../index.html" class="font-bold flex items-center gap-2"><span class="w-7 h-7 rounded-lg bg-gradient-to-br from-orange-500 to-purple-600 text-white text-xs flex items-center justify-center font-bold">OS</span> OpenSkill</a>
+      <div class="flex items-center gap-3 text-sm">
+        <a href="../dashboard.html" class="hover:text-orange-500 hidden md:inline">Dashboard</a>
+        <button id="langToggle" class="px-2.5 py-1 border rounded-full text-xs">EN | RU</button>
+        <button id="themeToggle" class="p-1.5">🌓</button>
       </div>
     </div>
   </header>
-  <main class="max-w-5xl mx-auto px-4 py-10">
-    <div class="mb-10">
-      <div class="text-sm text-orange-600 font-medium mb-2">Learning Path • Free Replacement for Skill Up Content Writing</div>
-      <h1 class="text-3xl md:text-5xl font-extrabold mb-4">Content Writing</h1>
-      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl">Free curriculum for Content Writing. Grammar, SEO writing, copywriting, storytelling, portfolio and freelancing prep.</p>
-      <div class="mt-6 flex flex-wrap gap-3 text-sm">
-        <span class="px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300">Beginner → Intermediate</span>
-        <span class="px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300">100% Free</span>
+  <div class="max-w-7xl mx-auto px-4 py-8 md:py-12">
+    <div class="grid lg:grid-cols-12 gap-8">
+      <aside class="lg:col-span-3 hidden lg:block">
+        <div class="course-sidebar card p-4">
+          <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Navigation</div>
+          <nav class="space-y-1 text-sm">
+            <a href="#overview" class="block px-3 py-2 rounded-lg hover:bg-amber-50 dark:hover:bg-amber-950/40 font-medium">Overview</a>
+            <a href="#roadmap" class="block px-3 py-2 rounded-lg hover:bg-amber-50 dark:hover:bg-amber-950/40">Roadmap</a>
+            <a href="#m1" class="block px-3 py-2 rounded-lg hover:bg-amber-50 dark:hover:bg-amber-950/40">1. Fundamentals</a>
+            <a href="#m2" class="block px-3 py-2 rounded-lg hover:bg-amber-50 dark:hover:bg-amber-950/40">2. SEO Writing</a>
+            <a href="#m3" class="block px-3 py-2 rounded-lg hover:bg-amber-50 dark:hover:bg-amber-950/40">3. Copywriting</a>
+            <a href="#m4" class="block px-3 py-2 rounded-lg hover:bg-amber-50 dark:hover:bg-amber-950/40">4. Portfolio</a>
+            <a href="#capstone" class="block px-3 py-2 rounded-lg hover:bg-amber-50 dark:hover:bg-amber-950/40">Capstone</a>
+          </nav>
+        </div>
+      </aside>
+      <div class="lg:col-span-9 space-y-10">
+        <section id="overview">
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="badge bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">Beginner → Intermediate</span>
+            <span class="badge bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300">100% Free</span>
+            <span class="badge bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300">80–120 hours</span>
+          </div>
+          <h1 class="text-3xl md:text-4xl font-extrabold mb-3">Content Writing</h1>
+          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mb-6">Free path for Skill Up Content Writing. Grammar, SEO blogs, copywriting, portfolio, and freelancing prep.</p>
+          <a href="#m1" class="inline-block px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-semibold text-sm">Start Module 1</a>
+        </section>
+        <section class="card p-6">
+          <h2 class="text-lg font-bold mb-4">What you will be able to do</h2>
+          <div class="grid sm:grid-cols-2 gap-3 text-sm">
+            <div class="flex gap-2"><span class="text-green-500">✓</span> Write clear, correct English content</div>
+            <div class="flex gap-2"><span class="text-green-500">✓</span> Write SEO-friendly blog posts</div>
+            <div class="flex gap-2"><span class="text-green-500">✓</span> Write product and landing page copy</div>
+            <div class="flex gap-2"><span class="text-green-500">✓</span> Edit and improve drafts</div>
+            <div class="flex gap-2"><span class="text-green-500">✓</span> Build a writing portfolio</div>
+            <div class="flex gap-2"><span class="text-green-500">✓</span> Pitch for freelance work</div>
+          </div>
+        </section>
+        <section id="roadmap">
+          <h2 class="text-2xl font-bold mb-6">Learning Roadmap</h2>
+          <div class="space-y-0">
+            <div class="roadmap-line pb-8"><div class="absolute left-0 w-8 h-8 rounded-full bg-amber-500 text-white flex items-center justify-center text-sm font-bold">1</div><h3 class="font-semibold text-lg">Writing Fundamentals</h3><p class="text-sm text-gray-500 mt-1">Grammar, tone, audience · 2–3 weeks</p></div>
+            <div class="roadmap-line pb-8"><div class="absolute left-0 w-8 h-8 rounded-full bg-amber-500 text-white flex items-center justify-center text-sm font-bold">2</div><h3 class="font-semibold text-lg">SEO & Blog Writing</h3><p class="text-sm text-gray-500 mt-1">3–4 weeks</p></div>
+            <div class="roadmap-line pb-8"><div class="absolute left-0 w-8 h-8 rounded-full bg-amber-500 text-white flex items-center justify-center text-sm font-bold">3</div><h3 class="font-semibold text-lg">Copywriting</h3><p class="text-sm text-gray-500 mt-1">2–3 weeks</p></div>
+            <div class="roadmap-line"><div class="absolute left-0 w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center text-sm font-bold">4</div><h3 class="font-semibold text-lg">Portfolio & Freelancing</h3></div>
+          </div>
+        </section>
+        <section id="m1" class="space-y-6">
+          <div class="module-accent pl-4" style="border-color:#f59e0b"><div class="text-sm font-semibold text-amber-600 mb-1">MODULE 1</div><h2 class="text-2xl font-bold">Writing Fundamentals</h2></div>
+          <article class="card p-6 space-y-4">
+            <h3 class="text-xl font-bold">1.1 Grammar, Clarity, Audience</h3>
+            <div class="grid sm:grid-cols-2 gap-2">
+              <a href="https://owl.purdue.edu/owl/general_writing/" target="_blank" rel="noopener" class="resource-link">Purdue OWL</a>
+              <a href="https://www.grammarly.com/blog/" target="_blank" rel="noopener" class="resource-link">Grammarly Blog</a>
+            </div>
+            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Practice:</strong> Write 3 short pieces. Edit for clarity.</div>
+          </article>
+        </section>
+        <section id="m2" class="space-y-6">
+          <div class="module-accent pl-4" style="border-color:#f59e0b"><div class="text-sm font-semibold text-amber-600 mb-1">MODULE 2</div><h2 class="text-2xl font-bold">SEO & Blog Writing</h2></div>
+          <article class="card p-6 space-y-4">
+            <div class="grid sm:grid-cols-2 gap-2">
+              <a href="https://moz.com/blog" target="_blank" rel="noopener" class="resource-link">Moz Blog</a>
+              <a href="https://www.hubspot.com/resources/courses" target="_blank" rel="noopener" class="resource-link">HubSpot Content Marketing</a>
+              <a href="https://www.youtube.com/c/AhrefsCom" target="_blank" rel="noopener" class="resource-link">Ahrefs SEO Content</a>
+            </div>
+            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Practice:</strong> Write 5 SEO blog posts (800–1200 words).</div>
+          </article>
+        </section>
+        <section id="m3" class="space-y-6">
+          <div class="module-accent pl-4" style="border-color:#f59e0b"><div class="text-sm font-semibold text-amber-600 mb-1">MODULE 3</div><h2 class="text-2xl font-bold">Copywriting</h2></div>
+          <article class="card p-6 space-y-4">
+            <a href="https://copyblogger.com/" target="_blank" rel="noopener" class="resource-link">Copyblogger</a>
+            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Practice:</strong> 3 product descriptions + 1 landing page draft.</div>
+          </article>
+        </section>
+        <section id="m4" class="space-y-6">
+          <div class="module-accent pl-4" style="border-color:#f59e0b"><div class="text-sm font-semibold text-amber-600 mb-1">MODULE 4</div><h2 class="text-2xl font-bold">Portfolio & Freelancing</h2></div>
+          <article class="card p-6 space-y-4">
+            <div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 text-sm"><strong>Practice:</strong> Portfolio on Notion/Google Sites + freelancing bio + sample pitch.</div>
+          </article>
+        </section>
+        <section id="capstone" class="card p-6 border-amber-200 dark:border-amber-900 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/20">
+          <div class="text-sm font-semibold text-amber-600 mb-2">FINAL PROJECT</div>
+          <h2 class="text-2xl font-bold mb-3">Capstone — Writing Portfolio</h2>
+          <p class="text-sm">Publish at least 8 pieces (blogs + copy + one long-form) + freelancing profile.</p>
+        </section>
+        <div class="flex gap-4 pt-4 border-t border-gray-200 dark:border-gray-800">
+          <a href="../dashboard.html" class="text-sm text-orange-600 hover:underline">← Dashboard</a>
+          <a href="../index.html" class="text-sm text-gray-500 hover:underline">All paths</a>
+        </div>
       </div>
     </div>
-    <section class="mb-10 p-6 rounded-2xl diagram-box border border-amber-200 dark:border-amber-900/50">
-      <h2 class="text-xl font-bold mb-3">Roadmap</h2>
-      <ol class="list-decimal pl-5 space-y-1 text-sm">
-        <li>Writing Fundamentals</li>
-        <li>Web & Blog Writing + SEO Writing</li>
-        <li>Copywriting & Ad Writing</li>
-        <li>Creative & Technical Writing</li>
-        <li>Editing, Portfolio & Freelancing</li>
-      </ol>
-    </section>
-    <section class="mb-8">
-      <h2 class="text-2xl font-bold mb-4">Free Resources</h2>
-      <article class="p-6 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 space-y-2 text-sm">
-        <p>• <a class="text-orange-600 hover:underline" href="https://owl.purdue.edu/owl/general_writing/" target="_blank">Purdue OWL</a></p>
-        <p>• <a class="text-orange-600 hover:underline" href="https://moz.com/blog" target="_blank">Moz Blog – SEO writing</a></p>
-        <p>• <a class="text-orange-600 hover:underline" href="https://www.hubspot.com/resources/courses" target="_blank">HubSpot Content Marketing free course</a></p>
-        <p>• <a class="text-orange-600 hover:underline" href="https://copyblogger.com/" target="_blank">Copyblogger</a></p>
-      </article>
-    </section>
-    <section class="mb-12 p-6 rounded-2xl bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-900">
-      <h2 class="text-xl font-bold mb-2">Capstone</h2>
-      <p class="text-sm">Publish a portfolio of at least 8 pieces and a short freelancing profile.</p>
-    </section>
-    <div class="text-center py-8"><a href="../index.html" class="text-orange-600 hover:underline">← Back to all paths</a></div>
-  </main>
+  </div>
   <script src="../js/theme.js"></script>
   <script src="../js/language.js"></script>
 </body>
