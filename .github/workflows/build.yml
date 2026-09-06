@@ -5,7 +5,7 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
-  workflow_dispatch:  # Allow manual trigger
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -29,21 +29,21 @@ jobs:
       - name: Build static site
         run: |
           echo "Building OpenSkill Academy static site..."
-          # Create a clean dist folder
           mkdir -p dist
-          # Copy all site files
-          cp -r index.html css js dist/ 2>/dev/null || true
-          cp -r courses data assets dist/ 2>/dev/null || true
+          # Copy ALL root HTML files (index, dashboard, etc.)
+          cp -f *.html dist/ 2>/dev/null || true
+          # Copy folders
+          cp -r css js courses data assets dist/ 2>/dev/null || true
           cp README.md dist/ 2>/dev/null || true
-          # Ensure folders exist even if some are missing
           mkdir -p dist/css dist/js dist/courses dist/data
-          # Simple validation
           if [ ! -f dist/index.html ]; then
             echo "Error: index.html not found"
             exit 1
           fi
-          echo "Build completed successfully."
+          echo "=== dist contents ==="
           ls -la dist/
+          ls -la dist/courses/ || true
+          echo "Build completed successfully."
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
