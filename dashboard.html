@@ -6,47 +6,59 @@
   <title>Dashboard · OpenSkill Academy</title>
   <script>(function(){var t=localStorage.getItem('theme')||'system';if(t==='dark'||(t==='system'&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark');})();</script>
   <link rel="stylesheet" href="css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%234f46e5'/><text x='16' y='22' text-anchor='middle' fill='white' font-size='14' font-family='system-ui' font-weight='700'>OS</text></svg>" />
 </head>
 <body>
   <header class="site-header">
     <div class="inner">
-      <a href="index.html" class="logo">OpenSkill Academy</a>
+      <a href="index.html" class="logo"><span class="logo-mark">OS</span> OpenSkill Academy</a>
       <nav class="nav">
-        <a href="index.html#catalog">Catalog</a>
+        <a href="index.html#courses">Courses</a>
         <a href="dashboard.html">Dashboard</a>
       </nav>
       <button type="button" id="themeToggle" class="btn btn-ghost">Theme</button>
     </div>
   </header>
-  <main class="container" style="padding:48px 0 80px">
-    <div style="margin-bottom:40px;max-width:32em">
-      <h1 class="h2" style="margin-bottom:8px">Dashboard</h1>
-      <p class="muted" style="font-size:14px;line-height:1.6">Select a path and work modules in sequence. Lesson and task completion is stored in this browser.</p>
+  <main class="container" style="padding:40px 0 80px">
+    <h1 style="font-size:1.5rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:8px">Your learning</h1>
+    <p style="color:var(--fg-3);font-size:14px;margin-bottom:28px">Progress is saved in this browser. Pick a path and continue where you left off.</p>
+    <div class="card" style="margin-bottom:24px">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:flex-start">
+        <div>
+          <div class="label" style="margin-bottom:6px">Primary path</div>
+          <h2 style="font-size:18px;font-weight:700;margin-bottom:8px">Web Development</h2>
+          <div class="prog" style="width:min(280px,100%)"><span id="dashProg" style="width:0%"></span></div>
+          <div style="font-size:13px;color:var(--fg-3);margin-top:8px" id="dashPct">0% complete</div>
+        </div>
+        <a href="courses/web-development.html" class="btn btn-primary">Continue learning →</a>
+      </div>
     </div>
-    <div class="path-grid">
-      <a href="courses/web-development.html" class="path-item" style="border-color:var(--border-strong)">
-        <div class="label" style="margin-bottom:8px">Recommended</div>
-        <h3>Web Development</h3>
-        <p>Most complete path: lessons, syntax notes, progressive tasks, quizzes, progress tracking.</p>
-      </a>
-      <a href="courses/uiux-design.html" class="path-item"><h3>UI/UX &amp; Graphics</h3><p>Design systems thinking, tools, Figma, screenshot design scope.</p></a>
-      <a href="courses/digital-marketing.html" class="path-item"><h3>Digital Marketing</h3><p>SEO, ASO, campaigns, and lead generation modules.</p></a>
-      <a href="courses/content-writing.html" class="path-item"><h3>Content Writing</h3><p>Fundamentals through SEO and commercial copy.</p></a>
-      <a href="courses/video-editing.html" class="path-item"><h3>Video Editing</h3><p>DaVinci Resolve–centered free workflow.</p></a>
-      <a href="courses/unity-game-dev.html" class="path-item"><h3>Unity 3D</h3><p>Engine fundamentals through publishable prototypes.</p></a>
-      <a href="courses/3d-modeling.html" class="path-item"><h3>3D Modeling</h3><p>Blender from basics to portfolio renders.</p></a>
-    </div>
-    <div class="surface" style="margin-top:48px;padding:24px">
-      <h2 class="h3" style="margin-bottom:12px">Protocol</h2>
-      <ol class="muted" style="font-size:14px;line-height:1.7;padding-left:18px">
-        <li>Open one path only until the capstone is public.</li>
-        <li>Read the module text before any optional video.</li>
-        <li>Complete the task and quiz before advancing.</li>
-        <li>Publish work externally; mark progress on the course page.</li>
-      </ol>
+    <h2 class="section-title" style="margin-bottom:16px">All paths</h2>
+    <div class="course-grid">
+      <a href="courses/web-development.html" class="course-card"><div class="icon">💻</div><div class="badge-row"><span class="badge badge-free">FREE</span></div><h3>Web Development</h3><p class="desc">Flagship path with progress tracking</p><span class="cta">Open →</span></a>
+      <a href="courses/uiux-design.html" class="course-card"><div class="icon">🎨</div><div class="badge-row"><span class="badge badge-free">FREE</span></div><h3>UI/UX & Graphics</h3><p class="desc">Design + Figma + portfolio</p><span class="cta">Open →</span></a>
+      <a href="courses/digital-marketing.html" class="course-card"><div class="icon">📈</div><div class="badge-row"><span class="badge badge-free">FREE</span></div><h3>Digital Marketing</h3><p class="desc">SEO · ASO · Leads</p><span class="cta">Open →</span></a>
+      <a href="courses/content-writing.html" class="course-card"><div class="icon">✍️</div><div class="badge-row"><span class="badge badge-free">FREE</span></div><h3>Content Writing</h3><p class="desc">SEO writing + copy</p><span class="cta">Open →</span></a>
+      <a href="courses/video-editing.html" class="course-card"><div class="icon">🎬</div><div class="badge-row"><span class="badge badge-free">FREE</span></div><h3>Video Editing</h3><p class="desc">DaVinci Resolve path</p><span class="cta">Open →</span></a>
+      <a href="courses/unity-game-dev.html" class="course-card"><div class="icon">🎮</div><div class="badge-row"><span class="badge badge-free">FREE</span></div><h3>Unity 3D</h3><p class="desc">Games + publish</p><span class="cta">Open →</span></a>
+      <a href="courses/3d-modeling.html" class="course-card"><div class="icon">🧊</div><div class="badge-row"><span class="badge badge-free">FREE</span></div><h3>3D Modeling</h3><p class="desc">Blender portfolio</p><span class="cta">Open →</span></a>
     </div>
   </main>
   <script src="js/theme.js"></script>
+  <script>
+    try {
+      const data = JSON.parse(localStorage.getItem('openskill_progress') || '{}');
+      const web = data['web-dev'] || {};
+      const lessons = Object.keys(web.lessons || {}).length;
+      const tasks = Object.keys(web.tasks || {}).length;
+      const quizzes = Object.keys(web.quizzes || {}).length;
+      const pct = Math.min(100, Math.round(lessons * 8 + tasks * 6 + quizzes * 5));
+      const bar = document.getElementById('dashProg');
+      const label = document.getElementById('dashPct');
+      if (bar) bar.style.width = pct + '%';
+      if (label) label.textContent = pct + '% complete · lessons ' + lessons + ' · tasks ' + tasks;
+    } catch (e) {}
+  </script>
 </body>
 </html>
